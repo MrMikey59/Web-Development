@@ -17,3 +17,7 @@
 
 -[Wrap Bootstrap](https://wrapbootstrap.com) 
 
+## Spans & Offsets
+Bootstrap uses a 12 column box.  
+![Spans&Offsets]("Spans & Offsets.png")
+
