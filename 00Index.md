@@ -5,6 +5,7 @@
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)  
       ChromeDriver is a standalone server that implements the W3C WebDriver standard. ChromeDriver is available for Chrome on Android and Chrome on Desktop (Mac, Linux, Windows and ChromeOS).  
   - [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
+- [John Resig](https://github.com/jeresig)
 - [Microsoft](https://www.microsoft.com/)
   - [Learn WebDev from Microsoft](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)
   - [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
@@ -14,6 +15,7 @@
   - [Mozilla Developer Network (MDN)](http://developer.mozilla.org)
   - [Web](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers
 - [PC Mag](www.pcmag.com/)   
+- [Prettify.js]( https://www.prettifyjs.net/)  - minimize and beautify scripts (Base64, CSS, HTML, JSON, URL)
 - [WC3 Schools](http://w3schools.com)  
 - [WC3 Schools(Sisnixx)](https://w3schools.sinsixx.com/)  
 - [W3C Web Driver Standard](https://w3c.github.io/webdriver/webdriver-spec.html)  
