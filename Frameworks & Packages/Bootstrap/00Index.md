@@ -19,5 +19,5 @@
 
 ## Spans & Offsets
 Bootstrap uses a 12 column box.  
-![Spans&Offsets]("Spans & Offsets.png")
+![Spans&Offsets](Spans%20%26%20Offsets.PNG)
 
