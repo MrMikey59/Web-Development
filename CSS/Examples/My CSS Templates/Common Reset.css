@@ -33,3 +33,9 @@ a:visited {
   color: orange;
 }
 
+/* ====== Containers ====== */
+p {
+  line-height: 25px;
+  padding-bottom: 15px; 
+}
+

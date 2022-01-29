@@ -22,6 +22,7 @@ This is where the background details of the page are collected. The Head Section
 META elements are commonly Key-Value pairs that identify details about the website. These values are used by search engines to evaluate the website. This element is for Search Engine Optimiztion (SEO).
 
 ```html
+<META http-equiv="content-type" content="text/html; charset=UTF-8" />
 <META name="robots" content="noindex"> 
 ```
 
