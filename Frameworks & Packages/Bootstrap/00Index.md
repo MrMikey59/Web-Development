@@ -4,7 +4,6 @@
 ```html
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
 ```
 
 ## Local Storage Calls
@@ -14,10 +13,10 @@
 ```
 
 ## Additional Wrappers for Bootstrap
-
 -[Wrap Bootstrap](https://wrapbootstrap.com) 
 
 ## Spans & Offsets
-Bootstrap uses a 12 column box.  
+Bootstrap uses a 12 column box. Columns use **span[1 | 2 | 3 | … | 12 ]** and **offsets[1 | 2 | 3 | … | 12 ]**.
+
 ![Spans&Offsets](Spans%20%26%20Offsets.PNG)
 

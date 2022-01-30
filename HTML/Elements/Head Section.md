@@ -28,6 +28,7 @@ META elements are commonly Key-Value pairs that identify details about the websi
 <META name="description" content="A TL;DR Project">
 <META name="author" content="Michael R. Myers">
 <META name="viewport" content="width=device-width, initial-scale=1.0">
+<META name="viewport" content="width=device-width,height=500" id="viewportmeta">
 ???:
 <META name="robots" content="noindex"> 
 ```

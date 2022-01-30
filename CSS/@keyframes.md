@@ -50,5 +50,21 @@
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
   }
-}```
+}
+```
+
+```css
+@keyframes showlogo {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes showlogo {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+```
 
