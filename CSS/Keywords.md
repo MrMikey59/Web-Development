@@ -8,6 +8,7 @@
 | clear| determines the horizontal use of space on the sides of an element |  
 | color| `inherit \| <HexColor> \| hsl() \| rgb() \| rgba() ` |  
 | content|  |  
+| [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) | CORS compliance <BR> `crossorigin=[ “anonymous"` | “use-credentials” | “” ]` |  
 | display |  |  
 | float|  |  
 | font <BR> - font-size <BR> - font-weight <BR> - font-family |  |  
@@ -68,4 +69,13 @@
 | xx-large||| font size |
 | xx-small ||| font size |
 
+## Overload Pattern
+```css
+div {
+  background: gray;
+  background: linear-gradient(to bottom, white 0%, black 100%);
+}
+```
+This pattern is often used to give browsers that don’t understand linear gradients a fallback solution (e.g. gray color in the example). 
+**NOTE**: In CSSOM, `background: gray` gets overwritten. 
 

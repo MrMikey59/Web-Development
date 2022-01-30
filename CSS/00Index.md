@@ -2,6 +2,11 @@
 
 This folder contains CSS notes, snippets and example code.
 
+CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
+
+CSS is a container of Rules that modify the browser display of elements.
+
+### Common Alternatives
 - [CCS Object Model (CSSOM)](https://drafts.csswg.org/cssom/) 
 - [Less](http://lesscss.org/) (Run `npm install -g less` to install).
   - [Less Plugin: Clean CSS](https://github.com/less/less-plugin-clean-css)  
@@ -9,10 +14,12 @@ This folder contains CSS notes, snippets and example code.
 - SASS
 - SCSS
 
-CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
+### Minimizers, Parser & Stringifiers
+https://nv.github.io/CSSOM/docs/parse.html (from https://github.com/NV/CSSOM) 
+[CSSTree]( https://github.com/csstree/csstree) 
+[ReworkCSS](https://github.com/reworkcss/css)
 
-CSS is a container of Rules that modify the browser display of elements.
-
+## Rules
 The Rule: Each rule has exactly two parts:
 
 -	a selector that defines the HTML element(s) to which the rule applies

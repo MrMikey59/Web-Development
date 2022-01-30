@@ -16,6 +16,10 @@ This is where the background details of the page are collected. The Head Section
 ## BASE Element
 
 ## LINK Element
+Link Icons, Manifests & Style Sheets.
+```css
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
 
 ## META Element
 

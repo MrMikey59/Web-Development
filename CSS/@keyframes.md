@@ -1,6 +1,24 @@
 # @keyframes
 
 ```css
+@keyframes Build{
+  0%{
+    background-size:0 10px}
+  70%{
+    background-size:1407px 10px}
+  80%{
+    background-size:1407px 60px}
+  90%{
+    background-size:1407px 70px}
+  100%{
+    background-size:1407px 60px}
+}
+@keyframes loading{
+  0%{
+    transform:rotate(0deg)}
+  100%{
+    transform:rotate(360deg)}
+}
 @-webkit-keyframes _1kw-widgets-shared--wobble-animation {
   0%,
   17.33%,
