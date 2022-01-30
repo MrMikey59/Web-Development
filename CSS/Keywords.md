@@ -4,23 +4,46 @@
 
 | Keyword (Attribute) | Description |  
 | --- | --- |  
-| border <BR> - border-bottom <BR> - border-left <BR> - border-right<BR> - border-top  | `<Size> <BorderType> <Color>` |  
-| clear| determines the horizontal use of space on the sides of an element |  
+| background | `none \| transparent \| url() \| no-repeat \| repeat` |  
+| background-image | `url()` |  
+| background-position | postion of the top left corner <BR> `<XPos> <YPos>` |  
+| background-size | `<Size> <Size>` | 
+| border <BR> - border-bottom <BR> - border-left <BR> - border-right<BR> - border-top  | `<Size> <BorderType> <Color> \| none ` |  
+| border-radius <BR> -moz-border-radius | `<Size> \| inherit` |  
+| box-shadow | `none` | 
+| clear| determines the horizontal use of space on the sides of an element <BR> `both \| left \| right ` |  
 | color| `inherit \| <HexColor> \| hsl() \| rgb() \| rgba() ` |  
-| content|  |  
+| [content](https://developer.mozilla.org/en-US/docs/Web/CSS/content) |  |  
 | [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) | CORS compliance <BR> `crossorigin=[ “anonymous"` | “use-credentials” | “” ]` |  
-| display |  |  
-| float|  |  
-| font <BR> - font-size <BR> - font-weight <BR> - font-family |  |  
-| line-height|  |  
+| cursor | `pointer` |  
+| display | `block \| inline \| inline-block` |  
+| [filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) | applies graphical effects like blur or color shift to an element |  
+| float| `left \| right` |  
+| font <BR> - font-size <BR> - font-weight <BR> - font-family |   `<Size> <Weight> <Family>` <BR> `<Size>` <BR> `bold \| normal \| <WeightValue>` <BR> `monospace \| sans-serif \| serif ` | 
+| [font-style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) | `normal \| italic \| oblique \| oblique 40deg`  |  
+| height | `<Size>` |  
+| left |  |  
+| letter-spacing | `<Size>` |  
+| line-height| `<Size>` |  
+| list-style | `{decimal \| disc} [outside]` |  
 | margin <BR> - margin-bottom <BR> - margin-left <BR> - margin-right<BR> - margin-top  |  |  
+| max-width |  |  
 | min-height|  |  
-| outline| `<Weight> <OutlineType> <Color>` |  
-| outline-offset|  |  
-| padding <BR> - padding-bottom <BR> - padding-left <BR> - padding-right<BR> - padding-top  |  |  
-| text-decoration |  |  
-| text-rendering  |  |  
-| width |  |  
+| opacity | `none` or `<OpValue>` |  
+| outline| `none \| <Weight> <OutlineType> <Color>` |  
+| [outline-offset](https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset) |  |  
+| overflow | `hidden \| inherit` |  
+| padding <BR> - padding-bottom <BR> - padding-left <BR> - padding-right<BR> - padding-top  | `<TSize> <RSize> <BSize> <LSize>` <BR> `<TBSize> <LRSize>` <BR> `<AllSize>` |  
+| position | `absolute \| relative` 
+| text-align | `center \| left \| right` |  
+| text-decoration | `none` |  
+| text-indent | `<Size>` |  
+| [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering) <BR> The text-rendering property is an SVG property that is not defined in any CSS standard.  | `/* Keyword values */` <BR>  `text-rendering: auto;` <BR> `text-rendering: optimizeSpeed;` <BR> `text-rendering: optimizeLegibility;` <BR> `text-rendering: geometricPrecision;` <BR> `/* Global values */` <BR>  `text-rendering: inherit;` <BR> `text-rendering: initial;` <BR> `text-rendering: revert;` <BR> `text-rendering: unset;` |  
+| text-transformation | `lowercase \| uppercase` |  
+| top |  |
+| transition | `background \| <Time>` | 
+| visibility | `visible` |  
+| width | `auto` |  
 | *zoom|  |  
 
 |Constants|Description|Value|Type |
