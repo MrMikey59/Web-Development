@@ -4,7 +4,9 @@
 
 | Keyword (Attribute) | Description |  
 | --- | --- |  
-| align-self | `center` |  
+| align-content | `center \| end \| flex-end \| flex-start \| space-around \| space-between` |  
+| align-items | `baseline \| center \| flex-end \| flex-start` |  
+| align-self | `center \| flex-start \| stretch` |  
 | animation <BR> -moz-appearance <BR> -webkit-appearance | `buffering-stripes 2s linear infinite` <BR> `Build 1.5s cubic-bezier(0.5, 0, 0.5, 1.5) 1` |  
 | animation-delay | `<Time>` |  
 | appearance | `none` |
@@ -24,18 +26,20 @@
 | [content](https://developer.mozilla.org/en-US/docs/Web/CSS/content) |  |  
 | [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) | CORS compliance <BR> `crossorigin=[ “anonymous"` | “use-credentials” | “” ]` |  
 | cursor | `default \| N-resize \| pointer` |  
-| display | `block \| flex \| inherit \| inline \| inline-block \| table-cell` |  
+| display | `block \| flex \| inherit \| inline \| inline-block \| table \| table-cell \| -ms-flexbox` |  
 | [filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) | applies graphical effects like blur or color shift to an element |  
-| flex |  
+| flex <BR> -ms-flex |  |  
+| flex-align <BR> -ms-flex-align | `baseline \| center \| end \| flex-start \| start` | 
 | flex-basis | `<Size>` |  
-| flex-wrap | `wrap` |  
+| flex-direction <BR> -ms-flex-direction | `column \| column-reverse \| row \| row-reverse` | 
+| flex-wrap <BR> -ms-flex-wrap | `wrap` |  
 | float| `left \| right` |  
 | font <BR> - font-size <BR> - font-weight <BR> - font-family |   `<Size> <Weight> <Family>` <BR> `<Size>` <BR> `bold \| normal \| <WeightValue>` <BR> `monospace \| sans-serif \| serif ` | 
 | [font-style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) | `normal \| italic \| oblique \| oblique 40deg`  |  
 | height | `<Size>` |  
-| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | `center \| space-around \| space-between \| space-evenly \| start` |  
+| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | `center \| flex-start \| space-around \| space-between \| space-evenly \| start` |  
 | left |  |  
-| letter-spacing | `<Size>` |  
+| letter-spacing | `<Size> \| normal` |  
 | line-height| `<Size>` |  
 | list-style | `{ decimal \| disc \| none } [ outside ]` |  
 | list-style-type | `none` |  
@@ -50,7 +54,7 @@
 | padding <BR> - padding-bottom <BR> - padding-left <BR> - padding-right<BR> - padding-top  | `<TSize> <RSize> <BSize> <LSize>` <BR> `<TBSize> <LRSize>` <BR> `<AllSize>` |  
 | pointer-events | `none` |  
 | position | `absolute \| fixed \| relative \| static \| sticky` 
-| text-align | `center \| initial \| left \| right` |  
+| text-align <br> text-align-last | `center \| initial \| justify \| left \| right \| start` |  
 | text-decoration | `none  \| underline` |  
 | text-indent | `<Size>` |  
 | text-overflow | `ellipsis` |  
@@ -62,8 +66,9 @@
 | transition <BR> -webkit-transition | `{all \| background \| opacity} [ ease \| ease-in \| ease-in-out ] <Time> ` <BR> `background ease-in-out .2s` |  
 | vertical-align | `bottom \| middle \| top` |  
 | visibility | `hidden \| visible` |  
-| white-space | `nowrap` |  
+| white-space | `normal \| nowrap` |  
 | width | `auto` |  
+| word-spacing | `normal` |
 | z-index | `<Integer>` |  
 | *zoom|  |  
 

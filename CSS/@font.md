@@ -4,6 +4,7 @@
 [America](#America)
 [Lato](#Lato)
 [Overlock](#Overlock)
+[ProximaNova](#ProximaNova)
 [Roboto](#Roboto)
 
 ## Amatic SC (Cyrillic, Hebrew, Latin, Latin-ext & Vietnamese)
@@ -390,6 +391,23 @@
   src: url(https://fonts.gstatic.com/s/overlock/v13/Z9XSDmdMWRiN1_T9Z7xaz_mFtry79Q.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+```
+
+## ProximaNova
+```css
+@font-face{
+font-family:'ProximaNova';
+src:url("../../fonts/Proxima-Light/267447_4_0.eot?321123597");
+src:url("../../fonts/Proxima-Light/267447_4_0.eot?123597#iefix") format("embedded-opentype"),url("../../fonts/Proxima-Light/267447_4_0.woff?123597") format("woff"),url("../../fonts/Proxima-Light/267447_4_0.ttf?123597") format("truetype")
+@font-face{
+font-family:'ProximaNova';
+font-weight:bold;
+src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
+src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
+@font-face{
+font-family:'ProximaNova-Semibold';
+src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
+src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
 ```
 
 ## Roboto
