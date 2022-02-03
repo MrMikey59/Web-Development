@@ -8,6 +8,7 @@ CSS is a container of Rules that modify the browser display of elements.
 
 ### Common Alternatives
 - [CCS Object Model (CSSOM)](https://drafts.csswg.org/cssom/) 
+- [Google Cast API Reference]( https://developers.google.com/cast/docs/reference) or [Alt]( https://developers.google.com/cast) 
 - [Less](http://lesscss.org/) (Run `npm install -g less` to install).
   - [Less Plugin: Clean CSS](https://github.com/less/less-plugin-clean-css)  
   (Run `npm install -g less-plugin-clean-css` to install).
@@ -17,7 +18,21 @@ CSS is a container of Rules that modify the browser display of elements.
 ### Minimizers, Parser & Stringifiers
 https://nv.github.io/CSSOM/docs/parse.html (from https://github.com/NV/CSSOM) 
 [CSSTree]( https://github.com/csstree/csstree) 
-[ReworkCSS](https://github.com/reworkcss/css)
+[ReworkCSS](https://github.com/reworkcss/css)  
+
+## Stringify the Ugly CSS 
+
+#### Using Notepad
+Use the `Search > Replace` with the following:
+1. `{`  becomes  `{\n  `  (two spaces at end)
+2. `}`  becomes `\n}`
+3. `;`  becomes `;\n  `  (two spaces at end)
+
+#### Using MS Word
+Use the `Search > Replace` with the following:
+1. `{`  becomes  `{^p  `  (two spaces at end)
+2. `}`  becomes `^p}`
+3. `;`  becomes `;^p  `  (two spaces at end)
 
 ## Rules
 The Rule: Each rule has exactly two parts:

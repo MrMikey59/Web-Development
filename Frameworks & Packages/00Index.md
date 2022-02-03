@@ -14,6 +14,6 @@ Sometimes, letting others do the hard work makes sense.  Here's where I keep inf
 | [Isotope](http://isotope.metafizzy.co) |  | An exquisite jQuery plugin for magical layouts |  
 | jQuery ($) |```<SCRIPT type=”text/jvascript” src=”js/jquery.js”></SCRIPT>```| John Resig's best! |
 | Prettify.js |  |   |  
-| [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore | 
+| [Reflex](https://github.com/leejordan/reflex) | a responsive flexbox grid |  | [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore | 
 | Zero Clipboard | `<script src="js/ZeroClipboard-1.1.7.min.js"></script>` |  | 
 
