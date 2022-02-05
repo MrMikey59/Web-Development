@@ -2,10 +2,23 @@
 
 [Amatic](#Amatic)
 [America](#America)
+Courier 
+Courier New
 [Lato](#Lato)
+Lucida Grande
+Lucida Sans Unicode
+Neue
+Open Sans
 [Overlock](#Overlock)
+Oswald
 [ProximaNova](#ProximaNova)
 [Roboto](#Roboto)
+Work Sans
+
+### Font Families
+- monospace
+- sans-serif
+- serif
 
 ## Amatic SC (Cyrillic, Hebrew, Latin, Latin-ext & Vietnamese)
 ```css

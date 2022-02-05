@@ -78,7 +78,6 @@ All the styles in a page will "cascade" into a new "virtual" style sheet by the 
   2. External and internal style sheets (in the head section)
   3. Browser default
 
-
 ###### Internal (Anywhere in document)
 ```css
 <style type="text/css">

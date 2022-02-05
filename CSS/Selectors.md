@@ -62,6 +62,7 @@ CSS uses HTML/SGML commenting like: `/* comment */`
 | :focus  | Element with focus |  |   
 | :hover  | Elemnt with mouse over |  |   
 | :lang(var) | Element with language "var" |   
+| :last-child |  |  |  
 | :link  | Unvisited links |  |   
 | :not(<Selector>)  |  |  |   
 | :nth-of-type(\<IndexNumber> \| even \| odd)  |  | `#table1 .col:nth-child(even)` |   
