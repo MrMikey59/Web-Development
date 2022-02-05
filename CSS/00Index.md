@@ -6,12 +6,23 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 
 CSS is a container of Rules that modify the browser display of elements.
 
+#### To Check Out
+```css
+behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
+```
+
+#### Training Available
+[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) 
+- Data files on [GitHub](https://github.com/missing-semester/missing-semester)
+- Lectures on [Hacker Tools](https://hacker-tools.github.io/lectures/)
+- Video recordings of the lectures are available [YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J)
+
 #### CSS Namespace
 | Source | Namespace ID |  
 | --- | --- |  
 | CrEdge|-ms |  
 | FireFox|-moz |  
-| IE|-webkit |  
+| MS IE, Edge|-webkit |  
 | Opera|-o |  
 
 ## Common Support
@@ -138,10 +149,10 @@ The CSS2 Box![CSS2 Box](CSS2%20Box%20Model.png)
 | Attribut Roadmap | Examples
 | --- | --- |  
 | `align-items: [ center ];` | --- |  
-| `display: [ block | flex ];` | --- |  
+| `display: [ block \| flex ];` | --- |  
 | `font-family: [ Arial ];` | --- |  
 | `justify-content: [ center ];` | --- |  
-| `position: [ absolute | relative ];` | --- |  
+| `position: [ absolute \| relative ];` | --- |  
 | `text-decoration: [ none ];` | --- |  
 
 ## Adapting to Media Size

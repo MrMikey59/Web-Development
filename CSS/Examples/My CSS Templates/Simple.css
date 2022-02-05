@@ -84,11 +84,14 @@
 .monospace {  
   font-family: 'Courier New', monospace;  
   font-size: 1.23em;  
-}  
-.textitalic {  
+} 
+.text-center {
+  text-align: center;
+}
+.text-italic {  
   font-style: italic; 
 }
-.textstrong {  
+.text-strong {  
   font-weight: bold; 
 }
 
@@ -104,13 +107,19 @@
 }
 
 /*  Vertical Alignment  */
-.vabottom {  
+.va-bottom {  
   vertical-align: bottom; 
 } 
-.vamiddle {  
+.va-middle {  
   vertical-align: middle; 
 } 
-.vatop {  
+.va-subscript {
+  vertical-align: sub;
+}
+.va-superscript {
+  vertical-align: super;
+}
+.va-top {  
   vertical-align: top; 
 }
 

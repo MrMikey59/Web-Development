@@ -4,7 +4,14 @@
 
 CSS uses HTML/SGML commenting like: `/* comment */`
 
-#### Operators in CSS
+### Browser Conditional Checks
+|  Key Check | Comment Embedded Code |  
+| --- | --- | 
+| IE 7 |`<!--[if IE 7]>` <BR> `<![endif]-->`|  
+| IE 8 |`<!--[if IE 8]>` <BR> `<![endif]-->`|  
+| IE 9 |`<!--[if IE 9]>` <BR> `<![endif]-->`|  
+
+### Operators in CSS
 | Operator | Description |  
 | --- | --- |  
 | = | Equal |
@@ -15,12 +22,34 @@ CSS uses HTML/SGML commenting like: `/* comment */`
 | : |  Key-Value Pair separator |  
 | :: | Insert |  
 
-#### Browser Conditional Checks
-|  Key Check | Comment Embedded Code |  
-| --- | --- | 
-| IE 7 |`<!--[if IE 7]>` <BR> `<![endif]-->`|  
-| IE 8 |`<!--[if IE 8]>` <BR> `<![endif]-->`|  
-| IE 9 |`<!--[if IE 9]>` <BR> `<![endif]-->`|  
+### Variables in CSS
+Setting variables is CSS uses a Key-Value pair:
+```css
+/* For Root Values */
+:root {
+  --hue: 215;
+  --sat: 39%;
+  --lum: 51%;
+  --one: 0;
+  --two: 60;
+  --three: 120;
+  --four: 180;
+  --five: 240;
+  --six: 300;
+  --dark: 30;
+  --light: 210;
+}
+/* For individual selector values */
+.accent-1 {
+  --this-hue: calc(var(--hue) + var(--one));
+  background: hsl(var(--this-hue), var(--sat), var(--lum));
+  position:relative;
+}
+```
+Call the variable using the `var()` function. as show:  
+```css
+hsl(var(--hue), var(--sat), var(--lum))
+```
 
 ## CSS2
 
@@ -65,6 +94,34 @@ CSS uses HTML/SGML commenting like: `/* comment */`
 | :last-child |  |  |  
 | :link  | Unvisited links |  |   
 | :not(<Selector>)  |  |  |   
+| :nth-child({ even \| odd \| <Index> })] | Select every other row based on index number |  |   
 | :nth-of-type(\<IndexNumber> \| even \| odd)  |  | `#table1 .col:nth-child(even)` |   
+| :root | ??? |  |  |  
 | :visited | Visited links |  |  |  
+
+
+## Responsive Selectors
+```css
+/* Setup just for Printing */
+@media print{
+}
+/*  responsive set to typical tablet portrait size  */
+@media only screen and (max-width:951px){
+}
+@media all and (max-width: 798px){
+}
+@media only screen and (max-width: 768px) {
+}
+@media all and (max-width: 641px){
+}
+@media all and (max-width: 540px){
+}
+@media all and (max-width: 480px){
+}
+/*     responsive set to typical phone portrait size */
+@media only screen and (max-width: 400px) {
+}
+@media all and (max-width: 400px){
+}
+```
 
