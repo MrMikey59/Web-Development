@@ -24,6 +24,7 @@ Resources:
 - [**Bogan Stashchuk**](https://github.com/bstashchuk/)  
   - [JavaScript Bible Basics](https://github.com/bstashchuk/JavaScript-Bible-Basics.git)
   - [JavaScript Bible ES6]( https://github.com/bstashchuk/JavaScript-Bible-ES6.git) 
+- [JS Foundation](https://js.foundation) 
 - [JSFiddle](http://jsfiddle.net/) – A Web Development code playground (CSS, HTML & JS)
 - [Simple-Excel.js](https://github.com/faisalman/simple-excel-js) - Client-side script to easily parse / convert / write any Microsoft Excel XLSX / XML / CSV / TSV / HTML / JSON / etc formats  
 - [jscompress.com](http://jscompress.com)
