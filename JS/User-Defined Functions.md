@@ -2,11 +2,19 @@
 
 
 ## User Defined Function Enclosures
+
 ```javascript
 function FunctionName() {
 }
 ```
+### Function Expression
+```javascript
+<MethodName>: function () {
+  <JSCommands>;
+}
+```
 
+### Immediately Invoked Function Expressions (IIFE)
 ```javascript
 (function() {
 })();
@@ -17,12 +25,12 @@ function FunctionName() {
 }();
 ```
 
-### Ajax Function
+#### Ajax IIFE
 ```javascript
 $.ajax({
  });
 ```
-### jQuery Function
+#### jQuery IIFE
 ```javascript
 $(function() {
 });

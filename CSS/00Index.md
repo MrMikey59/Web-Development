@@ -6,6 +6,15 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 
 CSS is a container of Rules that modify the browser display of elements.
 
+#### CSS Namespace
+| Source | Namespace ID |  
+| --- | --- |  
+| CrEdge|-ms |  
+| FireFox|-moz |  
+| IE|-webkit |  
+| Opera|-o |  
+
+
 ### Common Alternatives
 - [CCS Object Model (CSSOM)](https://drafts.csswg.org/cssom/) 
 - [Google Cast API Reference]( https://developers.google.com/cast/docs/reference) or [Alt]( https://developers.google.com/cast) 
