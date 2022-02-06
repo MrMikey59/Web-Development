@@ -38,3 +38,13 @@
 @media screen and (max-width: 850px){
 }
 ```
+
+```css
+@media only screen 
+and (-webkit-min-device-pixel-ratio: 1.5), only screen 
+and (min--moz-device-pixel-ratio: 1.5), only screen 
+and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-resolution: 240dpi){
+}
+```
+
+
