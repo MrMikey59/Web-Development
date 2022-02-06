@@ -15,10 +15,25 @@ This is where the background details of the page are collected. The Head Section
 ```
 ## BASE Element
 
-## LINK Element
-Link Icons, Manifests & Style Sheets.
+## LINK Element  
+```html
+<link rel="canonical" href="https://...">
+<link rel="shortlink" href="https://...">
+```
+
+###Link Icons, Manifests & Style Sheets.
 ```css
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
+
+### Link Applications
+```html
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.navsea.navy.mil/opensearch/osd.action" title="NAVSEA Wiki">
+```
+
+### Link Style Sheets
+```html
+<link rel="stylesheet" type="text/css" href="css/style.css">
 ```
 
 ## META Element
