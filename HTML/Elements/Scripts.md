@@ -30,3 +30,10 @@
 <NOSCRIPT>  </NOSCRIPT>
 ```
 
+## Script Templates
+```html
+<script type="text/x-template" title="gliffy-webpanel-footer">
+  <div class="gliffy-webpanel-footer"><span></span></div>
+</script>
+```
+
