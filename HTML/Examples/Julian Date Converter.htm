@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <TITLE>Ordinal & Julian Date Converter</TITLE> 
+  <META content="IE=5.0000" http-equiv="X-UA-Compatible">
+  <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+  <META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+  <LINK href="support/icon.png" rel="SHORTCUT ICON"> 
+  <LINK href="support/main.css" rel="stylesheet" type="text/css"> 
+  <SCRIPT src="support/script.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="support/script.vbs" type="text/vbscript"></SCRIPT>
+</HEAD> 
+
+<BODY>
+
+<HR>
+
+
+<HR>
+  <TABLE width="600" border="0" cellspacing="0" cellpadding="10">
+    <TBODY>
+      <TR>
+        <TD bgcolor="#e8eede">
+          <H1 align="center" class="hdtitlegreen">Tools: Ordinal & Julian Date Converter</H1>
+        </TD>
+      </TR>
+      <TR>
+        <TD align="left" valign="top" bgcolor="#ffffff">
+          <P>Today's date: 
+            <SCRIPT type="text/javascript">
+              StandardDate();
+            </SCRIPT>
+            <BR>
+            Today's Julian Date is  
+            <SCRIPT type="text/javascript">
+              JulianDate();
+            </SCRIPT>
+            <BR>
+            Today's Ordinal (Military Julian) Date is  
+            <SCRIPT type="text/javascript">
+              ShortYear();
+              DayofYear();
+            </SCRIPT>          </P><BR>
+          <H1 class="hdtitlegreen">Convert</H1>
+          <FORM>                
+            Date or Julian Date: 
+            <INPUT name="UsrDate" type="text" size="13">                 
+            <INPUT name="Date" type="submit" value="Convert">                  
+            <BR>
+          </FORM>
+          <BR>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+        <P>Instructions:</P>
+        <P>Use this tool to convert between date and Julian (yyddd) date formats.</P>
+        <P>Enter a valid date or Julian date, and click 'Convert'. To see an 
+        example, click 'Show Example'.</P>
+        <P>Enter dates in the form mm/dd/yy, dd-mmm-yyyy, 'today', '+1 day' 
+        or similar. Enter Julian dates in the format yyddd, yy-ddd 
+        or yy.ddd</P>
+        <P class="hdtitlegreen2">Remember:</P>
+        <UL>
+          <LI>This tool can only convert date values after Jan 1, 1970.</LI>
+        </UL>
+        </TD>
+      </TR>
+      <TR>
+        <TD bgcolor="#e8eede">
+          <H1>Notes About Julian Dates</H1>
+          <P>Julian dates (abbreviated JD) are simply a continuous count of days 
+          and fractions since noon Universal Time on January 1, 4713 BCE (on the 
+          Julian calendar). Almost 2.5 million days have transpired since this date.
+          Julian dates are widely used as time variables within astronomical software. 
+          Typically, a 64-bit floating point (double precision) variable can represent
+           an epoch expressed as a Julian date to about 1 millisecond precision.</P>
+          <H1>Notes About Ordinal Dates</H1>
+          <P>We refer to a yyddd date format (yy = year, ddd=day) as a 'Julian 
+          Date' - this is the common term for such a date in mainframe and 
+          other circles. However technically, a Julian date can mean different 
+          things. Astronomers refer to a Julian date as the number of days 
+          since the beginning of the Julian Period (January 1, 4713 BC). The 
+          Smithsonian Astrophysical Observatory introduced the 'Modified 
+          Julian Date' to record the orbit of the Sputnik satellite in 18 
+          bits.</P>
+          <P>A yyddd (or similar format such as yyyyddd, yy-ddd) date is more 
+          correctly called an <I>ordinal date</I>. However in the mainframe 
+          world, we call them 'Julian Dates', and so we've used this term on 
+          this page.</P>
+          <P>Reference: ISO 8601:1988, Ordinal Dates are represented as follows:</P>
+          <UL>
+            <LI>1993045 or 1993-045 (complete representation)</LI>
+            <LI>93045 or 93-045</LI>
+            <LI>-045</LI>
+          </UL>
+          <P>and also is nothing to do with the Julian date.</P>
+        </TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+<HR>
+</BODY>
+
+</HTML>

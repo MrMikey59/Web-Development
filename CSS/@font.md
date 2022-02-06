@@ -1,19 +1,15 @@
 # @ Font-Face
 
+| cursive | serif | sans-serif | monospace |  
+| --- | --- | --- | --- |  
+| Amatic SC <BR> [Overlock](#Overlock) |  | Arial <BR> Helvetica <BR> Open Sans <BR> Oswald <BR> [Proxima Nova](#Proxima%20Nova) <BR> [Roboto](#Roboto) <BR> Verdana <BR> Work Sans | Courier <BR> Courier New
+ |  
+
 [Amatic](#Amatic)
 [America](#America)
-Courier 
-Courier New
 [Lato](#Lato)
 Lucida Grande
 Lucida Sans Unicode
-Neue
-Open Sans
-[Overlock](#Overlock)
-Oswald
-[ProximaNova](#ProximaNova)
-[Roboto](#Roboto)
-Work Sans
 
 ### Font Families
 - monospace
@@ -406,7 +402,7 @@ Work Sans
 }
 ```
 
-## ProximaNova
+## Proxima Nova
 ```css
 @font-face{
 font-family:'ProximaNova';
