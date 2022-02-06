@@ -99,6 +99,7 @@ hsl(var(--hue), var(--sat), var(--lum))
 | :root | ??? |  |  |  
 | :visited | Visited links |  |  |  
 
+**Note**: The anchor pseudo-classes should be declared in the following order: `:link`, `:visited`, `:hover`, `:active`.  
 
 ## Responsive Selectors
 ```css

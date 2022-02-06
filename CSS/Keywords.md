@@ -1,6 +1,6 @@
 # CSS Keywords & Values
 
-**Note**: Color keywords are not covered in this document. Go to the [Color document](https://github.com/MrMikey59/00---Projects/blob/master/Web%20Design/Color.md) in Web Design.
+**Note**: Color keywords are not covered in this document. Go to the Color document in Web Development.
 
 | Keyword (Attribute) | Description |  
 | --- | --- |  
@@ -42,7 +42,8 @@
 | letter-spacing | `<Size> \| normal` |  
 | line-height| `<Size>` |  
 | list-style | `{ decimal \| disc \| none } [ outside ]` |  
-| list-style-type | `none` |  
+| list-style-image | `url(bullet.gif)` | 
+| list-style-type | `circle \| decimal \| decimal-leading-zero \| disc \| lower-alpha \| lower-roman \| none \| square \| upper-alpha \| upper-roman` |  
 | margin <BR> - margin-bottom <BR> - margin-left <BR> - margin-right<BR> - margin-top  |  |  
 | max-width | `<Size>` |  
 | min-height| `<Size>` |  
@@ -55,11 +56,11 @@
 | pointer-events | `none` |  
 | position | `absolute \| fixed \| relative \| static \| sticky` 
 | text-align <br> text-align-last | `center \| initial \| justify \| left \| right \| start` |  
-| text-decoration | `none  \| underline` |  
+| text-decoration | `blink  \| line-through \| none  \| overline \| underline` |  
 | text-indent | `<Size>` |  
 | text-overflow | `ellipsis` |  
 | [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering) <BR> The text-rendering property is an SVG property that is not defined in any CSS standard.  | `/* Keyword values */` <BR>  `text-rendering: auto;` <BR> `text-rendering: optimizeSpeed;` <BR> `text-rendering: optimizeLegibility;` <BR> `text-rendering: geometricPrecision;` <BR> `/* Global values */` <BR>  `text-rendering: inherit;` <BR> `text-rendering: initial;` <BR> `text-rendering: revert;` <BR> `text-rendering: unset;` |  
-| text-transformation | `lowercase \| uppercase` |  
+| text-transformation | `capitalize \| lowercase \| uppercase` |  
 | top |  |  
 | transform |  |  
 | transform-origin | `center` |  
@@ -71,6 +72,8 @@
 | word-spacing | `normal` |
 | z-index | `<Integer>` |  
 | *zoom|  |  
+
+**Note**: In CSS, margins can take either a positive or a negative value. Padding, however, can only take a positive value.
 
 |Constants|Description|Value|Type |
 | --- | --- | --- | --- |  

@@ -1,8 +1,15 @@
 # @ Font-Face
 
-| cursive | serif | sans-serif | monospace |  
-| --- | --- | --- | --- |  
-| Amatic SC <BR> [Overlock](#Overlock) |  | Arial <BR> Helvetica <BR> Open Sans <BR> Oswald <BR> [Proxima Nova](#Proxima%20Nova) <BR> [Roboto](#Roboto) <BR> Verdana <BR> Work Sans | Courier <BR> Courier New
+### Font Families
+- cursive
+- fantasy
+- monospace
+- sans-serif
+- serif
+
+| cursive | fantasy | serif | sans-serif | monospace |  
+| --- | --- | --- | --- | --- |  
+| Amatic SC <BR> [Overlock](#Overlock) |  | Times New Roman | Arial <BR> Geneva <br> Helvetica <BR> Open Sans <BR> Oswald <BR> [Proxima Nova](#Proxima%20Nova) <BR> [Roboto](#Roboto) <BR> Verdana <BR> Work Sans | Andale Mono <BR> Courier <BR> Courier New
  |  
 
 [Amatic](#Amatic)
@@ -10,11 +17,6 @@
 [Lato](#Lato)
 Lucida Grande
 Lucida Sans Unicode
-
-### Font Families
-- monospace
-- sans-serif
-- serif
 
 ## Amatic SC (Cyrillic, Hebrew, Latin, Latin-ext & Vietnamese)
 ```css
