@@ -16,6 +16,7 @@
   - [Web](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers
 - [PC Mag](www.pcmag.com/)   
 - [Prettify.js]( https://www.prettifyjs.net/)  - minimize and beautify scripts (Base64, CSS, HTML, JSON, URL)
+- [TypeScript](www.typescriptlang.org)  
 - [WC3 Schools](http://w3schools.com)  
 - [WC3 Schools(Sisnixx)](https://w3schools.sinsixx.com/)  
 - [W3C Web Driver Standard](https://w3c.github.io/webdriver/webdriver-spec.html)  
