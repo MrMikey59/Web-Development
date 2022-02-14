@@ -1,5 +1,4 @@
-# Referenecing in HTML
-
+# Referencing in HTML
 
 ### A Quick Example
 | Method | Example |  

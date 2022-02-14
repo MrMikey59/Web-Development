@@ -19,6 +19,10 @@ This is where the background details of the page are collected. The Head Section
 ```html
 <link rel="canonical" href="https://...">
 <link rel="shortlink" href="https://...">
+<link rel=File-List href="/filelist.xml">
+<link rel=Edit-Time-Data href="/editdata.mso">
+<link rel=themeData href="/themedata.thmx">
+<link rel=colorSchemeMapping href="/colorschememapping.xml">
 ```
 
 ### Link Applications

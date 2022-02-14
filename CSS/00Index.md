@@ -17,14 +17,6 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 - Lectures on [Hacker Tools](https://hacker-tools.github.io/lectures/)
 - Video recordings of the lectures are available [YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J)
 
-#### CSS Namespace
-| Source | Namespace ID |  
-| --- | --- |  
-| CrEdge|-ms |  
-| FireFox|-moz |  
-| MS IE, Edge|-webkit |  
-| Opera|-o |  
-
 ## Common Support
 [Mozilla](https://www.mozilla.org/en-US/)
 - [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/) 
