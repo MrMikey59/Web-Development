@@ -128,9 +128,33 @@ Lucida Sans Unicode
        url(https://c5.patreon.com/external/fonts/gt-america/GT-America-Standard-Bold.woff2) format('woff2'),
        url(https://c5.patreon.com/external/fonts/gt-america/GT-America-Standard-Bold.woff) format('woff');
 }```
+  
+## Calibri
+```css
+@font-face {
+	font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;
+}
+```
 
+## Cambria Math  
+```css
+ @font-face {
+	font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;
+}
+```
 
 ## Hebrew
+```css
 @font-face {
   font-family: 'Amatic SC';
   font-style: normal;
@@ -139,6 +163,7 @@ Lucida Sans Unicode
   src: url(https://fonts.gstatic.com/s/amaticsc/v22/TUZyzwprpvBS1izr_vOECOSfQZQ.woff2) format('woff2');
   unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+```
 
 ## Lato
 ```css
@@ -300,7 +325,20 @@ Lucida Sans Unicode
   font-weight: 900;
   src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh50XSwiPGQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}```
+}
+```
+
+## Open Sans
+```css
+@font-face {
+  font-family:"Open Sans";
+	panose-1:2 11 6 6 3 5 4 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870161 1073750107 40 0 415 0;
+}
+```
 
 ## Overlock (Latin & Latin-ext)
 ```css
@@ -407,18 +445,32 @@ Lucida Sans Unicode
 ## Proxima Nova
 ```css
 @font-face{
-font-family:'ProximaNova';
-src:url("../../fonts/Proxima-Light/267447_4_0.eot?321123597");
-src:url("../../fonts/Proxima-Light/267447_4_0.eot?123597#iefix") format("embedded-opentype"),url("../../fonts/Proxima-Light/267447_4_0.woff?123597") format("woff"),url("../../fonts/Proxima-Light/267447_4_0.ttf?123597") format("truetype")
+  font-family:'ProximaNova';
+  src:url("../../fonts/Proxima-Light/267447_4_0.eot?321123597");
+  src:url("../../fonts/Proxima-Light/267447_4_0.eot?123597#iefix") format("embedded-opentype"),url("../../fonts/Proxima-Light/267447_4_0.woff?123597") format("woff"),url("../../fonts/Proxima-Light/267447_4_0.ttf?123597") format("truetype")
+}
 @font-face{
-font-family:'ProximaNova';
-font-weight:bold;
-src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
-src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
+  font-family:'ProximaNova';
+  font-weight:bold;
+  src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
+  src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
+}
 @font-face{
-font-family:'ProximaNova-Semibold';
-src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
-src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
+  font-family:'ProximaNova-Semibold';
+  src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?123597");
+  src:url("../../fonts/Proxima-Semibold/267447_5_0.eot?#iefix123597") format("embedded-opentype"),url("../../fonts/Proxima-Semibold/267447_5_0.woff?123597") format("woff"),url("../../fonts/Proxima-Semibold/267447_5_0.ttf?123597") format("truetype")
+}
+```
+
+## PT Serif
+```css
+@font-face {
+	font-family:"PT Serif";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;
+}
 ```
 
 ## Roboto

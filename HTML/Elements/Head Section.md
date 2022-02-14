@@ -21,14 +21,19 @@ This is where the background details of the page are collected. The Head Section
 <link rel="shortlink" href="https://...">
 ```
 
-###Link Icons, Manifests & Style Sheets.
-```css
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
-```
-
 ### Link Applications
 ```html
 <link rel="search" type="application/opensearchdescription+xml" href="https://wiki.navsea.navy.mil/opensearch/osd.action" title="NAVSEA Wiki">
+```
+
+### Link Fonts
+```html
+<link rel=Stylesheet type="text/css" media=all href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|PT+Serif:400,700">
+```
+
+### Link Manifests
+```css
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
 ```
 
 ### Link Style Sheets
