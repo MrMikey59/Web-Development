@@ -328,6 +328,22 @@ Lucida Sans Unicode
 }
 ```
 
+## MS PGothic
+```css
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
+@font-face
+	{font-family:"\@MS PGothic";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
+``
 ## Open Sans
 ```css
 @font-face {
