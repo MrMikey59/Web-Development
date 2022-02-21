@@ -76,6 +76,8 @@ hsl(var(--hue), var(--sat), var(--lum))
 
 **Note**: The primary selectors listed aboce can also be combined but be aware of the effects!
 
+How are “H1 Small” and H1 > Small” different?  The first is a descendant selector and is broadly applied, the second is a child selector and limits the scope to the first level only.
+
 ## Pseudo Selectors
 | Selector | Description | Example |  
 | --- | --- | --- |  

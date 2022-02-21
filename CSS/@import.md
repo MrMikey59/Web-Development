@@ -1,8 +1,10 @@
 # @Import
 
 ```css
+<!-- Including one css file into other -->
 @import url(style.css);
 @import url(print.css);
+@import "style2.css";
 ```
 
 ## Import a Font

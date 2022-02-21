@@ -18,12 +18,15 @@ Sometimes, letting others do the hard work makes sense.  Here's where I keep inf
 | [Font Awesome](https://fontawesome.com/) |  |  |  
 | [FullCalendar](http://arshaw.com/fullcalendar/) |  Google Calendar Plugin |  |  
 | [Google Analytics](https://www.google-analytics.com/) | `<script src="https://www.google-analytics.com/analytics.js"></script>` |  |  
+| [Hammer.JS](https://hammerjs.github.io/)  |  |  |  
 | [HTML5shiv](https://github.com/aFarkas/html5shiv) | `<script src="../src/html5shiv.js"></script>` <BR> `<script src="../src/html5shiv-printshiv.js"></script>` |  |  
 | [Isotope](http://isotope.metafizzy.co) |  | An exquisite jQuery plugin for magical layouts |  
 | jQuery ($) |```<SCRIPT type=”text/jvascript” src=”js/jquery.js”></SCRIPT>```| John Resig's best! |
 | [LESS - Leaner CSS](http://lesscss.org)  |  |  |  
+| [Materialize](https://materializecss.com) | A modern responsive front-end framework based on Material Design |  |  
 | Prettify.js |  |   |  
 | [Reflex](https://github.com/leejordan/reflex) | a responsive flexbox grid |  | [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore |  
+| [StackTraceJS](https://www.stacktracejs.com/)  |  |  |  
 | [style-switcher.js](http://onokumus.com/)  |  |  |  
 | Zero Clipboard | `<script src="js/ZeroClipboard-1.1.7.min.js"></script>` |  | 
 
