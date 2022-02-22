@@ -24,6 +24,7 @@ Sometimes, letting others do the hard work makes sense.  Here's where I keep inf
 | jQuery ($) |```<SCRIPT type=”text/jvascript” src=”js/jquery.js”></SCRIPT>```| John Resig's best! |
 | [LESS - Leaner CSS](http://lesscss.org)  |  |  |  
 | [Materialize](https://materializecss.com) | A modern responsive front-end framework based on Material Design |  |  
+| [MermaidJS](https://mermaid-js.github.io/) | a tool that renders diagrams based on markdown-like text content |  
 | Prettify.js |  |   |  
 | [Reflex](https://github.com/leejordan/reflex) | a responsive flexbox grid |  | [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore |  
 | [StackTraceJS](https://www.stacktracejs.com/)  |  |  |  
