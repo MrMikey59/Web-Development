@@ -1,0 +1,7 @@
+/* The Basic Tables CSS */
+
+th,td,thead,tbody {
+	border-color: #ccc;
+	background: #fff;
+}
+

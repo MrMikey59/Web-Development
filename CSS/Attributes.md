@@ -11,10 +11,12 @@
 | animation-name | `<IDName> \| spin`|  |  
 | animation-timing-function| `linear`| |  
 | background | ``{ <Color> \|\| [ <ImageFile> <Setting> <Size> <Size> ] }`` | --- |  
-| background-filter| `alpha(opacity=60)` | |  
+|
+| background-attachment| fixed |  |  
+| background-filter| `alpha(opacity=60)` |  |  
 | background-position \<LRPosition> \<TBPostion> | `<Percent> \| center \| right` | --- |  
 | background-repeat| `no-repeat` | |  
-| background-size | `{ <Size> \| cover }` | --- |  
+| background-size <BR> -moz-background-siz <br> -o-background-size <BR> -webkit-background-size | `{ <Size> \| cover }` | --- |  
 | background-width| `<Size>` | |   
 | border \<Size> \<Type> \<Color> | `none` | `border: solid 1px #aaa;` |  
 | border-bottom | `{ <Size> \| none }` | --- |  

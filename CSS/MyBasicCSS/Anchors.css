@@ -1,0 +1,20 @@
+/* The Basic Anchors CSS */
+
+a { 
+  color: blue; 
+  text-decoration: underline; 
+}
+a:hover { 
+  color: #ff7b38; 
+}
+a:active {
+  color: green;
+}
+a:visited {
+  color: red;
+}
+
+/* Remove borders when image is the anchor for smoother look  */
+a img { 
+  border: 0; 
+}

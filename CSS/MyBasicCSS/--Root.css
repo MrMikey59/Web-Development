@@ -1,0 +1,17 @@
+/* The Root CSS */
+@charset "UTF-8";
+
+/* Variables */
+:root {
+  --dark-green: #2E5955;               /* var(--dark-green) */
+  --mid-green: #3C7373;                /* var(--mid-green) */
+  --light-green: #C2D9BF;              /* var(--light-green) */
+  --heading_font: 'Amatic SC', cursive;  /* var(--heading_font) */
+  --paragraph_font: 'Overlock', cursive; /* var(--paragraph_font) */
+}
+
+* {
+  margin: 0;
+  Padding: 0;
+}
+

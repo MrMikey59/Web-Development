@@ -1,0 +1,38 @@
+/* The Basic Body CSS */
+
+body, html { 
+  font-family: var(--paragraph_font);
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+}
+
+body { 
+  background: url(theme/bodybg.jpg?1645272412) repeat-y center; 
+  font-family: arial, sans-serif; 
+  font-size: 12px; 
+  color: #fff; 
+  height: 100%; 
+  position: relative; 
+}
+
+/* Clear */
+.clear { 
+  clear: both; 
+}
+.clear-right { 
+  clear: right; 
+}
+.clear-left { 
+  clear: left; 
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.show {
+  display: contents;
+  visibility: visible;
+}
+

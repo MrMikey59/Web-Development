@@ -18,9 +18,9 @@ Sometimes, letting others do the hard work makes sense.  Here's where I keep inf
 | [Materialize](https://materializecss.com) | A modern responsive front-end framework based on Material Design |  |  
 | [MermaidJS](https://mermaid-js.github.io/) | a tool that renders diagrams based on markdown-like text content |  
 | Prettify.js |  |   |  
-| [Reflex](https://github.com/leejordan/reflex) | a responsive flexbox grid |  | [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore |  
+| [Reflex](https://github.com/leejordan/reflex) | a responsive lightweight flexbox grid |  | [Underscore](https://underscorejs.org) |  | Jeremy Ashkenas at https://github.com/jashkenas/underscore |  
 | [StackTraceJS](https://www.stacktracejs.com/)  |  |  |  
-| [style-switcher.js](http://onokumus.com/)  |  |  |  
+| [Style-Switcher.js](http://onokumus.com/)  |  |  |  
 | Zero Clipboard | `<script src="js/ZeroClipboard-1.1.7.min.js"></script>` |  | 
 
 <HR>

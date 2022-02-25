@@ -1,0 +1,20 @@
+ /* The Basic Containers CSS  */
+
+ div, span, p { 
+  margin: 0; 
+  padding: 0; 
+}
+
+p, .paragraph { 
+  line-height: 1.5; 
+  color: #fff; 
+  font-size: 15px; 
+  padding: .5em 0; 
+}
+
+div.paragraph { 
+  line-height: 1.5; 
+  color: #fff; 
+  font-size: 15px; 
+  padding: .5em 0; 
+}

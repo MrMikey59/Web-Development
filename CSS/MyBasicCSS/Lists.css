@@ -1,13 +1,14 @@
 /* The Basic List CSS */
 
 /* Reset */
-ul, ol, li { 
+ul, ol, li,
+dl, dd, dt { 
   margin: 0; 
   padding: 0; 
 }
 ul {
-  list-style: disc; 
+  list-style: disc outside; 
 }
 ol {
-  list-style: decimal; 
+  list-style: decimal outside; 
 }
