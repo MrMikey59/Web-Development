@@ -7,7 +7,7 @@ Sometimes, letting others do the hard work makes sense.  Here's where I keep inf
 | Analytics | `<script src="analytics.js" async="">  </script>` |  |  
 | [Backbone.JS](http://backbonejs.org) |  | Jeremy Ashkenas | 
 | [date.js](http://www.datejs.com/) |  |  |  
-| [FancyBox](fancyapps.com) |  |  |  
+| [FancyBox](https://fancyapps.com/fancybox/) | create a graphics slide show |  |  
 | [Font Awesome](https://fontawesome.com/) |  |  |  
 | [FullCalendar](http://arshaw.com/fullcalendar/) |  Google Calendar Plugin |  |  
 | [Hammer.JS](https://hammerjs.github.io/)  |  |  |  
