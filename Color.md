@@ -34,6 +34,7 @@ arrColors = {
 |Constants|RGB/RGBa Values|Hex Value|
 | --- | --- | --- |   
 | aliceblue | (240,248,255,1) | #f0f8ff |  
+| amber||#FF9900|  
 | antiquewhite | (250,235,215,1) | #faebd7 |  
 | aqua | (0,255,255,1) | #00ffff |  
 | aquamarine | (127,255,212,1) | #7fffd4 |  
@@ -46,6 +47,7 @@ arrColors = {
 | blueviolet | (138,43,226,1) | #8a2be2 |  
 | brown | (165,42,42,1) | #a52a2a |  
 | burlywood | (222,184,135,1) | #deb887 |  
+| burntorange||#993300|  
 | cadetblue | (95,158,160,1) | #5f9ea0 |  
 | chartreuse | (127,255,0,1) | #7fff00 |  
 | chocolate | (210,105,30,1) | #d2691e |  
@@ -54,11 +56,11 @@ arrColors = {
 | cornsilk | (255,248,220,1) | #fff8dc |  
 | crimson | (220,20,60,1) | #dc143c |  
 | cyan | (0,255,255,1) | #00ffff |  
+| darkazure||#003366|  
 | darkblue | (0,0,139,1) | #00008b |  
 | darkcyan | (0,139,139,1) | #008b8b |  
 | darkgoldenrod | (184,134,11,1) | #b8860b |  
-| darkgray | (169,169,169,1) | #a9a9a9 |  
-| darkgrey | (169,169,169,1) | #a9a9a9 |  
+| darkgray <BR> darkgrey| (169,169,169,1) | #a9a9a9 |  
 | darkgreen | (0,100,0,1) | #006400 |  
 | darkkhaki | (189,183,107,1) | #bdb76b |  
 | darkmagenta | (139,0,139,1) | #8b008b |  
@@ -86,10 +88,10 @@ arrColors = {
 | ghostwhite | (248,248,255,1) | #f8f8ff |  
 | gold | (255,215,0,1) | #ffd700 |  
 | goldenrod | (218,165,32,1) | #daa520 |  
-| gray | (128,128,128,1) | #808080 |  
-| grey | (128,128,128,1) | #808080 |  
+| gray <BR> grey | (128,128,128,1) | #808080 |  
 | green | (0,128,0,1) | #008000 |  
 | greenyellow | (173,255,47,1) | #adff2f |  
+| greyishblue||#666699|  
 | honeydew | (240,255,240,1) | #f0fff0 |  
 | hotpink | (255,105,180,1) | #ff69b4 |  
 | indianred | (205,92,92,1) | #cd5c5c |  
@@ -104,15 +106,13 @@ arrColors = {
 | lightcoral | (240,128,128,1) | #f08080 |  
 | lightcyan | (224,255,255,1) | #e0ffff |  
 | lightgoldenrodyellow | (250,250,210,1) | #fafad2 |  
-| lightgray | (211,211,211,1) | #d3d3d3 |  
-| lightgrey | (211,211,211,1) | #d3d3d3 |  
+| lightgray <BR> lightgrey | (211,211,211,1) | #d3d3d3 |  
 | lightgreen | (144,238,144,1) | #90ee90 |  
 | lightpink | (255,182,193,1) | #ffb6c1 |  
 | lightsalmon | (255,160,122,1) | #ffa07a |  
 | lightseagreen | (32,178,170,1) | #20b2aa |  
 | lightskyblue | (135,206,250,1) | #87cefa |  
-| lightslategray | (119,136,153,1) | #778899 |  
-| lightslategrey | (119,136,153,1) | #778899 |  
+| lightslategray <BR> lightslategrey | (119,136,153,1) | #778899 |  
 | lightsteelblue | (176,196,222,1) | #b0c4de |  
 | lightyellow | (255,255,224,1) | #ffffe0 |  
 | lime | (0,255,0,1) | #00ff00 |  
@@ -122,6 +122,7 @@ arrColors = {
 | maroon | (128,0,0,1) | #800000 |  
 | mediumaquamarine| (102,205,170,1) | #66cdaa |  
 | mediumblue | (0,0,205,1) | #0000cd |  
+| mediumgrey||#A5ADBA|  
 | mediumorchid | (186,85,211,1) | #ba55d3 |  
 | mediumpurple | (147,112,219,1) | #9370d8 |  
 | mediumseagreen | (60,179,113,1) | #3cb371 |  
@@ -141,11 +142,13 @@ arrColors = {
 | orange | (255,165,0,1) | #ffa500 |  
 | orangered | (255,69,0,1) | #ff4500 |  
 | orchid | (218,112,214,1) | #da70d6 |  
+| palecyan||#CCFFFF|  
 | palegoldenrod | (238,232,170,1) | #eee8aa |  
 | palegreen | (152,251,152,1) | #98fb98 |  
 | paleturquoise | (175,238,238,1) | #afeeee |  
 | palevioletred | (219,112,147,1) | #d87093 |  
 | papayawhip | (255,239,213,1) | #ffefd5 |  
+| peach||#FFCC99|  
 | peachpuff | (255,218,185,1) | #ffdab9 |  
 | peru | (205,133,63,1) | #cd853f |  
 | pink | (255,192,203,1) | #ffc0cb |  
@@ -153,6 +156,7 @@ arrColors = {
 | powderblue |(176,224,230,1)  | #b0e0e6 |  
 | purple | (128,0,128,1) | #800080 |  
 | red | (255,0,0,1) | #ff0000 |  
+| red violet||#993366|  
 | rosybrown | (188,143,143,1) | #bc8f8f |  
 | royalblue | (65,105,225,1) | #4169e1 |  
 | saddlebrown | (139,69,19,1) | #8b4513 |  
@@ -164,8 +168,7 @@ arrColors = {
 | silver | (192,192,192,1) | #c0c0c0 |  
 | skyblue | (135,206,235,1) | #87ceeb |  
 | slateblue | (106,90,205,1) | #6a5acd |  
-| slategray | (112,128,144,1) | #708090 |  
-| slategrey | (112,128,144,1) | #708090 |  
+| slategray <BR> slategrey | (112,128,144,1) | #708090 |  
 | snow | (255,250,250,1) | #fffafa |  
 | springgreen | (0,255,127,1) | #00ff7f |  
 | steelblue | (70,130,180,1) | #4682b4 |  
@@ -174,6 +177,7 @@ arrColors = {
 | thistle | (216,191,216,1) | #d8bfd8 |  
 | tomato | (255,99,71,1) | #ff6347 |  
 | turquoise | (64,224,208,1) | #40e0d0 |  
+| very dark grey||#333333|  
 | violet | (238,130,238,1) | #ee82ee |  
 | wheat | (245,222,179,1) | #f5deb3 |  
 | white | (255,255,255,1) | #ffffff |  
