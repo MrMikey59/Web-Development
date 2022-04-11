@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
         $.each($(".drop"), function() {
            var drop = $(this),
            dropOffset = drop.offset();
-            if (dropOffset.left > (window.innerWidth / 2)) {
+            if (dropOffset.left > (window.innerWidth / 2 || document.body.clientWidth / 2 )) {
                 drop.next().addClass('align_right');
             }
            else {
@@ -14,11 +14,12 @@ jQuery(document).ready(function(){
         });
     }
  
+    // run quick fix on load
     adjustMenus();
 
-    $(window).resize(function(){
-        adjustMenus();
-    }); 
+    // add fix to window resize event
+    window.onresize = adjustMenus;
+    
     
 	$('div[class^="dropdown"]').each(function(){
 		$(this).parent().click(function(){
