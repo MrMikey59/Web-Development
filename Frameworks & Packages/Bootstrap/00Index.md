@@ -1,5 +1,10 @@
 # Bootstrap
 
+```html
+<LINK href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<SCRIPT src="bootstrap.min.js" type="text/javascript"></SCRIPT>
+```
+
 ## CDN Calls
 ```html
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
