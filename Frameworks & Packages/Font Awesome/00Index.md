@@ -1,7 +1,14 @@
 # Font Awesome
 
+U: Michael.R.Myers1.CTR@navy.mil PHint: 1st QTR 2022
+Kit:
+```html
+<script src="https://kit.fontawesome.com/249fc961f6.js" crossorigin="anonymous"></script>
+```
+
 Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, or really almost whatever you want.  
 
+## Licensing
 - **Icons** — CC BY 4.0 License  
     In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
 - **Fonts** — SIL OFL 1.1 License
@@ -13,8 +20,8 @@ Font Awesome Free is free, open source, and GPL friendly. You can use it for com
 - [Font Awesome 4](https://fontawesome.com/v4.7/)
 - https://github.com/Rush/Font-Awesome-SVG-PNG
 - https://github.com/FortAwesome/Font-Awesome  
-[Fort Awesome](https://fortawesome.com) - Dave Gandy
-
+- [Full Font Awesome Free license](https://fontawesome.com/license)
+- [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons/)
 ### Kit 1: 
 ```html
 <script src="https://kit.fontawesome.com/8864ea4335.js" crossorigin="anonymous"></script>
@@ -61,5 +68,22 @@ Font Awesome Free is free, open source, and GPL friendly. You can use it for com
   <li><a href="#"><i class="icon-fixed-width icon-pencil"></i> Applications</a></li>
   <li><a href="#"><i class="icon-fixed-width icon-cogs"></i> Settings</a></li>
 </ul>
+```
+
+## HTML Linking
+```css
+  .fontawesome-icon-list > div {
+      float: left;
+      margin: 10px 5px 10px 5px;
+      width: 15%;
+  }
+```
+
+```html
+<i class="fas fa-camera"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == camera -->
+<i class="fas fa-camera"></i> <!-- using an <i> element to reference the icon -->
+<span class="fas fa-camera"></span> <!-- using a <span> element to reference the icon -->
+<SPAN class="fa fa-caret-down"></SPAN>
+<SPAN class="fa fa-home"></SPAN>
 ```
 
