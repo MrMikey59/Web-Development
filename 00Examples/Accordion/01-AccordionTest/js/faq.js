@@ -1,5 +1,3 @@
-// FAQ 
-
 jQuery(document).ready(
   jQuery(function() {
     jQuery( ".faq-accordion" ).accordion({

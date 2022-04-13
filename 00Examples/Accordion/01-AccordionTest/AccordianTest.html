@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Menu Test</title>
+
+<!-- Set Meta Data -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<!-- Set Icons -->
+  <link rel="icon" href="favicon.png" type="image/png"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+<!-- Link Style Sheets -->
+  <link type="text/css" href="css/jquery-ui.css" rel="Stylesheet">
+
+<style>
+html {
+  box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: "Times New Roman", serif;
+  font-size: 0.875em;
+  background-color:#f5f5f5;
+  color: #343434;
+  min-width: 900px;
+}
+p {
+  line-height: 1.2em;
+}
+
+/* ========Accordion======== */
+.faq-accordion {
+    width: 75%;
+}
+.faq-accordion h3 {
+    margin-bottom: 0;
+}
+/* ========End of Accordion======== */
+
+/* ========Alignment======== */
+.center {
+  max-width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/* ========End of Alignment======== */
+
+/* ========Column======== */
+.column-container:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: " ";
+}
+.column-of-two {
+  padding: 0.5%;
+  float: left;
+  width: 50%;
+}
+.column-of-three {
+  padding: 0.5%;
+  float: left;
+  width:33%;
+}
+.column-of-four {
+  padding: 0.5%;
+  float: left;
+  width: 25%;
+}
+/* ========End Column======== */
+
+/* ========Content======== */
+.content {
+  background-color: #FcFcFc;
+  color: #343434;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 50%;
+  max-width:90%;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #dddddd;
+  padding: 5px;
+  line-height: 15px;	
+}
+
+.content > p {
+    margin-left: 15px;
+}
+
+.content:after {
+    content:"";
+    display:table;
+    clear:both;
+	overflow: hidden;      
+}
+
+/* content style without width restrictions*/
+.content-style {
+	background-color: #FFFFFF;
+	color: #343434;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-width: 3px;
+	border-color: #dddddd;
+	padding: 5px;
+	line-height: 20px;	
+}
+/* ========End of Content======== */
+
+/* ========Headers======== */
+h1, h2, h3, h4, h5 {
+  font-family: Arial;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3125em;
+}
+
+h4 {
+  font-size: 1.125em;
+}
+
+h5 {
+  font-size: 1em;
+
+}
+/* ========End of Headers======= */
+</style>
+
+<!-- Link Scripts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/faq.js"></script>
+
+</head>
+
+<body>
+
+<!- ====== Accodion Content ====== -->
+
+<!-- Engineering Support -->
+  <section id="LES-content" class="content">
+    <h2></a>Logistics Engineering Support</h2>
+    <div class="column-container">
+      <div class="column-of-two" align="center">
+        <img alt="Department Logo" src="images/LELogo.png" style="width:100px;height:100px; vertical-align:middle">
+      </div>
+      <div class="column-of-two">
+        <p style="font-size: 12pt">
+          <strong>Supervisor: </strong>Marcus<br>
+          <strong>  Call: </strong>360-555-1234<br>
+          <strong>  Email Address: </strong><a href="mailto:name@where.com" target="_top">Marcus</a>
+        </p>
+      </div>
+
+<!-- Sub-Accordians for EngSup -->
+
+<BR><BR><BR><BR><BR><BR><BR><BR><!-- Why are those breaks necessary to reduce the first acordian size? -->
+
+<div class="faq-accordion center ui-accordion ui-widget ui-helper-reset">
+  <h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Logistics Support (LS) & Logistics Tracking System (LTS)</h3>
+  <section class="ui-accordion-content" style="display: none;">
+<UL>
+  <li>Monitor logistics processes</li>
+</UL>
+<HR>
+<UL>
+  <LI><B>Michael</B>, Management Coordinator</LI>
+</UL>
+  </section> 
+</div> 
+
+<div class="faq-accordion center ui-accordion ui-widget ui-helper-reset">
+  <h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Record Drawings (RD)</h3>
+  <section class="ui-accordion-content" style="display: none;">
+<UL>
+  <li>Develop and maintain Drawings</li>
+</UL>
+<HR>
+<UL>
+  <LI><B>Paul</B>, Engineering Coordinator</LI>
+</UL>
+  </section> 
+</div> 
+
+  </section> <!-- End of ES-Content -->
+
+</body>
+</html>
