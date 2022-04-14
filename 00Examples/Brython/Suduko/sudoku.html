@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><meta charset="iso-8859-1">
+
+<style>
+body,td,th{
+    font-family:sans-serif;
+    font-size:12px;
+}
+td {
+    border-style:solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #000;
+    padding:3px;
+}
+
+th {
+    border-style:solid;
+    border-width: 1px;
+    border-color: #000;
+    background-color: #61D7A4;
+    padding: 4px;
+}
+
+</style>
+
+<script type="text/javascript" src="sudoku_files/brython.js"></script>
+<script type="text/python" src="sudoku_files/show_source.omcsettings"></script>
+<style>
+table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+colgroup, tbody { border: solid medium; }
+td { border: solid thin; height: 1.8em; width: 1.8em; text-align: center; padding: 0; }
+</style>
+</head>
+<body onload="brython()" data-new-gr-c-s-check-loaded="8.896.0" data-gr-ext-installed="">
+<div style="text-align: right;"><button class="nice">Show source code</button></div><script type="text/python">
+from browser import document, html, alert
+from random import choice
+
+import sudoku
+
+current_cell = None
+
+def entry_keypress(ev):
+    ev.preventDefault()
+    ev.stopPropagation()
+    target = ev.target
+    is_digit = ev.key.isdigit()
+    if is_digit:
+        value = ev.key
+        cell = ev.target.parent
+        cell.clear()
+        cell.text = value
+
+        # jump to next cell
+        cell_rank = int(cell.id[1:])
+        if cell_rank < 80:
+            next_cell = puzzle.get(selector="TD")[cell_rank + 1]
+            make_input(next_cell)
+
+def entry_keydown(ev):
+    is_tab = ev.key == "Tab"
+    if is_tab:
+        ev.preventDefault()
+        ev.stopPropagation()
+        value = ev.target.value
+        cell = ev.target.parent
+        cell.clear()
+        cell.text = value
+
+        # jump to next cell
+        cell_rank = int(cell.id[1:])
+        if not ev.shiftKey:
+            if cell_rank < 80:
+                next_cell = puzzle.get(selector="TD")[cell_rank + 1]
+                make_input(next_cell)
+        else: # shift tab
+            if cell_rank > 0:
+                next_cell = puzzle.get(selector="TD")[cell_rank - 1]
+                make_input(next_cell)
+
+def end_entry(ev):
+    global current_cell
+    if current_cell is not None:
+        inputs = current_cell.get(selector="INPUT")
+        if inputs:
+            value = inputs[0].value
+            current_cell.clear()
+            current_cell.text = value
+
+def entry(ev):
+    end_entry(ev)
+    make_input(ev.target)
+
+def entry_blur(ev):
+    end_entry(ev)
+
+def make_input(cell):
+    global current_cell
+    value = cell.text.strip()
+    cell.clear()
+    input = html.INPUT(value=value,
+        style={"width": "1.3em", "padding": "0px"})
+    cell <= input
+    input.bind("keydown", entry_keydown)
+    input.bind("keypress", entry_keypress)
+    input.focus()
+    input.select()
+    current_cell = cell
+
+def make_grid (grid):
+    # returns an HTML table with 9 rows and 9 columns
+    global current_cell
+
+    t = html.TABLE()
+    for i in range(3):
+        cg = html.COLGROUP()
+        for j in range(3):
+            cg <= html.COL()
+        t <= cg
+    srow = -1
+    for i,val in enumerate(grid):
+        row, column = divmod(i, 9)
+        if row > srow:
+            if row % 3 == 0:
+                tb = html.TBODY()
+                t <= tb
+            line = html.TR()
+            tb <= line
+            srow = row
+        if val == "0":
+            val = " "
+        cell = html.TD(val, id="i%s" %i)
+        cell.bind("click", entry)
+        cell.style.contentEditable = True
+        if column % 3 == 0:
+            cell.style.borderLeftWidth = "1px"
+        if column == 8:
+            cell.style.borderRightWidth = "1px"
+        line <= cell
+
+    current_cell = None
+    return t
+
+# example from http://magictour.free.fr/msk_009
+grids = [line.replace(".", "0").strip() for line in open("sudoku_grids.txt")]
+
+puzzle = html.SPAN(style={"float":"left"})
+puzzle <= make_grid(choice(grids))
+document <= puzzle
+
+buttons = html.SPAN(style={"float":"left"})
+
+b_solve = html.BUTTON("Solve")
+buttons <= html.DIV(b_solve)
+
+def solve(ev):
+    line = "".join(cell.text or " " for cell in puzzle.get(selector="TD"))
+    line = line.replace(" ","0")
+    try:
+        solution = sudoku.sudoku99(line)
+        result.clear()
+        result <= make_grid(solution)
+    except:
+        result.clear()
+        result <= "No solution !"
+
+b_solve.bind("click", solve)
+
+buttons <= html.P()
+
+b_change = html.BUTTON("Load random grid")
+buttons <= html.DIV(b_change)
+
+def change_grid(ev):
+    puzzle.clear()
+    puzzle <= make_grid(choice(grids))
+
+b_change.bind("click", change_grid)
+
+b_clear = html.BUTTON("Enter new grid")
+buttons <= html.DIV(b_clear)
+
+def clear_grid(ev):
+    result.clear()
+    cells = puzzle.get(selector="TD")
+    for cell in cells:
+        cell.text = " "
+    alert("Enter digits in the puzzle. Use TAB key to navigate")
+    make_input(cells[0])
+
+b_clear.bind("click", clear_grid)
+
+document <= buttons
+
+result = html.SPAN(style={"float":"left"})
+document <= result
+
+</script>
+
+<h1>Sudoku solver</h1>
+<a href="https://github.com/attractivechaos/plb/blob/master/sudoku/incoming/sudoku-bb.py">Sudoku algorithm</a> by Boris Borcic,
+sample grids from <a href="http://magictour.free.fr/msk_009">http://magictour.free.fr/msk_009</a>,
+
+<p>
+
+
+</p><style>
+/* colors for highlighted Python code */
+
+span.python-string{
+    color: #27d;
+}
+span.python-comment{
+    color: #019;
+}
+span.python-keyword{
+    color: #950;
+}
+span.python-builtin{
+    color: #183;
+}
+
+em {
+  color:#339;
+  font-family:courier
+}
+
+strong {
+  color:#339;
+  font-family:courier;
+}
+
+button.nice{
+    margin-right: 15%;
+    color: #fff;
+    background: #7ae;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #45b;
+    text-align: center;
+    font-size: 15px;
+    padding: 6px;
+}
+
+</style><span style="float: left;"><table><colgroup><col><col><col></colgroup><colgroup><col><col><col></colgroup><colgroup><col><col><col></colgroup><tbody><tr><td id="i0" style="border-left-width: 1px;"> </td><td id="i1">4</td><td id="i2"> </td><td id="i3" style="border-left-width: 1px;"> </td><td id="i4">8</td><td id="i5">2</td><td id="i6" style="border-left-width: 1px;"> </td><td id="i7">3</td><td id="i8" style="border-right-width: 1px;"> </td></tr><tr><td id="i9" style="border-left-width: 1px;"> </td><td id="i10">5</td><td id="i11"> </td><td id="i12" style="border-left-width: 1px;"> </td><td id="i13"> </td><td id="i14"> </td><td id="i15" style="border-left-width: 1px;">1</td><td id="i16"> </td><td id="i17" style="border-right-width: 1px;"> </td></tr><tr><td id="i18" style="border-left-width: 1px;"> </td><td id="i19"> </td><td id="i20"> </td><td id="i21" style="border-left-width: 1px;"> </td><td id="i22">3</td><td id="i23">7</td><td id="i24" style="border-left-width: 1px;"> </td><td id="i25">6</td><td id="i26" style="border-right-width: 1px;"> </td></tr></tbody><tbody><tr><td id="i27" style="border-left-width: 1px;">8</td><td id="i28"> </td><td id="i29">2</td><td id="i30" style="border-left-width: 1px;"> </td><td id="i31"> </td><td id="i32"> </td><td id="i33" style="border-left-width: 1px;"> </td><td id="i34">1</td><td id="i35" style="border-right-width: 1px;"> </td></tr><tr><td id="i36" style="border-left-width: 1px;">5</td><td id="i37"> </td><td id="i38"> </td><td id="i39" style="border-left-width: 1px;">3</td><td id="i40">1</td><td id="i41">6</td><td id="i42" style="border-left-width: 1px;"> </td><td id="i43"> </td><td id="i44" style="border-right-width: 1px;"> </td></tr><tr><td id="i45" style="border-left-width: 1px;"> </td><td id="i46"> </td><td id="i47"> </td><td id="i48" style="border-left-width: 1px;"> </td><td id="i49"> </td><td id="i50">8</td><td id="i51" style="border-left-width: 1px;"> </td><td id="i52"> </td><td id="i53" style="border-right-width: 1px;"> </td></tr></tbody><tbody><tr><td id="i54" style="border-left-width: 1px;"> </td><td id="i55"> </td><td id="i56">1</td><td id="i57" style="border-left-width: 1px;"> </td><td id="i58">5</td><td id="i59"> </td><td id="i60" style="border-left-width: 1px;"> </td><td id="i61"> </td><td id="i62" style="border-right-width: 1px;"> </td></tr><tr><td id="i63" style="border-left-width: 1px;">2</td><td id="i64">6</td><td id="i65"> </td><td id="i66" style="border-left-width: 1px;"> </td><td id="i67"> </td><td id="i68"> </td><td id="i69" style="border-left-width: 1px;"> </td><td id="i70">4</td><td id="i71" style="border-right-width: 1px;">3</td></tr><tr><td id="i72" style="border-left-width: 1px;">3</td><td id="i73"> </td><td id="i74">4</td><td id="i75" style="border-left-width: 1px;"> </td><td id="i76"> </td><td id="i77"> </td><td id="i78" style="border-left-width: 1px;"> </td><td id="i79"> </td><td id="i80" style="border-right-width: 1px;"> </td></tr></tbody></table></span><span style="float: left;"><div><button>Solve</button></div><p></p><div><button>Load random grid</button></div><div><button>Enter new grid</button></div></span><span style="float: left;"></span></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

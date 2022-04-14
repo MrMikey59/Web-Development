@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8">
+
+<title>Title</title>
+
+    <link rel="stylesheet" href="TheClock_files/bootstrap.css">
+    <!-- Create a simple CodeMirror instance -->
+    <link rel="stylesheet" href="TheClock_files/codemirror.css">
+    <link rel="stylesheet" href="TheClock_files/shadowfox.css">
+
+    <script type="text/javascript" src="TheClock_files/brython.js"></script>
+    <script type="text/javascript" src="TheClock_files/brython_stdlib.js"></script>
+    <script src="TheClock_files/codemirror.js"></script>
+    <script src="TheClock_files/python.js"></script>
+    
+    <style>
+     html {
+        height: 100%;
+      }
+     /* 
+      body {
+        height: 100%;
+      }
+      #main {
+        height: 100%;
+      }
+      #main > .row, #main .card, #input-ta, .card .card-body, .full-h{
+        height: 100%;
+      }
+       .CodeMirror{
+        height: 100%;
+      }
+       .wrapper {
+        height: 90%;
+       }
+      .full-h .card-body{
+        padding: 0px;
+      }*/
+      .CodeMirror {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        flex: 1 0 100%;
+      }
+      .code-colrow {
+        position:relative;
+      }
+      textarea#input-ta {
+        height: 100%;
+        width: 100%;
+        border: 1px solid gray;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body onload="brython(1)" class=" h-100">
+  
+  <div class="modal fade" id="help-content" tabindex="-1" role="dialog" aria-labelledby="help-modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="help-modal-title">Brython Tiny IDE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This is a very simple Brython IDE. The idea is to have a 
+static web page that can be hosted without any backend software. This is
+ also a one pager. All libraries come from CDNs. </p>
+          <p>The left column contains the editor and the right column contains an output div. You can access it in your brython code using <code>document["output"]</code>.</p>
+          
+          <p>This tiny IDE includes the following libraries: 
+            </p><ul>
+              <li>Bootstrap 4 - This contains lots of components and 
+utilities that you can use just by setting classes. You have access to 
+buttons, layouts and many other things. </li>
+              <li>Jquery Slim</li>
+            </ul>
+           <p></p>
+          <p>For a more complex IDE, check out <a href="https://github.com/tiggerntatie/brython-server">brython-server</a></p>
+          <p>You can run the code with Ctrl + Enter.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="main" class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+      <div class="col-6 bg-red">
+        <div class="h-100 d-flex flex-column">
+          <div class="row bg-dark">
+            <nav class="navbar navbar-dark bg-dark w-100">
+              <div class="navbar-brand">Brython Tiny IDE</div>
+              <div class="form-inline">
+                <button class="btn btn-info mx-2" id="show-help" data-toggle="modal" data-target="#help-content">Help</button>
+                <button class="btn btn-success mx-2" id="run-code" title="Ctrl + Enter"> ►</button>
+              <div>
+            </div></div></nav>
+              
+          </div>
+          <div class="row justify-content-center bg-blue flex-grow-1 code-colrow">
+
+<textarea id="input-ta" style="display: none;">
+import time
+import math
+import datetime
+
+from browser import html
+from browser import document as doc
+import browser.timer
+
+sin, cos = math.sin, math.cos
+width, height = 250, 250 # canvas dimensions
+ray = 100 # clock ray
+
+def needle(angle, r1, r2, color="#000000"):
+    # draw a needle at specified angle in specified color
+    # r1 and r2 are percentages of clock ray
+    x1 = width / 2 - ray * cos(angle) * r1
+    y1 = height / 2 - ray * sin(angle) * r1
+    x2 = width / 2 + ray * cos(angle) * r2
+    y2 = height / 2 + ray * sin(angle) * r2
+    ctx.beginPath()
+    ctx.strokeStyle = color
+    ctx.moveTo(x1, y1)
+    ctx.lineTo(x2, y2)
+    ctx.stroke()
+
+def set_clock():
+    # erase clock
+    ctx.beginPath()
+    ctx.fillStyle = "#fff"
+    ctx.arc(width / 2, height / 2, ray * 0.89, 0, 2 * math.pi)
+    ctx.fill()
+    
+    # redraw hours
+    show_hours()
+
+    # print day
+    now = datetime.datetime.now()
+    day = now.day
+    ctx.font = "bold 14px Arial"
+    ctx.textAlign = "center"
+    ctx.textBaseline = "middle"
+    ctx.fillStyle = "#fff"
+    ctx.fillText(day, width * 0.7, height * 0.5)
+
+    # draw needles for hour, minute, seconds    
+    ctx.lineWidth = 3
+    hour = now.hour % 12 + now.minute / 60
+    angle = hour * 2 * math.pi / 12 - math.pi / 2
+    needle(angle, 0.05, 0.5)
+    minute = now.minute
+    angle = minute * 2 * math.pi / 60 - math.pi / 2
+    needle(angle, 0.05, 0.85)
+    ctx.lineWidth = 1
+    second = now.second + now.microsecond / 1000000
+    angle = second * 2 * math.pi / 60 - math.pi / 2
+    needle(angle, 0.05, 0.85, "#f00") # in red
+    
+browser.timer.set_interval(set_clock, 100)
+
+
+canvas = html.CANVAS(height="300");
+doc["output"] &lt;= canvas
+
+# draw clock border
+ctx = canvas.getContext("2d")
+ctx.beginPath()
+ctx.lineWidth = 10
+ctx.arc(width / 2, height / 2, ray, 0, 2 * math.pi)
+ctx.stroke()
+
+for i in range(60):
+    ctx.lineWidth = 1
+    if i % 5 == 0:
+        ctx.lineWidth = 3
+    angle = i * 2 * math.pi / 60 - math.pi / 3
+    x1 = width / 2 + ray * cos(angle)
+    y1 = height / 2 + ray * sin(angle)
+    x2 = width / 2 + ray * cos(angle) * 0.9
+    y2 = height / 2 + ray * sin(angle) * 0.9
+    ctx.beginPath()
+    ctx.moveTo(x1, y1)
+    ctx.lineTo(x2, y2)
+    ctx.stroke()
+
+def show_hours():
+    ctx.beginPath()
+    ctx.arc(width / 2, height / 2, ray * 0.05, 0, 2 * math.pi)
+    ctx.fillStyle = "#000"
+    ctx.fill()
+    for i in range(1, 13):
+        angle = i * math.pi / 6 - math.pi / 2
+        x3 = width / 2 + ray * cos(angle) * 0.75
+        y3 = height / 2 + ray * sin(angle) * 0.75
+        ctx.font = "20px Arial"
+        ctx.textAlign = "center"
+        ctx.textBaseline = "middle"
+        ctx.fillText(i, x3, y3)
+    # cell for day
+    ctx.fillStyle = "#000"
+    ctx.fillRect(width * 0.65, height * 0.47, width * 0.1, height * 0.06)
+
+show_hours()
+set_clock()
+</textarea>
+
+<div class="CodeMirror cm-s-shadowfox"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 43px;"><textarea style="position: absolute; bottom: -1em; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 2504px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 39px; margin-bottom: -17px; border-right-width: 13px; min-height: 2504px; min-width: 707.8px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div style="position: relative; outline: currentcolor none medium;" role="presentation"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>104</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 148px; top: 48px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">import</span> <span class="cm-variable">time</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">import</span> <span class="cm-variable">math</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">import</span> <span class="cm-variable">datetime</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">from</span> <span class="cm-variable">browser</span> <span class="cm-keyword">import</span> <span class="cm-variable">html</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">from</span> <span class="cm-variable">browser</span> <span class="cm-keyword">import</span> <span class="cm-variable">document</span> <span class="cm-keyword">as</span> <span class="cm-variable">doc</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">import</span> <span class="cm-variable">browser</span>.<span class="cm-property">timer</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable">sin</span>, <span class="cm-variable">cos</span> <span class="cm-operator">=</span> <span class="cm-variable">math</span>.<span class="cm-property">sin</span>, <span class="cm-variable">math</span>.<span class="cm-property">cos</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable">width</span>, <span class="cm-variable">height</span> <span class="cm-operator">=</span> <span class="cm-number">250</span>, <span class="cm-number">250</span> <span class="cm-comment"># canvas dimensions</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable">ray</span> <span class="cm-operator">=</span> <span class="cm-number">100</span> <span class="cm-comment"># clock ray</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">def</span> <span class="cm-def">needle</span>(<span class="cm-variable">angle</span>, <span class="cm-variable">r1</span>, <span class="cm-variable">r2</span>, <span class="cm-variable">color</span><span class="cm-operator">=</span><span class="cm-string">"#000000"</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># draw a needle at specified angle in specified color</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># r1 and r2 are percentages of clock ray</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">x1</span> <span class="cm-operator">=</span> <span class="cm-variable">width</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">-</span> <span class="cm-variable">ray</span> <span class="cm-operator">*</span> <span class="cm-variable">cos</span>(<span class="cm-variable">angle</span>) <span class="cm-operator">*</span> <span class="cm-variable">r1</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">y1</span> <span class="cm-operator">=</span> <span class="cm-variable">height</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">-</span> <span class="cm-variable">ray</span> <span class="cm-operator">*</span> <span class="cm-variable">sin</span>(<span class="cm-variable">angle</span>) <span class="cm-operator">*</span> <span class="cm-variable">r1</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">x2</span> <span class="cm-operator">=</span> <span class="cm-variable">width</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">+</span> <span class="cm-variable">ray</span> <span class="cm-operator">*</span> <span class="cm-variable">cos</span>(<span class="cm-variable">angle</span>) <span class="cm-operator">*</span> <span class="cm-variable">r2</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">y2</span> <span class="cm-operator">=</span> <span class="cm-variable">height</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">+</span> <span class="cm-variable">ray</span> <span class="cm-operator">*</span> <span class="cm-variable">sin</span>(<span class="cm-variable">angle</span>) <span class="cm-operator">*</span> <span class="cm-variable">r2</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">beginPath</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">strokeStyle</span> <span class="cm-operator">=</span> <span class="cm-variable">color</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">moveTo</span>(<span class="cm-variable">x1</span>, <span class="cm-variable">y1</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">lineTo</span>(<span class="cm-variable">x2</span>, <span class="cm-variable">y2</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">stroke</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-keyword">def</span> <span class="cm-def">set_clock</span>():</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># erase clock</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">beginPath</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">fillStyle</span> <span class="cm-operator">=</span> <span class="cm-string">"#fff"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">arc</span>(<span class="cm-variable">width</span> <span class="cm-operator">/</span> <span class="cm-number">2</span>, <span class="cm-variable">height</span> <span class="cm-operator">/</span> <span class="cm-number">2</span>, <span class="cm-variable">ray</span> <span class="cm-operator">*</span> <span class="cm-number">0.89</span>, <span class="cm-number">0</span>, <span class="cm-number">2</span> <span class="cm-operator">*</span> <span class="cm-variable">math</span>.<span class="cm-property">pi</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">fill</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># redraw hours</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">show_hours</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># print day</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">now</span> <span class="cm-operator">=</span> <span class="cm-variable">datetime</span>.<span class="cm-property">datetime</span>.<span class="cm-property">now</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">day</span> <span class="cm-operator">=</span> <span class="cm-variable">now</span>.<span class="cm-property">day</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">font</span> <span class="cm-operator">=</span> <span class="cm-string">"bold 14px Arial"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">textAlign</span> <span class="cm-operator">=</span> <span class="cm-string">"center"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">41</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">textBaseline</span> <span class="cm-operator">=</span> <span class="cm-string">"middle"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">42</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">fillStyle</span> <span class="cm-operator">=</span> <span class="cm-string">"#fff"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">43</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">fillText</span>(<span class="cm-variable">day</span>, <span class="cm-variable">width</span> <span class="cm-operator">*</span> <span class="cm-number">0.7</span>, <span class="cm-variable">height</span> <span class="cm-operator">*</span> <span class="cm-number">0.5</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">44</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">45</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-comment"># draw needles for hour, minute, seconds    </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">46</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">ctx</span>.<span class="cm-property">lineWidth</span> <span class="cm-operator">=</span> <span class="cm-number">3</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">47</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">hour</span> <span class="cm-operator">=</span> <span class="cm-variable">now</span>.<span class="cm-property">hour</span> <span class="cm-operator">%</span> <span class="cm-number">12</span> <span class="cm-operator">+</span> <span class="cm-variable">now</span>.<span class="cm-property">minute</span> <span class="cm-operator">/</span> <span class="cm-number">60</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">48</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">angle</span> <span class="cm-operator">=</span> <span class="cm-variable">hour</span> <span class="cm-operator">*</span> <span class="cm-number">2</span> <span class="cm-operator">*</span> <span class="cm-variable">math</span>.<span class="cm-property">pi</span> <span class="cm-operator">/</span> <span class="cm-number">12</span> <span class="cm-operator">-</span> <span class="cm-variable">math</span>.<span class="cm-property">pi</span> <span class="cm-operator">/</span> <span class="cm-number">2</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">49</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">needle</span>(<span class="cm-variable">angle</span>, <span class="cm-number">0.05</span>, <span class="cm-number">0.5</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">50</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">minute</span> <span class="cm-operator">=</span> <span class="cm-variable">now</span>.<span class="cm-property">minute</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">51</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    <span class="cm-variable">angle</span> <span class="cm-operator">=</span> <span class="cm-variable">minute</span> <span class="cm-operator">*</span> <span class="cm-number">2</span> <span class="cm-operator">*</span> <span class="cm-variable">math</span>.<span class="cm-property">pi</span> <span class="cm-operator">/</span> <span class="cm-number">60</span> <span class="cm-operator">-</span> <span class="cm-variable">math</span>.<span class="cm-property">pi</span> <span class="cm-operator">/</span> <span class="cm-number">2</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 2504px;"></div>
+
+<div class="CodeMirror-gutters" style="height: 2517px; left: 0px;">
+  <div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 38px;"></div>
+</div>
+    </div></div>
+          </div>
+        </div>
+      </div>
+      
+<!-- The Clock Holder -->
+<div class="col-6" id="output"><canvas height="300"></canvas></div>
+
+    </div>
+  </div>
+  
+<script type="text/python3">
+from browser import document, window
+def __EXECUTE__BRYTHON__(*argv):
+    content = window.editor.getValue("\n")
+    # Empty the output element
+    document['output'].clear()	
+    exec(content, {"__name__":"__main__"})
+window.__EXECUTE__BRYTHON__ = __EXECUTE__BRYTHON__
+document["run-code"].bind("click", __EXECUTE__BRYTHON__)
+__EXECUTE__BRYTHON__()
+</script>
+  
+  <script src="TheClock_files/jquery-3.js"></script>
+  <script src="TheClock_files/popper.js"></script>
+  <script src="TheClock_files/bootstrap.js"></script>
+
+  <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("input-ta"), {
+        lineNumbers: true,
+        theme: "shadowfox",
+        "extraKeys": {
+          "Ctrl-Enter": function(cm) {
+            __EXECUTE__BRYTHON__();
+          }
+        }
+      });
+      editor.refresh();
+  </script>
+  
+</body>
+
+</html>
