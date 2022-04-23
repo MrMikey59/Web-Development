@@ -29,10 +29,10 @@
   - Page Header
 - jsCompress (code minimization)
 - Menus
-  - Menu Test 1  
+  - Menu Test 1  (NavBar)
   - Menu Test 2 
   - Menu Test 6  (CSS Only)
-  - Menu Test 7  (CSS Only)
+  - Menu Test 7  (CSS Only - not working)
   - Menu Test 8  (CSS Only) 
   - Menu Test 9  (CSS Only)
   - Menu Test 10 (CSS Only) 
