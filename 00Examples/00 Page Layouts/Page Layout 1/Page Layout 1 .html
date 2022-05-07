@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<title>Page Layout 1</title>
+
+<style>
+
+:root {
+  --ContentsBG: 	#ffffff;     /* white */
+  --BannerBG:	#f0f0f0;  /* light gray */
+  --PageBG:	#f0fff0;   /* pale green */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f0fff0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: inherit;
+}
+
+.banner {
+  background-color: #f0f0f0;
+  text-align: center;
+  width: 100%;
+}
+
+.banner h1 {
+ padding: 0;
+ margin: 0;
+}
+
+.center  {
+  text-align:center;
+}
+
+.contents {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.footer{
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.height60 {
+  height: 60px;
+}
+
+.padding20 {
+  padding:20px;
+} 
+
+.LeftMenu {
+  background-color: #f0f0f0;
+  display: inline-block;
+  flex-grow:1;
+  padding: 6px;
+  text-align: leftt;
+}
+
+.LeftMenu a,
+.RightMenu a {
+  text-decoration: none;
+}
+
+.MenuItem{
+  color:#202124;
+  padding: 6px;
+}
+
+.RightMenu {
+  background-color: #f0f0f0;
+  display: inline-block;
+  flex-grow:1;
+  padding: 6px;
+  text-align: right;
+}
+
+.seperation {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 6px;
+  text-align: center;
+  width: 6px;
+}
+
+.toplinemenu{
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===============Contents Box================= -->
+<div class="contents">
+
+<div class="banner">
+  <h1>GMenu Contents</h1>
+</div>
+
+<!-- ================Top Line Menu Container======== -->
+<div class="toplinemenu"> 
+
+  <div class="LeftMenu MenuList">
+    <a class="MenuItem" href="#">About</a> | 
+    <a class="MenuItem" href="#">Store</a>
+  </div> <!-- End of Left Menu -->
+
+  <div class="seperation">|</div>
+
+  <div class="RightMenu">
+    <a class="MenuItem" href="https://mail.google.com/mail/" target="_top">Gmail</a> |
+    <a class="MenuItem" href="https://www.google.com/imghp?hl=en" target="_top">Images</a> |
+    <a class="MenuItem" href="https://www.google.com/intl/en/about/products" aria-expanded="false" role="button" tabindex="0">Apps</a> 
+  </div>  <!-- End of Right Menu -->
+
+  <div class="IconBox">
+      <img src="images/mikey32.jpg" srcset="images/mikey32.jpg 1x, images/mikey64.jpg 2x" alt="Mikey">
+  </div>  <!-- End of Icon Box -->
+
+</div>  <!-- ==========End of TopLineMenu ======= -->
+
+<P>End of Contents!</P>
+</div> <!-- ==========End of Content box========= -->
+
+<!-- ===============Footer Box================= -->
+<div class="footer">
+
+<P>The Footer!</P>
+
+</div> <!-- ==========End of Footer Box========= -->
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Flip Cards Example</title>
+
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/portal.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body> 
+
+<div id="content" role="main"> Main Starts Here!
+</div>
+
+    <style>
+        @media only screen and (min-width: 300px) {
+            .dod2-card {
+                width: calc(100% - 16px);
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .dod2-card {
+                width: calc(50% - 16px);
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .dod2-card {
+                width: calc(50% - 32px);
+            }
+        }
+
+        
+        @media only screen and (min-width: 600px) {
+            .dod2-card__title {
+                line-height: 2.6rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .dod2-card {
+                width: calc(50% - 32px);
+                margin: 8px;
+                padding: 1.6rem;
+            }
+
+            .dod2-card__title {
+                line-height: 2.3rem;
+                font-size: 1.5rem;
+            }
+
+            .dod2-card:hover .dod2-card__read-more, .dod2-card:focus .dod2-card__read-more, .dod2-card:active .dod2-card__read-more {
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .dod2-card {
+                width: calc(33.33334% - 32px);
+                min-width: 0;
+                min-height: 0;
+                margin: 8px 4px 8px 15px;
+            }
+
+            .dod2-card__title {
+                line-height: 2.6rem;
+                font-size: 1.8rem;
+            }
+
+            .dod2-card:hover .dod2-card__content, .dod2-card:focus .dod2-card__content, .dod2-card:active .dod2-card__content {
+                margin-top: 28px;
+            }
+
+            .dod2-card:hover .dod2-card__read-more, .dod2-card:focus .dod2-card__read-more, .dod2-card:active .dod2-card__read-more {
+                opacity: 1;
+            }
+
+            .dod2-card .dod2-object-eyebrow {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .dod2-card {
+                width: calc(25% - 32px);
+            }
+        }
+</style>	
+	
+<section id="dod2-card-grid" class="dod2-card-grid">
+    <div class="dod2-card-grid-rows">
+        
+        <a class="dod2-card" href="https://newsroom.tricare.mil/Articles/Article/3006260/pharmacy-benefit-questions-check-out-this-handbook">
+            <div class="dod2-card__image" style="background-image: url(https://media.defense.gov/2022/Apr/21/2002981243/600/400/0/220421-A-AB123-001.JPG)">
+                <span class="sr-only">The TRICARE Pharmacy Program Handbook and other publications resources.</span>
+            </div>
+            <div class="dod2-card__overlay"></div>
+            <div class="dod2-card__content">
+                <h3 class="dod2-card__title"><span>Pharmacy Benefit Questions? Check Out This Handbook</span></h3>
+                <div class="dod2-object-eyebrow">
+                    <div class="dod2-object-eyebrow-type">
+                        News
+                    </div>
+                    <div class="dod2-object-eyebrow-date">
+                        Apr. 21, 2022
+                    </div>
+                </div>
+                <hr class="dod2-card__hr">
+                <div class="dod2-card__description">
+                    <span>Do you want to learn more about your prescription drug coverage? The TRICARE Pharmacy Program Handbook can...</span>
+                    <div class="dod2-card__read-more">Read More</div>
+                </div>
+                    
+            </div>
+        </a>
+        
+        <a class="dod2-card" href="https://newsroom.tricare.mil/Articles/Article/3002999/pre-authorization-and-medical-necessity-for-prescription-drugs-what-you-need-to">
+            <div class="dod2-card__image" style="background-image: url(https://media.defense.gov/2022/Apr/18/2002979018/600/400/0/220419-A-AB123-001.JPG)">
+                <span class="sr-only">Air Force Pharmacist Technician Scans Prescription Drug Container</span>
+            </div>
+            <div class="dod2-card__overlay"></div>
+            <div class="dod2-card__content">
+                <h3 class="dod2-card__title"><span>Pre-Authorization and Medical Necessity for Pres...</span></h3>
+                <div class="dod2-object-eyebrow">
+                    <div class="dod2-object-eyebrow-type">
+                        News
+                    </div>
+                    <div class="dod2-object-eyebrow-date">
+                        Apr. 19, 2022
+                    </div>
+                </div>
+                <hr class="dod2-card__hr">
+                <div class="dod2-card__description">
+                    <span>Prescription drugs are tools meant to support your overall health. TRICARE has procedures to make sure you get...</span>
+                    <div class="dod2-card__read-more">Read More</div>
+                </div>
+                    
+            </div>
+        </a>
+</div>
+
+</section> <!-- End of Cards -->
+
+</body>
+
+</html>
