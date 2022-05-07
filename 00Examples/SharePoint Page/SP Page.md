@@ -5,7 +5,6 @@ Key:
   sic = Space Information Center
   fsi = favorite-space-icon
 
-
 #### Breadcrumbs Horizontal Menu
 ```html
 <div id="breadcrumb-section">  
