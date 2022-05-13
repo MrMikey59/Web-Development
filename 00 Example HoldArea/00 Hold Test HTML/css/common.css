@@ -92,14 +92,6 @@
   padding: 0;
 }
 
-fieldset {
-  border: 0;
-}
-
-form {
-  margin: 0px; padding: 0px;
-}
-
 html, body {
   background: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -127,10 +119,6 @@ img {
   border: 0px currentColor; border-image: none;
 }
 
-input {
-  border: 0;
-}
-
 legend {
   border: 0;
 }
@@ -139,6 +127,19 @@ p {
   cursor: text;
   margin: 0;
   padding: 0;
+}
+
+q:before, q:after {
+  content:'';
+}
+
+table, tbody, th, td, tr {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .hide {
@@ -163,11 +164,14 @@ p {
 .clear {
   clear: both;
 }
+
 .clearfix:before,
 .clearfix:after {
-  display: table;
+  display: block;
   content: "";
+  height: 0;
   line-height: 0;
+  visibility: hidden;
 }
 .clearfix:after {
   clear: both;
@@ -186,6 +190,11 @@ a {
   font-weight: bold;
   outline: none;
   text-decoration: none;
+}
+a:hover, 
+a:active, 
+a:focus {
+  text-decoration: underline
 }
 a:link {
   color: #aa2716
@@ -259,28 +268,82 @@ a.SmallLink {
   font-size: 0.6em;
 }
 
+/* Document Links */
+a[href$='.doc'], 
+a[href$='.rtf'], 
+a[href$='.wps'], 
+a[href$='.txt'], 
+a[href$='.docx'] {
+  background:transparent url(images/doc.png) center right no-repeat;
+  display:inline-block;
+  padding-right:14px;
+  margin-right:3px;
+}
+
+/* Heading Links Stay Blue */
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h1 a:visited, 
+h2 a:visited, 
+h3 a:visited, 
+h4 a:visited, 
+h5 a:visited {
+  background-image: none;
+  padding: 0;
+  color: #01539c;
+}
+
+/* PDF document links */
+a[href$='.pdf'],
+a.pdf {
+  background:transparent url(../images/pdf.png) center right no-repeat;
+  display:inline-block;
+  padding-right:14px;
+  margin-right:3px;
+}
+/* Spreadsheet links */
+a[href$='.xls'], 
+a[href$='.xlsx'], 
+a[href$='.csv'], 
+a[href$='.xlw'], 
+a[href$='.xlt'] {
+  background:transparent url(../images/xls.png) center right no-repeat;
+  display:inline-block;
+  padding-right:14px;
+  margin-right:3px;
+}
+
 /* ================================Blockquote================================= */
 blockquote {
-  width:75%;
-  margin:5px auto;
+  width: 75%;
+  margin: 5px auto;
   color: black;
-  padding:3px 10px 1px 60px;
-  border-left:8px solid #34495e ;
-  line-height:1.6;
+  padding: 3px 10px 1px 60px;
+  border-left: 8px solid #34495e ;
+  line-height: 1.6;
   position: relative;
-  background:#FABD00;
+  background: #FABD00;
 }
-
 blockquote::before {
-  font-family:Arial;
+  font-family: Arial;
   content: "\201C";
-  color:#34495e;
-  font-size:4em;
+  color: #34495e;
+  font-size: 4em;
   position: absolute;
   left: 10px;
-  top:-10px;
+  top: -10px;
 }
-
+blockquote cite {
+  display :block;
+  color: #000000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px 0;
+}
 blockquote p {
   font-size:120%;
 }
@@ -328,6 +391,34 @@ blockquote p {
 .flex-60 { width: 534px; max-width:100%;}
 .flex-40 { width: 356px; max-width:100%;}
 .flex-30 { width: 267px; max-width:100%;}
+
+/* ==========Columns========== */
+/* Half Column */
+.halfCol {
+  float:left;
+  width:50%;
+}
+/* Quarter Column */
+.four-col {
+  border-right: 1px solid #d9d9d9;
+  padding:0 0 20px 0;
+  width:238.75px;
+  float: left;
+  overflow:hidden
+}
+.four-col ul {
+  margin:15px 20px
+}
+.four-col img {
+  border-bottom: 1px solid #d9d9d9
+}
+.four-col p {
+  color:#000000;
+  font-size:14px;
+}
+.four-col h5, #business-groups .four-col p {
+  margin:15px 20px
+}
 
 /* ==================================Cursor=================================== */
 .c-hand {
@@ -377,9 +468,11 @@ blockquote p {
 /* ==================================Float===================================== */
 .fl-right {
   float: right;
+  margin-left: 7px;
 }
 .fl-left {
   float: left;
+  margin-right: 7px;
 }
 .fl-middle {
   margin-left: auto;
@@ -410,8 +503,26 @@ blockquote p {
 
 /* Font Style */
 .f-italic {
-  font-style:italic;
+  font-style: italic;
 }
+
+/* ==================================Forms===================================== */
+form, 
+fieldset, 
+input, 
+textarea {
+  margin: 0px;
+  padding: 0px;
+}
+
+fieldset {
+  border: 0;
+}
+
+input {
+  border: 0;
+}
+
 
 /* ==================================Lists===================================== */
 
@@ -430,6 +541,10 @@ blockquote p {
 ol, ul, li, dl, dt, dd {
   margin: 0;
   padding: 0;
+}
+/* Require the setting of the list-style */
+ol, ul {
+  list-style: none;
 }
 
 .ls-none {
@@ -589,9 +704,35 @@ th, td {
 }
 
 /* ===================================Text==================================== */
-.selected {
-  background-color: yellow;
+address, caption, cite, code, dfn, em, strong, var {
+  font-style: normal;
+  font-weight: normal;
 }
+address {
+  font-style: normal;
+}
+abbr, acronym {
+  border: none;
+}
+caption {
+  text-align: left;
+}
+em, i {
+  font-style: italic;
+}
+strong, b {
+  font-weight: bold;
+}
+sup {
+  vertical-align: 1em;
+  font-size: 0.5em;
+  font-weight: bold;
+}
+sub {
+  vertical-align: -0.5em;
+  font-size: 0.9em;
+}
+
 .txt-center p {   text-align: center;}
 
 .txt-lower {  text-transform: lowercase;}
@@ -603,6 +744,14 @@ th, td {
 /* Text Colors */
 .txt-blue, .txt-info {  color: blue;}
 .txt-red, .txt-danger, .txt-error {  color: red;}
+
+/* Text Selection */
+::selection {
+  text-shadow: none;
+}
+.selected {
+  background-color: yellow;
+}
 
 /* ==============================Vertical Align================================ */
 /* 
