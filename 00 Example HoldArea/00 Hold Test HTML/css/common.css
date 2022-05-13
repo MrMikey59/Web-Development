@@ -52,12 +52,15 @@
    grey
    lightgrey
    lightsteelblue
+   lightyellow
    navy
    red				#f00			rgb(255, 0, 0)
    silver			#c0c0c0	
    white			#fff			rgb(255, 255, 255)
    whitesmoke
-   yellow			
+   yellow	
+   
+   [NOTE: All grey colors can also be gray!]
 */
 
 /* Importing External CSS Example */
@@ -68,22 +71,18 @@
 :root {
   --blackish: 		#343434;
   --dark-blue:		#0272A7;
-  --green1: 		#019875;
+  --green1: 		  #019875;
+  --green2:       #07B48E;
   --light-blue:		#f1f8fd;
-  --maroon: 		#9b301c;
+  --maroon: 		  #9b301c;
   --medium-blue:	#5EAEFF;
   --navyblue: 		rgb(0, 56, 107);
-  --orange: 		#f04f23; 
-  --peach: 			#34495e;
-  --red1: 			#D9534F;
+  --orange: 		  #f04f23; 
+  --peach: 			  #34495e;
+  --red1: 			  #D9534F;
   --softblack:		#242526;
-  --yellow1: 		#DFD300;
-  --yelloworange: 	rgb(255, 184, 88);
-}
-
-.new-green-text {
-    color: #07B48E;
-}
+  --yellow1: 		  #DFD300;
+  --yelloworange: rgb(255, 184, 88);
 }
 
 /* Resets */ 
@@ -93,12 +92,8 @@
   padding: 0;
 }
 
-a {
-  cursor: pointer;
-  outline: none;
-}
-
 fieldset {
+  border: 0;
 }
 
 form {
@@ -133,9 +128,11 @@ img {
 }
 
 input {
+  border: 0;
 }
 
 legend {
+  border: 0;
 }
 
 p {
@@ -184,10 +181,26 @@ p {
 
 /* ====================================Anchors================================= */
 a {
-  font-weight: bold;
   color: #00529B;
-  text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+}
+a:link {
+  color: #aa2716
+}
+a:visited {
+  color: #821F11
+}
+a:hover, a:active {
+  color: red;
+}
+a:link {
+  color: #d82412
+}
+a:visited {
+  color: #a12115
 }
 a[disabled] {
   color: #999 !important;
@@ -242,6 +255,8 @@ a.quickLink {
   background-position: 8px center;
 }
 a.SmallLink {
+  border: 0;
+  font-size: 0.6em;
 }
 
 /* ================================Blockquote================================= */
@@ -315,6 +330,12 @@ blockquote p {
 .flex-30 { width: 267px; max-width:100%;}
 
 /* ==================================Cursor=================================== */
+.c-hand {
+  cursor: hand;
+}
+.c-grab {
+  cursor: grab;
+}
 .c-pointer {
   cursor: pointer;
 }
@@ -426,7 +447,7 @@ dt {
   color:#0272A7;
 }
 dd {
-
+  border: 0;
 }
 
 /* ============Ordered List================ */
