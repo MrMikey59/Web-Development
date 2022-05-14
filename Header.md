@@ -1,4 +1,4 @@
-# Header Navigation.
+# Header
 
 ```html
 <HEADER class="main">

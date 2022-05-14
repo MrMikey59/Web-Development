@@ -3,15 +3,30 @@
 /*
    bd-	border
    bg-	bscground
-   c-	cursor
-   f-	font
+   btn- button
+   c-	  cursor
+   col- column
+   f-	  font
    fl-	float
    ls-	list style
-   m-	margin
-   p-	position
+   m-	  margin
+   pa-  padding
+   po-  position
+   ta-  text align
    txt- text
    va-	vertical align
-   w-	width
+   w-	  width
+
+   Modifiers:
+   -b   bottom
+   -l   left
+   -lg  large 
+   -md  medium
+   -r   right
+   -t   top
+   -xl  extra large
+   -xs  extra small
+
 */
 
 /* Base for starting modular font scale
@@ -427,6 +442,9 @@ blockquote p {
 .c-grab {
   cursor: grab;
 }
+.c-move {
+  cursor: move;
+}
 .c-pointer {
   cursor: pointer;
 }
@@ -812,17 +830,21 @@ sub {
 }
   
 @media screen {
-
 }
 
-/*Laptop/Desktop*/
+/* Laptop/Desktop */
 @media screen and (min-width: 1200px) {
 }
 
-/*Tablet and Laptop/Desktop Size*/
+/* older laptops */
+@media screen and (min-width:992px){
+}
+
+/* Tablet and Laptop/Desktop Size */
 @media screen and (min-width: 768px) {
 }
 
-/*Tablet Size*/
+/* Tablet Size */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 }
+
