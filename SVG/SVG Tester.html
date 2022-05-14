@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en/US">
+
+<head>
+
+    <title>W1 SVG essentials</title>
+
+    <style>
+      body {
+      margin: 0;
+        overflow: hidden;
+      }
+      rect {
+        stroke: black;
+        fill: red;
+        stroke-width: 20px;
+        /*transition: fill 3000ms, stroke-width 3000ms;*/
+        transition: all 3000ms
+      }
+      rect:hover {
+        fill: green;
+        stroke-width: 100px;
+      }
+    </style>
+
+</head>
+
+<body>
+    <svg width="960" height="500">
+      <!-- overlapping circles -->
+
+      <circle cx="480" cy="250" r="200" fill="red"></circle>
+      <circle cx="530" cy="250" r="150" fill="white"></circle>
+      <circle cx="430" cy="250" r="150" fill="white"></circle>
+      <circle cx="480" cy="250" r="50"  fill="red"></circle>
+
+      <circle cx="0" cy="250" r="200" fill="red"></circle>
+      <circle cx="-50" cy="250" r="150" fill="white"></circle>
+      <circle cx="0" cy="250" r="50"  fill="red"></circle> 
+      
+      <circle cx="960" cy="250" r="200" fill="red"></circle>
+      <circle cx="1010" cy="250" r="150" fill="white"></circle>
+      <circle cx="960" cy="250" r="50"  fill="red"></circle> 
+      
+      <rect
+        x="225"
+        y="100"
+        width="20"
+        height="300"
+        fill="white"
+        stroke="red"
+        stroke-width="10"
+      />
+      
+      <rect
+        x="715"
+        y="100"
+        width="20"
+        height="300"
+        fill="white"
+        stroke="red"
+        stroke-width="10"
+      />
+<!--
+this is how you make a comment
+-->
+      <line
+        x1="100"
+        y1="100"
+        x2="150"
+        y2="150"
+        stroke="white"
+        stroke-width="30"
+      ></line>
+      
+       <line
+        x1="150"
+        y1="350"
+        x2="100"
+        y2="400"
+        stroke="white"
+        stroke-width="30"
+      ></line>
+      
+       <line
+        x1="860"
+        y1="100"
+        x2="810"
+        y2="150"
+        stroke="white"
+        stroke-width="30"
+      ></line>
+      
+       <line
+        x1="810"
+        y1="350"
+        x2="860"
+        y2="400"
+        stroke="white"
+        stroke-width="30"
+      ></line>
+    <!--
+have no idea about syntax of this following path
+"Line To" command, called with L. H draws a horizontal line, and V draws a vertical line
+
+      <path
+        d="M550.54,120.92H78.46c-3.31,0-6-2.69-6-6s2.69-6,6-6h273.08c3.31,0,6,2.69,6,6S354.85,120.92,550.54,120.92z"
+      ></path>
+--> 
+      <path
+        fill="none"
+        d="M 350 200 l130 -100 l130 100"
+        stroke="black"
+        stroke-width="50"
+      ></path>
+    </svg>
+
+    <svg width="960" height="500">
+      <rect x="250" y="100" width="500" height="250"></rect>
+    </svg>
+
+</body>
+
+</html>
