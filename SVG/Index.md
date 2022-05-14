@@ -29,10 +29,15 @@ Elements
 | circle |  | `<circle cx="362.589996" cy="204.589996" data-fill="1" id="Oval" r="204.589996" fill="#00f"></circle>` | 
 | clipPath |  | `<clipPath>  </clipPath>` | 
 | defs | definitions | `<defs>  </defs>` |  
+| ellipse |  | `<ellipse></ellipse>` |
 | g | grouping | `<g> </g>` |  
+| line | create a line between two points | `<line></line>` |
 | path |  | `<path d="m 14.35,-0.14 -5.86,5.86 20.73,20.78 5.86,-5.91 z"></path>` |  
+| polygon |  | `<polygon></polygon>` |
 | rect | rectangle | `<rect data-fill="2" height="545.799988" id="Rectangle" width="100" x="0" y="0" fill="#f00"></rect>` |  
 | svg | container | `<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%" fill-opacity="0.3">  </svg>` |  
+| text |  |  |
+| textpath |  |  |
 | use |  | `<use class="ytp-svg-shadow" xlink:href="#ytp-id-14"> </use>` |  
 
 ## SVG The Container
@@ -40,20 +45,54 @@ Elements
 <svg 
   aria-label="Loading" 
   viewBox="0 0 64 64" 
-  class="sc-dlfnbm ktLGbV"
+  class=""
+  height="500"
+  width="960"
 >  </svg>
 ```
+| Attribute | Description |
+| --- | --- | 
+| cx | Center position on X axis; X increases to right |
+| cy | Center position on Y axis; Y increases to bottom |
+| d | Data points string |
+| fill | color inside shape; fill set to none makes it tranparent |
+| height |  |
+| stroke | Sets outline |
+| stroke-width | Sets stroke thickness |
+| width |  |
+| x | Top position on X axis; X increases to right |
+| x1 | Start position on X axis; X increases to right |
+| x2 | Start position on X axis; X increases to right |
+| y | Top position on Y axis; X increases to bottom |
+| y1 | End position on Y axis; X increases to bottom |
+| y2 | End position on Y axis; X increases to bottom |
 
+**Note**: all sizes are in pixels (px). Layer (Z) order is dependent on position in the SVG container.
 ## Circle
+Circles are created using cx & cy to define the center point, and r to define the radius of the circle.
 ```svg
-<circle cx="32" cy="32" r="32" class="sc-hKgILt dFKJAk"></circle>
-<circle color="light" cx="32" cy="32" r="32" stroke-linecap="round" class="sc-eCssSg kRaCnm"></circle>
+<circle cx="32" cy="32" r="32"></circle>
+<circle color="light" cx="32" cy="32" r="32" stroke-linecap="round"></circle>
 ```
 
 ## DESC - The Description
 ```svg
 <DESC>Item Name or Description</DESC>
 ```
+
+## Line
+```svg
+<line x1="1" y1="1" x2="100" y2="100" stroke="blue">
+</line>
+```
+
+## Path
+[Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
+'''svg
+<path ></path>
+'''
+Mx,y  set starting point
+Lx,y  move to next point (can be stacked)
 
 ## Polygon
 ```svg
@@ -87,6 +126,17 @@ Elements
 </svg>
 ```
 
+#### Heart
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10,30
+           A 20,20 0,0,1 50,30
+           A 20,20 0,0,1 90,30
+           Q 90,60 50,90
+           Q 10,60 10,30 z"/>
+</svg>
+```
+
 #### LinkedIn Icon
 ```svg
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 27 32">
@@ -102,6 +152,17 @@ Elements
   </path>
 </svg>
 ```
+
+#### Text Path Example
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path id="MyPath" fill="none" stroke="silver"
+        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <text>
+    <textPath path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
+      Quick brown fox jumps over the lazy dog.
+    </textPath>
+  </text>
+</svg>
 
 #### Twitter Icon
 ```svg

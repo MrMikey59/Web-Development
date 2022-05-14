@@ -1,11 +1,13 @@
 # Web Design
 
+- [Drupal 7](https://www.drupal.org) - robust content management tools, sophisticated APIs for multichannel publishing
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Google](https://www.google.com/)
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)  
       ChromeDriver is a standalone server that implements the W3C WebDriver standard. ChromeDriver is available for Chrome on Android and Chrome on Desktop (Mac, Linux, Windows and ChromeOS).  
   - [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
 - [John Resig](https://github.com/jeresig)
+- [MediaElement.js](http://www.mediaelementjs.com/) 
 - [Microsoft](https://www.microsoft.com/)
   - [Learn WebDev from Microsoft](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)
   - [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
@@ -14,8 +16,11 @@
   - [Firefox](https://www.mozilla.org/firefox/) browser
   - [Mozilla Developer Network (MDN)](http://developer.mozilla.org)
   - [Web](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers
+- [MobileDetectJS](https://github.com/hgoebl/mobile-detect.js) 
 - [PC Mag](www.pcmag.com/)   
+- [PerimeterX, Inc](www.perimeterx.com) 
 - [Prettify.js]( https://www.prettifyjs.net/)  - minimize and beautify scripts (Base64, CSS, HTML, JSON, URL)
+- [PySchool.net](http://pyschool.net) 
 - [TypeScript](www.typescriptlang.org)  
 - [WC3 Schools](http://w3schools.com)  
 - [WC3 Schools(Sisnixx)](https://w3schools.sinsixx.com/)  

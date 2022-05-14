@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SVG Fundamentals</title>
-  </head>
-  <body>
-    <svg width="500" height="500">
-      <circle cx="300" cy="300" r="200"></circle>
-      <circle cx="300" cy="300" r="60" fill="grey"></circle>
-      <circle cx="300" cy="300" r="45" fill="gold"></circle>
-      <circle cx="300" cy="300" r="5" fill="silver"></circle>
-      <path
-        d="M 200 200 Q 300 120 400 200"
-        stroke="grey"
-        fill ="transparent">
-      <animate attributeName="opacity" dur="10s" keyTimes="0;0.2;0.4;0.6;1" values="0;1;0;0;1" repeatCount="indefinite" begin="1s"/>
-      </path>
-      <path
-        d="M 240 220 Q 300 180 360 220"
-        stroke="grey"
-        fill="transparent">
-      <animate attributeName="opacity" dur="10s" keyTimes="0;0.1;0.3;0.6;1" values="0;1;0;0;1" repeatCount="indefinite" begin="1s"/>
-      </path>
-    </svg>
 
-    <script>
-      // Open Chrome developer tools to see this.
-      console.log('Hello JavaScript!');
-    </script>
-  </body>
+<html lang=""en/US">
+
+<head>
+  <title>SVG Fundamentals</title>
+</head>
+
+<body>
+  <svg width="500" height="500">
+    <circle cx="300" cy="300" r="200"></circle>
+    <circle cx="300" cy="300" r="60" fill="grey"></circle>
+    <circle cx="300" cy="300" r="45" fill="gold"></circle>
+    <circle cx="300" cy="300" r="5" fill="silver"></circle>
+    <path
+      d="M 200 200 Q 300 120 400 200"
+      stroke="grey"
+      fill ="transparent">
+    <animate attributeName="opacity" dur="10s" keyTimes="0;0.2;0.4;0.6;1" values="0;1;0;0;1" repeatCount="indefinite" begin="1s"/>
+    </path>
+    <path
+      d="M 240 220 Q 300 180 360 220"
+      stroke="grey"
+      fill="transparent">
+    <animate attributeName="opacity" dur="10s" keyTimes="0;0.1;0.3;0.6;1" values="0;1;0;0;1" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </svg>
+
+</body>
+
 </html>

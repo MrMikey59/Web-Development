@@ -85,19 +85,41 @@
 
 :root {
   --blackish: 		#343434;
-  --dark-blue:		#0272A7;
+  --brickred:     #821F11;  
+  --brightred:    #d82412;  
+  --cyan:         #a0ffff; 
+  --darkblue1:	  #0272A7;
+  --darkblue2: 	  #0087FF;
+  --darkblue3:    #273565;  
+  --darkpink: 	  #F84F7F;
+  --darkpurple: 	#7F51F4;
+  --darkyellow: 	#FFBD00; 
+  --deepred1:     #a12115;  
+  --deepred2:     #aa2716; 
   --green1: 		  #019875;
   --green2:       #07B48E;
-  --light-blue:		#f1f8fd;
+  --lightblue1:		#f1f8fd;
+  --lightblue2:   #E0E7EF;
+  --lightpurple:  #d1daf9;  
+  --lightyellow: 	#FEF0B2;
   --maroon: 		  #9b301c;
   --medium-blue:	#5EAEFF;
+  --mediumpurple: #8564A6;  
   --navyblue: 		rgb(0, 56, 107);
   --orange: 		  #f04f23; 
+  --palepink: 	  #FAD2E1;
+  --paleyellow:   #ffffa0; 
   --peach: 			  #34495e;
+  --pink:         #ffa0ff;  
+  --purple: 	    #DFCCFF;
   --red1: 			  #D9534F;
   --softblack:		#242526;
+  --verypaleblue: #DDEDFF;
   --yellow1: 		  #DFD300;
   --yelloworange: rgb(255, 184, 88);
+  --verypalegreen:#f0fff0;
+  --verypalepink: #fff0f0;
+  --verypalepurple:#f0f0ff;
 }
 
 /* Resets */ 
@@ -157,7 +179,7 @@ table {
   border-spacing: 0;
 }
 
-.hide {
+.hide, .hidden, .invisible {
   display:none;
   visibility: hidden;
 }
@@ -171,7 +193,7 @@ table {
   Padding: 10px 0;
 }                          /* <div class="spacer"></div> Quickly add 30px space between other elements. */
 
-.visible {
+.unhide, .unhidden, .visible {
   visibility: visible;
 }
 
@@ -311,6 +333,22 @@ h5 a:visited {
   color: #01539c;
 }
 
+/* Logos */
+.logo {
+  margin-top: 2px;
+  position: absolute;
+}
+
+.logo a:link {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.logo a:hover {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
 /* PDF document links */
 a[href$='.pdf'],
 a.pdf {
@@ -329,6 +367,44 @@ a[href$='.xlt'] {
   display:inline-block;
   padding-right:14px;
   margin-right:3px;
+}
+
+/* ================================Background================================= */
+/*
+   background: [<Color>] [<url()] [<repeat>] [scroll] [<position>];
+   background-color: { <color> | transparent }
+   background-position: <position>
+   <color>: { currentColor | #FFFFFF | rgb() | rgba() }
+   <repeat> { repeat-x | repeat-y | no-repeat }
+   <position>: { bottom | center | left | left bottom | left top | right | 
+                 right top | right  bottom | top | <xPos> <yPos> }
+*/
+.bg-black {
+  background-color: #343434;
+}
+.bg-darkblue {
+  background-color:#0272A7;
+}
+.bg-green {
+  background-color: #019875;
+}
+.bg-lightblue {
+  background-color:#f1f8fd;
+}
+.bg-mediumblue {
+  background-color:#5EAEFF;
+}
+.bg-red {
+  background-color: #D9534F;
+}
+.bg-yellow {
+  background-color: #DFD300;
+}
+.bg-white {
+  background-color: #FFFFFF;
+}
+.bg-whitesmoke {
+  background: whitesmoke;
 }
 
 /* ================================Blockquote================================= */
@@ -370,28 +446,49 @@ blockquote p {
    <color>: { currentColor | #FFFFFF | rgb() | rgba() }
 */
 
+.bd-darkblue {
+  border-color:#0272A7;
+}
 .bd-dimgray {
   border: 1px solid dimgray;
 }
-.bd-none {
-  border: none;
+.bd-lightblue {
+  border-color:#f1f8fd;
 }
 .bd-lightsteelblue {
   border: 1px solid lightsteelblue;
 }
+.bd-mediumblue {
+  border-color:#5EAEFF;
+}
+.bd-none {
+  border: none;
+}
 
-/* ================================Background================================= */
-/*
-   background: [<Color>] [<url()] [<repeat>] [scroll] [<position>];
-   background-color: { <color> | transparent }
-   background-position: <position>
-   <color>: { currentColor | #FFFFFF | rgb() | rgba() }
-   <repeat> { repeat-x | repeat-y | no-repeat }
-   <position>: { bottom | center | left | left bottom | left top | right | 
-                 right top | right  bottom | top | <xPos> <yPos> }
+/* ================================Buttons==================================== */
+
+/* Big Button */
+/* 
+   <div class="bigbtn"><a href="#">Knowledge</a></div>
 */
-.bg-whitesmoke {
-  background: whitesmoke;
+.bigbtn {
+  margin: 30px auto;  /* makes big & centers */
+  color: #666666;
+  clear: both;
+}
+.bigbtn a {
+  padding: 24px 14px;
+  font-weight: normal;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #8564A6;
+  border: 2px solid #020103;
+  border-radius: 40px;
+}
+.bigbtn a:hover,
+.bigbtn a:active {
+  background-color: #9071AE;
 }
 
 /* ===============================Containers================================== */
@@ -433,6 +530,103 @@ blockquote p {
 }
 .four-col h5, #business-groups .four-col p {
   margin:15px 20px
+}
+
+/* col – column */
+.col-container:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: " ";
+}
+.col-of-one {
+  padding: 0.5%;
+  float: left;
+  width: 100%;
+}
+.col-of-two {
+  padding: 0.5%;
+  float: left;
+  width: 50%;
+}
+.col-of-three {
+  padding: 0.5%;
+  float: left;
+  width:33%;
+}
+.col-of-four {
+  padding: 0.5%;
+  float: left;
+  width: 25%;
+}
+
+/* =====Notifications===== */
+/*
+  <div class="notification"><p>What ever they need to tell you! </p></div>
+*/
+.notification {
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.75));
+  border: 2px solid #020103;
+  border-radius: 20px;
+  margin: 0 auto;
+  min-height: 50px;
+  text-align: center;
+}
+.notification p{
+  padding: 3px;
+  font-size: 36px;
+  color: #8564A6;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ========Panels========= */
+.panel {
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel-blue {
+  border: 1px solid #0087FF;
+  background-color: #DDEDFF;
+  color: #0087FF;
+}
+
+.panel-green {
+  border: 1px solid #019875;
+  background-color: #F1FDF8;
+  color: #019875;
+}
+
+.panel-orange {
+  border: 1px solid #FFA500;
+  background-color: #FDF8F1;
+  color: #FFA500;
+}
+
+.panel-pink {
+  border: 1px solid #F84F7F;
+  background-color: #FAD2E1;
+  color: #F84F7F;
+}
+  
+.panel-purple {
+  border: 1px solid #7F51F4;
+  background-color: #DFCCFF;
+  color: #7F51F4;
+}
+
+.panel-red {
+  border: 1px solid #D9534F;
+  background-color: #FEECE5;
+  color: #D9534F;
+}
+
+.panel-yellow {
+  border: 1px solid #FFBD00;
+  background-color: #FEF0B2;
+  color: #FFBD00;
 }
 
 /* ==================================Cursor=================================== */
@@ -499,6 +693,8 @@ blockquote p {
 
 /* ==================================Fonts===================================== */
 /* 
+   font: <size> <family>
+
    f-f	font family
    f-s	font size (px)
    f-w	font weight
@@ -510,7 +706,8 @@ blockquote p {
    <weight>: { bold | bolder | normal }
 */
 
-.f-fmonospace {  font-family: "Courier New", monospace;}
+.f-fcursive {  font-family: cursive; font-weight: 400;}
+.f-fmonospace {  font-family: "Courier New", monospace; font-size: 1.23em;}
 .f-fsanserif {  font-family: Arial, Helvetica, sans-serif;}
 .f-fserif {  font-family: "Times New Roman", serif;}
 
@@ -549,7 +746,7 @@ input {
 <ol class="upper-alpha-bullets"> </ol>
 <ol class="lower-roman-bullets"> </ol>
 <ol class="upper-roman-bullets"> </ol>
-<ol class="numbered-bullets" ></ol>	
+<ol class="numbered-bullets" > </ol>	
 
 <ul class="no-bullets"> </ul>
 <ul class="circle-bullets"> </ul>
@@ -568,6 +765,17 @@ ol, ul {
 .ls-none {
   list-style: none;
 }
+
+ol.lowerroman {  list-style-type: lower-roman;}
+ol.loweralpha {  list-style-type: lower-alpha;}
+ol.numbered {  list-style-type: decimal;}
+ol.upperalpha {  list-style-type: upper-alpha;}
+ol.upperroman {  list-style-type: upper-roman;}
+
+ul.circle {  list-style-type: circle;}
+ul.disc {  list-style-type: disc;}
+ul.nostyle {  list-style-type: none;  margin-left: 0;   padding-left: 0;}
+ul.square {  list-style-type: square;}
 
 /* ==============Definition List======================== */
 
@@ -674,23 +882,23 @@ ul {
    padding: <top> <right-left> <bottom>
    padding: <top-bottom> <right-left>
    padding <all>
-   p-	padding (all)
-   p-b  padding bottom
-   p-l  padding left
-   p-r  padding rightt
-   p-t  padding top
-   P-99x99 padding top-bottom by left-right
+   pa-	padding (all)
+   pa-b  padding bottom
+   pa-l  padding left
+   pa-r  padding rightt
+   pa-t  padding top
+   pa-99x99 padding top-bottom by left-right
 */
-.p-20 {
+.pa-20 {
   padding: 20px;
 }
-.p-l20 {
+.pa-l20 {
   padding-left: 20px;
 }
-.p-r5 {
+.pa-r5 {
   padding-right: 5px;
 }
-.p-r20 {
+.pa-r20 {
   padding-right: 20px;
 }
 
@@ -698,9 +906,9 @@ ul {
 /*
    position: { absolute | fixed | relative | static }
 */
-.p-absolute {  position: absolute;}
-.p-fixed {  position: fixed;}
-.p-relative {  position: relative;}
+.po-absolute {  position: absolute;}
+.po-fixed {  position: fixed;}
+.po-relative {  position: relative;}
 
 /* ===============================Shadows===================================== */
 /*
@@ -722,6 +930,10 @@ th, td {
 }
 
 /* ===================================Text==================================== */
+/* 
+  ta - text align
+  txt- text
+*/
 address, caption, cite, code, dfn, em, strong, var {
   font-style: normal;
   font-weight: normal;
@@ -750,9 +962,11 @@ sub {
   vertical-align: -0.5em;
   font-size: 0.9em;
 }
+.ta-center {  text-align: center;}
+.ta-just {  text-align: justify;}
+.ta-left {  text-align: left;}
 
-.txt-center p {   text-align: center;}
-
+.txt-capital { text-transform: capitalize; }
 .txt-lower {  text-transform: lowercase;}
 .txt-overline {  text-decoration: overline;}
 .txt-strike {  text-decoration: strike;}
@@ -760,8 +974,17 @@ sub {
 .txt-upper {  text-transform: uppercase;}
 
 /* Text Colors */
+.txt-black {  color: #343434;}
 .txt-blue, .txt-info {  color: blue;}
+.txt-darkblue {  color:#0272A7;}
+.txt-green {  color: #019875;}
+.txt-lightblue {  color:#f1f8fd;}
+.txt-mediumblue {  color:#5EAEFF;}
+.txt-newgreen {  color: #07B48E;}
+.txt-palered {  color: #D9534F;}
 .txt-red, .txt-danger, .txt-error {  color: red;}
+.txt-yellow {  color: #DFD300;}
+.txt-white {  color: #FFFFFF;}
 
 /* Text Selection */
 ::selection {
@@ -776,18 +999,12 @@ sub {
    va-	vertical align
 */
 
-.va-bottom {
-  vertical-align: bottom;
-}
-.va-middle {
-  vertical-align: middle;
-}
-.va-textbottom {
-  vertical-align:text-bottom;
-}
-.va-top {
-  vertical-align: top;
-}
+.va-bottom {  vertical-align: bottom;}
+.va-middle {  vertical-align: middle;}
+.va-subscript {  vertical-align: sub;}
+.va-superscript {  vertical-align: super;}
+.va-textbottom {  vertical-align:text-bottom;}
+.va-top {  vertical-align: top;}
 
 /* ===================================Width==================================== */
 .w-25 {  width: 25px;}
@@ -848,3 +1065,5 @@ sub {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 }
 
+@supports(aspect-ratio:16/9){
+}
