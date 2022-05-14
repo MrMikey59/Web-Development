@@ -1,4 +1,6 @@
-# jQuery
+# jQuery  
+
+Originally written by John Resig
 
 ## Links
 
@@ -6,6 +8,8 @@
 - [jQuery API](http://api.jquery.com/)  
 - [jQueryUI API](http://api.jqueryui.com/)  
 - [MIT License](http://jquery.org/license)  
+
+[Learning jQuery](https://learningjquery.com/)
 
 ```html
 <script type="text/javascript" src="jquery.js"></script>

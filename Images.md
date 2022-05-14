@@ -23,3 +23,9 @@ Images are placed on a page using the Image tag:
 [Fontello](https://fontello.com/)
 [IconJam](https://www.icojam.com/)   
 [Online Web Fonts](https://www.onlinewebfonts.com/)
+
+
+## Common Images
+| Icon Name | Link |  
+| --- | --- |  
+| Up Pointer |`<span>▲</span>` |  
