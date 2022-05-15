@@ -9,7 +9,7 @@ There's Vanilla JavaScript and then there's ECMAScript/ES6/ES2015/ES2017/ES2020,
 | Acronym | Description |  
 | --- | --- |  
 | CS <BR> coffee | CoffeeScript |  
-| ES5 | ECMAScript 5 |  
+| ES5 | ECMAScript 5 - [ECMA-262, Edition 5, 15.4.4.14](http://es5.github.io/#x15.4.4.14) |  
 | ES6 | ECMAScript 6 |  
 | JS | JavaScript or JScript |  
 | TS | TypeScript |  
@@ -19,6 +19,12 @@ There's Vanilla JavaScript and then there's ECMAScript/ES6/ES2015/ES2017/ES2020,
   <SCRIPT type="text/JavaScript">
   </SCRIPT>
 ```
+
+### Common JavaScript File Start
+```javascript  
+/* eslint-disable */  
+"use strict";  
+```  
 
 Resources:
 - [**Bogan Stashchuk**](https://github.com/bstashchuk/)  
