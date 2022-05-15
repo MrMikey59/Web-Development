@@ -1,6 +1,8 @@
 # Web Design
 
 - [Drupal 7](https://www.drupal.org) - robust content management tools, sophisticated APIs for multichannel publishing
+- Fetching HTML data: [`pup`](https://github.com/EricChiang/pup)
+- Fetching JSON: [`jq`](https://stedolan.github.io/jq/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Google](https://www.google.com/)
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)  
