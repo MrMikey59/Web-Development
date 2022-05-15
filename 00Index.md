@@ -8,7 +8,14 @@
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)  
       ChromeDriver is a standalone server that implements the W3C WebDriver standard. ChromeDriver is available for Chrome on Android and Chrome on Desktop (Mac, Linux, Windows and ChromeOS).  
   - [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
+- [Internet Engineering Task Force (IETF)](http://www.ietf.org/)
+  - [RFC4180](http://www.ietf.org/rfc/rfc4180.txt) Common Format and MIME Type for Comma-Separated Values (CSV) Files
 - [John Resig](https://github.com/jeresig)
+- [Local Host:3000](http://localhost:3000) 
+- [Matt Kruse](mailto:matt@mattkruse.com) or [WWW](http://www.mattkruse.com/) 
+  -	AnchorPosition.js
+  -	CalendarPpopup.js
+  -	PopupWindow.js
 - [MediaElement.js](http://www.mediaelementjs.com/) 
 - [Microsoft](https://www.microsoft.com/)
   - [Learn WebDev from Microsoft](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)
@@ -23,11 +30,13 @@
 - [PerimeterX, Inc](www.perimeterx.com) 
 - [Prettify.js]( https://www.prettifyjs.net/)  - minimize and beautify scripts (Base64, CSS, HTML, JSON, URL)
 - [PySchool.net](http://pyschool.net) 
+- [Smarter Way to Learn (Mark Myers)](http://www.ASmarterWayToLearn.com)  
 - [TypeScript](www.typescriptlang.org)  
 - [WC3 Schools](http://w3schools.com)  
 - [WC3 Schools(Sisnixx)](https://w3schools.sinsixx.com/)  
-- [W3C Web Driver Standard](https://w3c.github.io/webdriver/webdriver-spec.html)  
+- [WC3 Web Driver Standard](https://w3c.github.io/webdriver/webdriver-spec.html)  
     WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more.
+- [Web Tool Kit](http://www.webtoolkit.info/)   
 - [World Wide Web Organization](www.w3.org)  
   - 📓 http://w3docs.com
 - [World Wide Web Consortium (W3C)](www.w3c.org)   
