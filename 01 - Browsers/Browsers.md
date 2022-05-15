@@ -158,6 +158,14 @@ function c() {
 
 - **Piping**. Since some services with web APIs are rather popular, common web API "gluing" has already been implemented and is provided with server included. This is the case for services like [If This Then That](https://ifttt.com/) and [Zapier](https://zapier.com/)
 
+#### Plug-Ins
+- [uBlock Origin](https://github.com/gorhill/uBlock) - It is a [wide-spectrum](https://github.com/gorhill/uBlock/wiki/Blocking-mode) blocker that doesn’t just stop ads, but all sorts of third-party communication a page may try to do. This also covers inline scripts and other types of resource loading. If you’re willing to spend some time on configuration to make things work, go to [medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) or even [hard mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode). Those will make some sites not work until you’ve fiddled with the settings enough, but will also significantly improve your online security. Otherwise, the [easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode) is already a good default that blocks most ads and tracking. You can also define your own rules about what website objects to block.
+- [Stylus](https://github.com/openstyles/stylus/) - a fork of Stylish (don't use Stylish, it was shown to [steal users' browsing history](https://www.theregister.co.uk/2018/07/05/browsers_pull_stylish_but_invasive_browser_extension/)), allows you to sideload custom CSS stylesheets to websites. With Stylus you can easily customize and modify the appearance of websites. This can be removing a sidebar, changing the background color or even the text size or font choice. This is fantastic for making websites that you visit frequently more readable. Moreover, Stylus can find styles written by other users and published in [userstyles.org](https://userstyles.org/). Most common websites have one or several dark theme stylesheets for instance. 
+- Full Page Screen Capture - [Built into Firefox](https://screenshots.firefox.com/) and [Chrome extension](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl?hl=en). Lets you take a screenshot of a full website, often much better than printing for reference purposes.
+- [Multi Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) - lets you separate cookies into "containers", allowing you to browse the web with different identities and/or ensuring that websites are unable to share information between them.
+- Password Manager Integration - Most password managers have browser extensions that make inputting your credentials into websites not only more convenient but also more secure. Compared to simply copy-pasting your user and password, these tools will first check that the website domain matches the one listed for the entry, preventing phishing attacks that impersonate popular websites to steal credentials. 
+- [Vimium](https://github.com/philc/vimium) - A browser extension that provides keyboard-based navigation and control of the web in the spirit of the Vim editor.
+
 #### Web Automation
 
 Sometimes web APIs are not enough. If only reading is needed you can use a html parser like `pup` or use a library, for example python has BeautifulSoup. However if interactivity or javascript execution is required those solutions fall short. WebDriver
@@ -181,75 +189,4 @@ driver = Firefox()
 url = 'https://hacker-tools.github.io'
 snapshot_wayback(driver, url)
 ```
-# Chrome (Google)  
-
-### Chrome Extensions
-* 🔖 [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
-* 🔖 [Colorblindly](https://chrome.google.com/webstore/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg)
-* 🔖 [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
-* 🔖 [CSSViewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce)
-* 🔖 [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj)
-* 🔖 [JSONView](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-* 🔖 [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
-* 🔖 [Lorem Ipsum Generator](https://chrome.google.com/webstore/detail/lorem-ipsum-generator/pglahbfamjiifnafcicdibiiabpakkkb)
-* 🔖 [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
-* 🔖 [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc)
-* 🔖 [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
-* 🔖 [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)  
-
-# CrEdge (Microsoft)
-Microsoft Edge is a modern web browser designed for faster, safer browsing on Windows 10 based on the Google Chromium browser engine. Get more done on the web with built-in tools for notetaking, reading and more. 
-
-#### Save tabs for later
-Whether you're planning a vacation or researching a school project, you'll likely have several sites open that you'll want to reopen later.  
-Next to your tabs in Microsoft Edge, select Set these tabs aside. When you're ready for them, select `Tabs you've set aside` > `Restore tabs`. 
- 
-#### See snapshots of open tabs
-When you have a tons of open tabs, see small snapshots of these pages by using your mouse to hover over open tabs. Or select Show tab previews  to see previews of all your open tabs. 
- 
-#### Mute a website
-Mute web pages that automatically play audio with a single click. Select the speaker  icon on the tab that is playing audio to turn it off. Select the speaker  icon again to turn the sound back on. 
- 
-#### Get to your favorite sites right away
-In Microsoft Edge, pin tabs to keep your favorite sites in the same place every time you open the browser. Press and hold (or right-click) a tab, then select Pin. 
- 
-#### Fill forms with a click
-Let Microsoft Edge help fill out your forms on the web. To add or edit your info, select Settings and more  > Settings > View advanced settings > Manage form entries.
-#### Make Your Shortcut Open an URL in InPrivate Browsing  
-You might want to open a specific web site always in InPrivate Browsing mode. In this case, you can add its address (URL) to the shortcut target. For instance, you can create a shortcut with the following target:  
-```dos
-"%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe" -inprivate https://portal.apps.mil/
-```  
-Then every time you click on the shortcut you will have Flank Speed  opened in an InPrivate window.
-
-#### Basic Link Formats:  
-(64-bit Windows - Opens Microsoft Edge Stable InPrivate browsing window to a specific site)
-```dos
-"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" -inprivate [URL]
-msedge.exe -inprivate [URL]
-```
-(64-bit Windows - Opens Microsoft Edge Stable InPrivate browsing window to a specific site always in new window)
-```dos
-"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" -inprivate -new-window [URL]
-msedge.exe -inprivate -new-window [URL]
-```
-For those challenging Websites that require Internet Explorer:
-```dos
-"C:\Program Files\Internet Explorer\iexplore.exe" [-private] [URL]
-iexplore.exe [-private] [URL]
-```
-
-**InPrivate** browsing is a private browsing mode in which no browsing history, download history, cookies and site data, and form fill data are remembered. Microsoft Edge saves downloaded files as well as any new favorites created while browsing InPrivate. By default, while browsing InPrivate, Microsoft does not collect any info about websites you visit for product improvement purposes. Your school, workplace, or internet service provider may still be able to see your browsing activity. Browsing data for the specific InPrivate session is cleared after all InPrivate windows are closed.
-
-# FireFox (Mozilla)  
-
-### Enable NTLM & Kerberos
-NTLM and Kerberos are not activated by default in Firefox. To make it work, you need to follow these steps:
-1. Navigate to the URL `about:config`.  
-2. Click past the warning of harmful consequences.  
-3. Type `negotiate-auth` into the filter at the top of the page, in order to remove most of the irrelevant settings from the list.  
-4. Double-click on `network.negotiate-auth.trusted-uris`. A dialogue box for editing the value should appear.  
-5. Enter the required hostname(s) and/or URL prefix(es) then click OK. For the above example, it is `http://localhost:3000`  
-
-[More detailed info here](http://www.microhowto.info/howto/configure_firefox_to_authenticate_using_spnego_and_kerberos.html) .
 
