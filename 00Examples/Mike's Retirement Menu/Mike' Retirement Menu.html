@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+
+<HTML lang="en">
+
+<HEAD>
+
+  <title>Mike's Retirement Menu [HTA]</title>
+
+  <META http-equiv="x-ua-compatible" content="ie=9">
+  <META http-equiv="Content-Type" content="text/html" />
+  <META name="Author" content="Michael R. Myers" />
+  <META name="Description" content="This is the Mike's Retirement Menu" />
+  <META name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <LINK rel="icon"  type="image/png"  href="images/favicon.png">
+
+  <LINK rel="stylesheet"  type="text/css"  href="css/common.css">
+
+  <SCRIPT src="scripts/common.js" language="JavaScript" text="text/javascript">
+    document.write("Included Common JS file not found");
+  </SCRIPT>
+
+<STYLE>
+
+.container {
+  border: solid 1px #222;
+  display: block;
+  margin: 0 2.5%;
+  width: 95%;
+}
+
+.footerList {
+  font-size: 16px;
+  text-align: center;
+  height: auto;
+  z-index: 10000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footerList>li {
+  display: inline-block;
+  margin-bottom: 10px
+}
+.footerList>li a {
+  color: #545456;
+  display: block;
+  padding: 10px 15px;
+  font-family: archivo_narrow,Arial Narrow,Arial,sans-serif;
+  font-weight: 400;
+  text-align: center
+}
+.footerList>li a:hover {
+  background: #009dd3;
+  color: #fff
+}
+.footerList>li+li {
+  margin-left: -4px
+}
+.footerList>li+li a {
+  border-left: 1px #ccc solid
+}
+
+/* ================================Header============================== */
+.header {
+  height: 170px;
+  text-align: center;
+  margin: 0;
+}
+.header iframe {
+  float: left;
+}
+.header p {
+  padding: 0;
+}
+.avatar {
+  float: right;
+  height: 85px;
+  vertical-align: middle;
+}
+.bannerImage {
+  float: left;
+  height: 170px;
+}
+
+/* ================================NavBar============================== */
+.navbar {
+  background-color: #ffffe0;
+  border-bottom: solid 1px #222;
+  border-top: solid 1px #222;
+  margin: 0;
+  padding: 0 10px;
+}
+.navbar ul {
+  list-style-type: none;
+}
+.navbar li {
+  display: inline;
+  font-weight: bolder;
+}
+.navbar li a {
+  color: #222;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  background-color: #80ffff;
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a0ffff;
+  width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 8px 12px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.listheader {
+  margin: 0;
+  padding: 2px 0;
+  text-decoration: underline;
+}
+.listitem {
+  padding: 2px 0;
+}
+
+/* ===================Footer==================== */
+.footer {
+  background-color: #ffffe0;
+  border-bottom: solid 1px #222;
+  border-left: solid 1px #222;
+  border-right: solid 1px #222;
+  display: block;
+  font-family: monospace;
+  margin: 0 2.5%;
+  width: 95%;
+}
+.footermenu {
+  font-weight: 800;
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+.footemenur ul {
+  list-style-type: none;
+}
+.footermenu li {
+  display: inline;
+}
+.footermenu li a {
+  color: #222;
+  text-decoration: none;
+}
+.footermenu li a:hover {
+  background-color: #80ffff;
+  text-decoration: underline;
+}
+.footerstatus {
+  font-family: monospace;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+}
+
+</STYLE>
+
+</HEAD>
+
+<BODY   bgcolor=" #d0fff">
+
+<div id="Page" class="container">
+
+<div id="Header" class="header">
+  <img src="images/mike.png" alt="Mike's Avatar" class="avatar">
+  <img src="images/SubService.jpg" alt="Submarine Service" class="bannerImage">
+  <div>
+    <h1>Mike's Retirement Menu</h1>
+    <p>'cause Bad Memory is a Waste of Time!</p>
+  </div>
+</div> <!-- End of Header -->
+
+<div id="NavBar" class="navbar">
+  <ul>
+    <li><a href="https://calendar.google.com/calendar/u/0/r?tab=cc" target="_blank">Calendar</a></li>
+    <li> | </li> 
+    <li><div class="dropdown">DoD
+        <ul id="DodDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.dfas.mil/" target="_blank" >Defense Finance and Accounting Service (DFAS)</a></li><br>
+          <li class="listitem"><a href="https://corpweb1.dfas.mil/askDFAS/custMain.action?mid=5" target="_blank" >- Ask DFAS</a></li><br>
+          <li class="listitem"><a href="https://mypay.dfas.mil/" target="_blank" >- MyPay</a></li><br>
+          <li class="listitem"><a href="https://www.dmdc.osd.mil/" target="_blank" >Defense Manpower Data Center (DMDC)</a></li><br>
+          <li class="listitem"><a href="https://www.dmdc.osd.mil/milconnect/" target="_blank" >- MilConnect</a></li>
+        </ul>
+      </div>
+    </li>
+    <li> | </li> 
+    <li><a href="#" target="_blank" >Insurance</a></li> 
+    <li> | </li> 
+    <li><div class="dropdown">Kitsap County</a>
+        <ul id="KCDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="#" target="_blank" >Kitsap County</a></li><br>
+          <li class="listitem"><a href="#" target="_blank" >Kitsap Transit</a></li><br>
+          <li class="listitem"><a href="#" target="_blank" > - Orca Card</a> (888-988-6722)</li><br>
+        </ul>
+      </div>
+    </li> 
+    <li> | </li> 
+    <li><div class="dropdown">Medical
+        <ul id="MedDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.fernwoodfamilydental.com/" target="_blank" >Fernwood Family Dental (360-394-4337)</a><br> -- 19500 10Th Ave Ne Ste 210 Poulsbo, WA 98370</li><br>
+          <li class="listitem"><a href="https://mychart.catholichealth.net/PRD/" target="_blank" >MyChart</a><br>- (VMCF & SCCA/UWMed)</li><br>
+        </ul>
+      </div>
+    </li> 
+    <li> | </li> 
+    <li><div class="dropdown">Social Media</a>
+        <ul id="SMDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.facebook.com/?sk=h_chr" target="_blank" >FaceBook</a></li><br>
+          <li class="listitem"><a href="https://eblanding.com/" target="_blank" >GD's EB Landing</a></li><br>
+          <li class="listitem"><a href="https://www.linkedin.com/" target="_blank" >LinkedIN</a></li><br>
+        </ul>
+      </div>
+    </li> 
+    <li> | </li>     <li><div class="dropdown">SSA
+        <ul id="MedDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.ssa.gov/" target="_blank" >Social Security Administration (SSA)</a></li><br>
+          <li class="listitem"><a href="https://secure.ssa.gov/RIL/SiView.action" target="_blank" >MySSA</a></li><br>
+        </ul>
+      </div>
+    </li> 
+    <li> | </li> 
+    <li><div class="dropdown">VA
+        <ul id="VADropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.va.gov/" target="_blank" >VA</a></li><br>
+          <li class="listitem"><a href="https://blogs.va.gov/VAntage/" target="_blank" >- Blogs (VAntage)</a></li><br>
+          <li class="listitem"><a href="https://www.va.gov/oig/">- Office of Inspector General</a></li><br>
+          <div class="listheader"> Benefits </div>
+          <div class="listheader"> Health</div>
+          <p class="listitem">Puget Sound Health Care System<br>-- 1660 South Columbian Way Seattle WA 98108-1597</p>
+          <p class="listitem">- CBOC Silverdale (360-307-6920)</p>
+          <li class="listitem"><a href="https://www.myhealth.va.gov/mhv-portal-web/home" target="_blank" >- MyHealth<span class="italic">e</span>Vet</a><br>-- (877-327-0022 or 800-877-8339/TTY)<br>-- Website Issues (855-520-5151)</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div> <!-- End of NavBar -->
+
+<div id="Content" class="content">
+
+  <h1>Content</h1>
+  <p>Password Guide (MD)</p>
+
+<!-- Search Engines -->
+<style>
+.titleBox {
+  border-left: 1px solid #222;
+  padding: 0 0 0 20px;
+}
+.titleBox:not(:last-child) {
+  border-bottom: 0px;
+}
+#search {
+  background-color: #f0f0f0;
+  border-top: 1px solid #222;
+  display: flex;
+  font-size: 20px;
+  padding: 0 20px 0 10px;
+}
+</style>
+<div id="search">
+  <div>
+    <h5>Search the Internet</h5>
+    <form method="get" action="http://www.google.com/search" target="_blank" name="googlesearch">
+      <img alt="Search Google" src="images/google_logo.gif">
+      <input type="text" id="google_search_box" value="Search" name="q" size="40">
+      <input type="submit" value="Search">
+    </form>
+    <form method="get" action="http://search.msn.com/results.aspx" target="_blank" name="msnsearch">
+      <img alt="Search Bing" src="images/bing_logo.png">
+      <input type="text" id="msn_search_box" value="Search" name="q" size="40">
+      <input type="submit" value="Search">
+      <input type="hidden" value="MSNH" name="form">
+    </form>
+  </div>
+  <div class="titleBox tx-center">
+    <h5>
+      <svg focusable="false" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">     <!- Search Icon (magnifying Glass) ->
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+      </svg>
+      Other Search Sites:
+      <svg focusable="false" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+      </svg>
+    </h5>
+    <ul class="footerList">
+      <li><a href="https://www.duckduckgo.com/" target="_blank" title="Bing">Duck Duck Go</a></li>
+      <li><a href="https://www.yahoo.com/" target="_blank" title="Yahoo">Yahoo</a></li>
+    </ul>
+  </div>
+</div>  <!-- End of Search -->
+
+</div>
+
+</div> <!-- End of Page -->
+
+<div id="Footer" class="footer">
+
+  <div class="footermenu">
+    <ul id="FooterMenu" class="footermenu">
+      <li><a href="html/about.html" target="_blank">About Us</a></li>
+      <li> | </li>
+      <li><a href="html/contact.html" target="_blank">Contact Us</a></li>
+      <li> | </li>
+      <li><a href="html/privacy.html" target="_blank">Privacy Policy</a></li>
+      <li> | </li>
+      <li><a href="./about/ToS.html" target="_new">Terms of Service</a></li>
+    </ul>
+  </div>  <!—End of Footer Menu -->
+
+<!-- This is the credits section                                                         -->
+<!-- -------------------------------------------------------------- -->
+    <div class="footerstatus">
+      <SCRIPT language="JavaScript">
+        PostDate();
+        PostCopyright();
+      </SCRIPT>
+    </div>
+
+</div> <!-- End of Footer -->
+
+</BODY>
+ 
+</HTML>

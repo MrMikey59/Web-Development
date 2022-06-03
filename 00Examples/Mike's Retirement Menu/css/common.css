@@ -1,0 +1,70 @@
+
+/* =======================Resets==================== */
+BODY, HTML { 
+  color: #222; 
+  font-family: "Times New Roman", serif; 
+  font-size: 18px;
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
+BODY { 
+    background-color: #d0fff;
+}
+
+/* ============Anchors========= */
+A {
+  text-decoration:underline;
+  text-underline:single;
+}
+A:link { color: blue;  }
+A:active { color: red; }
+A:visited { color: purple; }
+A:hover { color: orange; }
+
+ADDRESS { 
+  font-family: "Times New Roman", serif; 
+} 
+
+/* ============Headers========= */
+H1, H2, H3 {
+  margin: 0;
+  padding: 10px 0 3px 0;
+}
+H4, H5, H6 {
+  margin: 0;
+  padding: 5px 0 2px 0;
+}
+H1 {  font-size: 2.2em; }
+H2 {  font-size: 1.8em; }
+H3 {  font-size: 1.6em; }
+H4 {  font-size: 1.4em; }
+H5 {  font-size: 1.2em; }
+
+
+INPUT { 
+  font-size: 18px; 
+  margin: 0 10px 0 0;
+} 
+
+P {
+  margin: 0;
+  padding: 4px 0;
+}
+
+/* ====================Text Modification================ */
+
+.italic {
+  font-style: italic;
+}
+
+.tx-center {
+  text-align: center;
+}
+.tx-left {
+  text-align: left;
+}
+.tx-right {
+  text-align: right;
+}
+
