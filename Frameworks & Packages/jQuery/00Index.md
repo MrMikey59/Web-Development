@@ -6,10 +6,10 @@ Originally written by John Resig
 
 [jQuery](http://jquery.org/)  
 - [jQuery API](http://api.jquery.com/)  
+[jQueryUI](http://jqueryui.com/) - User Interface
 - [jQueryUI API](http://api.jqueryui.com/)  
-- [MIT License](http://jquery.org/license)  
-
 [Learning jQuery](https://learningjquery.com/)
+[MIT License](http://jquery.org/license)   
 
 ```html
 <script type="text/javascript" src="jquery.js"></script>

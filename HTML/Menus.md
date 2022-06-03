@@ -71,3 +71,81 @@ urlmenu.onchange = function() {
 <span>▸</span>
 ```
 
+## Pure CSS Menus
+
+### Menu Container
+```html
+<div class="topMenu">
+  [Menu List]
+</div>
+```
+```css
+.topMenu {
+}
+```
+
+### Menu List
+Simple:
+```html
+<ul>
+  [MenuListItems]
+</ul>
+```
+Drop Down Menu:
+```html
+<li class="dropdown">
+  <a href="javascript:void(0);" class="dropbtn">Contacts</a>
+  [DropMenuContentList]
+</li>
+```
+
+### Menu List Items
+```html
+<li> [AnchorItem] </li>
+```
+
+### DropMenu Content List
+```html
+<div class="dropdown-content">
+  [MenuList]
+</div>
+```
+
+### Quick Launch Menu
+```html
+<div id="QuickLaunchMenu" class="noindex ms-core-listMenu-verticalBox">
+  <ul id="LeftSideMenu" class="root ms-core-listMenu-root static">
+    <li class="static">
+      <span class="menu-item-text"> [MenuItem] </span>
+      <ul class="static">
+        [SubMenuList]
+      </ul>
+    </li>
+  </ul>
+</div>
+```
+
+### Title & Left Justified Menu
+```html
+<DIV class="header-primary"> <!-- Left Justified Menu Bar -->
+  <!-- Menu Bar -->
+  <ul class="nav" style="width: auto;">
+    <li>
+      <a id="space-menu-link" class="aui-dropdown2-trigger aui-nav-link" aria-controls="space-menu-link-content" aria-haspopup="true" role="button" title="Spaces" tabindex="0" data-aui-trigger="" resolved="" aria-expanded="false" href="#space-menu-link-content">Spaces</a>
+
+<div id="space-menu-link-content" class="aui-dropdown2 aui-dropdown2-in-header aui-layer" role="menu" resolved="" tabindex="-1" hidden="">
+  <ul class="nav">
+    <li>Another Submenu</li>
+    <li><a id="view-user-profile-link" href="#" title="">Profile</a></li>
+    <li><a id="view-mytasks-link" href="#n" title="">Tasks</a></li>
+    <li><a id="user-settings-link" href="#" title="">Settings</a></li>
+    <li><a id="quizzes-link" href="#" title="">Quizzes</a></li>
+    <li><a id="courses-link" href="#" title="">Courses</a></li>
+  </ul>
+</div>
+    </li>
+    <li><a href="#" class=" nav-imagelink" title="Calendars"><span>Marbles</span></a></li>
+  </ul>
+</DIV> <!-- End of Left Justified Menu BarSection -->
+```
+

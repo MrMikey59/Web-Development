@@ -25,3 +25,13 @@ If you're looking for Pinterest-like presentation of thumbnails of varying heigh
 </div>
 ```
 
+## User Icon or Avatar
+```html
+<!-- User Icon -->
+<span id="logo" class=" header-logo">
+  <a href="#" aria-label="Go to home page">
+    <img src="images/user-avatar.jpg" alt="Mikey's Wiki">
+  </a>
+</span>
+```
+

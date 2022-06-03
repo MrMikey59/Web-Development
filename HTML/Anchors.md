@@ -1,5 +1,8 @@
 # HTML Anchors
 
+Referencing Note: “#” refers to the current document (page), so #<Location> will take you to the location in the document. For a location in the document called “_Top”, a <Location> is defined by an Anchor element such as:
+<A name="_top”></A>
+
 ## Common Anchors
 ```html
 <a href="https://www.facebook.com/" title="Facebook" target="_blank"><span>Facebook</span>&nbsp;</a>

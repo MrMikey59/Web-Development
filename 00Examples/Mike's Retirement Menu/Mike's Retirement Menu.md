@@ -1,5 +1,27 @@
 # Mike' Retirement Menu Notes
 
+## Add to Mike's Retirement Menu
+
+Do Not Call List- You can register your numbers cell phones and landlines on the national Do Not Call list at no cost by calling 888-382-1222 or 866-290-4236 (TTY). You must call from the phone number you wish to register.
+
+Home Emergency
+- https://www.navbug.com/washington/kitsap_county_traffic.htm#popmap
+- https://www.pse.com/outage/outage-map
+- https://secure.pscleanair.org/AirQuality/NetworkMap 
+- Bremerton: https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1 
+- Poulsbo: https://www.bing.com/search?q=98370+weather&qs=WA&pq=98370+weather&sc=5-13&cvid=517CA61710B94410BE7063E744E66742&FORM=QBRE&sp=1
+- https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246 
+- https://www.localconditions.com/weather-kitsap-county-washington/wa279/traffic.php
+
+NBK page: https://www.facebook.com/kitsapnavy/
+
+### Links
+```html
+<div>
+  <a href="https://suicidepreventionlifeline.org/">National Suicide Prevention Hotline 1-800-273-TALK (8255)</a>
+</div>
+```
+
 ## Links to add:
 ```html
 <li><a href="https://www.gdbenefits.com" alt="">General Dynamics Service Center (GDSC)</a><br>- (888-432-3633) 8:30am-12am ET, M-F; managed by Fidelity Investments</li>

@@ -90,7 +90,266 @@
 
 # Examples
 
-### Use a Wrapper to store & hide variables
+## Content Section with Two Columns 
+
+Requires Bootstrap, row & col are Bootstrap classes
+```html
+<div id="ContentBody">
+  <div class="row">
+    <div id="LeftSide" class="col">
+      <h5> Left Side Matter</h5>
+    </div>
+    <div id="RightSide" class="col">
+      <h5> Right Side Matter</h5>
+    </div>
+  </div>
+</div>
+```
+```css
+#ContentBody{
+  background-color:#04272f;
+}
+#ContentBody h5 {
+  Color: white;
+}
+```
+
+## Top News Digests
+
+Requires Bootstrap, row & col are Bootstrap classes
+```html
+<!-- Top News -->
+<div id="NewsContainer" class="MainSection">
+  <div class="MainSectionTitle">
+    <img id="NewspaperIcon" src="images/newspaper.gif">
+    Top News
+  </div>
+  <div id="News">
+    <div class="row">
+      <div class="col"> <h5>A</h5> [Digest Items go here] </div>
+      <div class="col"> <h5>B</h5> [Digest Items go here] </div>
+    </div>
+  </div>
+</div>  <!-- End of Top News You Can Use -->
+```
+
+### Containers
+```css
+/* Container Classes */
+.MainSection {
+  background-color: #cbcbc9;
+  color: #000; 
+  margin: 10px;
+  border-radius: 5px;
+}
+.MainSectionTitle {
+  background-color: #8f8f8a;
+  color: #000;
+  padding-left: 20px;
+  height: 28px;
+}
+.MainSectionTitle img {
+  height: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+#NewsContainer {
+  margin-top: 20px;
+  margin-right: 15px;
+}
+#News {
+  min-height: 235px;
+}
+```
+
+### Digests
+```css
+/* Digest Classes */
+
+.DigestItem {
+  border: .5px;
+  border-radius: 5px;
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-color: #8f4330;
+}
+.DigestItem {
+  background-color: #fdf2eb;
+}
+.DigestItem p {
+  margin: 6px;
+}
+.DigestTitle {
+  color: #746853;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: Calibri;
+  font-weight: 400px
+}
+.DigestText {
+  color:#04272f;
+  text-decoration: none;
+  font-size:.8em;
+  font-family: Calibri;
+}
+.Digest a:hover {
+  text-decoration: none;
+}
+```
+
+## Focus Content Section
+Requires Bootstrap, row & col are Bootstrap classes
+```html
+<div id="Focus" class="row">
+<div class="mainSection col">
+   <div class="focusTitle">Focus</div>
+     <div id="FocusContent">
+       <div class="row">
+         <div class="col" style="margin-top:10px">
+         </div>
+         <div class="col" style="margin-top:10px">
+         </div>
+         <div class="col" style="margin-top:10px">
+         </div>
+         <div class="col" style="margin-top:10px">
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="Framework" class="MainSection col-3">
+    <div class="MainSectionTitle">Strategic Framework</div>
+    <div id="FrameworkContent">
+   </div>
+  </div>
+  <div id="EmergencyLinks" class="MainSection col-lg-3">
+    <div class="MainSectionTitle">Emergency</div>
+      <div id="EmergencyText">
+        <div class="row">
+          <div class="col"> [Emergency Items List] </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  <!-- End of Commander Focus -->
+</div>  <!—End of Row -->
+```
+```css
+#EmergencyLinks {
+  margin-right: 30px;
+  padding-left: 0;
+  padding-right: 0
+}
+#EmergencyLinks a {
+  color:#04272f;
+  text-decoration: none;
+  font-size: 14px;
+}
+#EmergencyText {
+  margin-right: 15px;
+  margin-left: 20px
+}
+#Focus {
+  background-color: #8f8f8a;
+  margin-left: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#Focus a {
+  color: #04272f;
+  text-decoration: none;
+  font-size: 14px;
+}
+#FocusContent {
+  margin-left: 20px;
+  margin-right: 15px;
+}
+#Framework { 
+  padding-left: 0;
+  padding-right: 0;
+}
+#FrameworkContent {
+  text-align: center;
+}
+.Emergency {
+  background-color: #ff6122;
+}
+.Emergency p:first-child {
+  color: #ff0;
+}
+.focusTitle {
+  background-color: #cbcbc9;
+  color: #000;
+  padding-left: 20px;
+  height: 28px
+}
+.mainSection {
+  background-color: #cbcbc9;
+  color: #000;
+  margin: 10px;
+  border-radius: 5px;
+}
+.MainSectionTitle{
+  background-color: #8f8f8a;
+  color: #000;
+  padding-left: 20px;
+  height: 28px
+}
+.MainSectionTitle img {
+  height: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+```
+
+## Main Section
+
+Requires Bootstrap, row & col are Bootstrap classes
+```html
+<div id="Misc" class="MainSection">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+    </div>
+    <div class="col-2">
+    </div>
+  </div>  <!-- End of Row -->
+</div>  <!-- End of Misc-MainSection -->
+```
+```css
+#Misc {
+  background-color: #97a3a4;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 15px;
+  font-size: 0.9em;
+}
+#Misc a {
+  color:#04272f;
+  text-decoration:none
+  ;font-size:14px;
+}
+#Misc h5 {
+  text-shadow:1px 1px #8f8f8a;
+}
+.mainSection {
+  background-color: #cbcbc9;
+  color: #000;
+  margin: 10px;
+  border-radius: 5px;
+}
+```
+
+## Use a Wrapper to store & hide variables
 ```javascript
 <div id="storeStartTime" class="hidden"></div>
 <p id="storeAnythingAtAll" class="hidden">3</p>

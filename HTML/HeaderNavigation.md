@@ -139,3 +139,18 @@ header nav .ss-icon:hover {
 }
 ```
 
+## Headers & Banners
+
+A typical breakdown of a header/banner:
+| Linked Apps Icon | User Icon/Avatar | Title & Left Justified Menu | Right Justified Menu |
+| --- | --- | --- | --- |  
+
+### Linked Apps Icon
+```html
+<DIV class="header-apps">  <!-- Linked Apps Icon & Menu -->
+  <button class="-dropdown2-trigger app-switcher-trigger dropdown2-trigger-arrowless marked" href="#">
+    <img src="images/toc.png" alt="Apps">
+  </button>
+</DIV>
+```
+

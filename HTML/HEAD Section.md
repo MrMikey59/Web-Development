@@ -21,6 +21,7 @@
 <LINK rel="canonical" href="https://www.yoursite.com/YourPage.html">
 <link rel="shortlink" href="https://www.yoursite.com/YourPage.html">
 <link rel="stylesheet" type="text/css" href="css/style.css"> 
+<link type="text/css" href="js/jquery-ui.css" rel="Stylesheet">
 ```
 
 ### Link Fonts with Google API

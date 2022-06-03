@@ -39,3 +39,83 @@ Get the full Year:
 document.write(new Date().getUTCFullYear());
 ```
 
+## Social Media List
+
+Requires BootStrap & HPsprites.png
+```html
+<div id="socialMediaLinks" class="row">
+  <div id="facebook">
+    <a href="https://www.facebook.com/[FBUserID]">  </a>
+  </div>
+  <div id="twitter">
+    <a href="https://twitter.com/[TWUserID]">  </a>
+  </div>
+  <div id="flickr">
+    <a href="https://www.flickr.com/[FLUserID]">  </a>
+  </div>
+  <div id="youTube">
+    <a href="https://www.youtube.com/[YTUserID]">
+  </div>
+  </a>
+</div>
+```
+```css
+#socialMediaLinks {
+  bottom: 0;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 70%;
+}
+#socialMediaLinks div {
+  margin-right: 10px;
+}
+#facebook {
+  width: 30px;
+  height: 40px;
+  background: url('images/HPsprites.png');
+  background-position: 0;
+}
+#twitter {
+  width: 48px;
+  height: 40px;
+  background: url('images/HPsprites.png');
+  background-position: -30px;
+}
+#flickr {
+  width: 43px;
+  height: 40px;
+  background: url('images/HPsprites.png');
+  background-position: -125px
+}
+#youTube {
+  width: 44px;
+  height: 40px;
+  background: url('images/HPsprites.png');
+  background-position: -256px;
+}
+```
+
+## Status Bar
+
+Requires Bootstrap, row & col are Bootstrap classes
+```html
+<!-- InfoStatus Bar -->
+<div id="Status" class="row">
+  <div class="col">
+    <p>STATUS</p>
+  </div>
+</div> <!-- End of InfoStatus Bar -->
+```
+```css
+#Status{
+  background-color:#ff6122;
+  text-align:center;
+}
+#Status a:link,
+#Status a:visited,
+#Status a:active,
+#Status a:hover{
+  color: #ff0;
+}
+```
+

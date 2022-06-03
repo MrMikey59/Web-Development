@@ -12,6 +12,8 @@ Font Awesome by @davegandy @fontawesome
 307 S. Main St. Suite 202 Bentonville, AR 72712, USA
 
 [Font Awesome](https://fontawesome.com/) 
+  - [FA Kits](https://fontawesome.com/kits/249fc961f6/)
+  - [FA License](http://fontawesome.com/license)
 - [Font Awesome 4](https://fontawesome.com/v4.7/)
 - https://github.com/Rush/Font-Awesome-SVG-PNG
 - https://github.com/FortAwesome/Font-Awesome  
@@ -65,6 +67,14 @@ Font Awesome by @davegandy @fontawesome
 ```
 
 ## Common Icons
+
+Using the icon set is extremely simple.  Create a <SPAN> element and set the class to fa fa-<IconName>. Calls to the Icons: (FA – FA Free)
+```html
+<SPAN class="fa fa-file-excel-o fa-1x"> </SPAN> - Excel Spreadsheets <BR>
+<SPAN class="fa fa-file-pdf-o fa-1x"></SPAN> - PDF Documents <BR>
+<SPAN class="fa fa-folder-open fa-1x"></SPAN> - Folder<BR>
+<SPAN class="fa fa-shield fa-1x"> </SPAN> - Security Access Limited <BR>
+```
 
 | Icon Name | Link |  
 | --- | --- |  

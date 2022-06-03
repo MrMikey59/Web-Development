@@ -136,12 +136,25 @@ Lx,y  move to next point (can be stacked)
            Q 10,60 10,30 z"/>
 </svg>
 ```
+#### Left Pointing Triangle: 
+```html
+<svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+</svg>
+```
 
 #### LinkedIn Icon
 ```svg
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 27 32">
   <path d="M6.24 11.168v17.696h-5.888v-17.696h5.888zM6.624 5.696q0 1.312-0.928 2.176t-2.4 0.864h-0.032q-1.472 0-2.368-0.864t-0.896-2.176 0.928-2.176 2.4-0.864 2.368 0.864 0.928 2.176zM27.424 18.72v10.144h-5.856v-9.472q0-1.888-0.736-2.944t-2.272-1.056q-1.12 0-1.856 0.608t-1.152 1.536q-0.192 0.544-0.192 1.44v9.888h-5.888q0.032-7.136 0.032-11.552t0-5.28l-0.032-0.864h5.888v2.56h-0.032q0.352-0.576 0.736-0.992t0.992-0.928 1.568-0.768 2.048-0.288q3.040 0 4.896 2.016t1.856 5.952z">
   </path>
+</svg>
+```
+
+#### Right Pointing Triangle:
+```html 
+<svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
 </svg>
 ```
 

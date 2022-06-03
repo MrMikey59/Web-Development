@@ -2,6 +2,26 @@
 
 - [HTML Goodies](http://www.htmlgoodies.com/)
 
+|  Element|Roadmap|Notes |
+| --- | --- | --- | 
+|  Division | `<DIV>  </DIV>` | `class="column-container"` <br>  `class="column-of-two"` <br> `class="column-of-three"` |
+|  Anchor`|`<A href="UR"L>...</A>`| |
+|  Article | `<ARTICLE>…</ARTICLE>` | |
+|  Aside | `<ASIDE>…</ASIDE>` | |
+|  Blockquote|`<BLOCKQUOTE>  </BLOCKQUOTE>`| |
+|  Button |`<BUTTON>  </BUTTON>`| |
+|  Content | `<CONTENT>…</CONTENT>` | |
+|  Footer | `<FOOTER>…</FOOTER>` | |
+|  Header | `<HEADER>…</HEADER>` | |
+|  Headers|`<H1> </H1>` <br>  `<H2>  </H2>` <br> `<H3>  </H3>` <br> `<H4> </H4>` <br> `<H5> </H5>` <br> `<H6> </H6>` | |
+|  Image|`<IMG src=URL />`| |
+|  Navigation | `<NAV>  </NAV>` | |
+|  Paragraph | `<P>  </P>` | `class="centered"` |
+|  Script|`<SCRIPT type="text/javascript" >…</SCRIPT>`|In Head or Body areas. |
+|  Section | `<SECTION>…</SECTION>` | |
+|  Span | `<SPAN></SPAN>` | Used for small area style changes or identification of an area in the document. |
+|  Style|`<STYLE type="text/css" >…</STYLE>`|In Head area. |
+
 HTML is an application of ISO Standard 8879:1986 ‑‑ Standard Generalized Markup Language (SGML). SGML is a system for defining structured document types, and markup languages to represent instances of those document types. HTML is one such markup language. Its syntax follows the syntax of SGML. An HTML file is an file of text whose character set includes [ISO‑8859‑1] and agrees with [ISO‑10646]. This is often commonly referred to as an ASCII file of text. This document text also includes instructions to a user agent (often called a browser) mostly about displaying the text. To formally identify the file as containing HTML elements, the beginning of the file should contain a line in SGML syntax identifying the version of HTML being used.
 
 Developed by Tim Bernier-Lee of CERN as a method for sharing documents via the Internet. Without a doubt, HTML has become one of the most widely used technologies in the world today. HTML uses a fixed set of tags - approximately 100 tags in HTML 4.0.
