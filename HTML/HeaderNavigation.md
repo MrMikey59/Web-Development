@@ -115,3 +115,27 @@ header nav .ss-icon:hover {
 
 **Note**: false as a class is not used!
 
+## Examles
+
+## One Header
+```html
+<HEADER id="Header" class="header">
+  <NAV class="header dropdown2-trigger-group" data-aui-responsive="true">
+    <DIV class=" header-inner">
+    </DIV>
+  </NAV>
+</HEADER>
+```
+
+```css
+.header {
+  background-color: #0049B0;
+}
+.header .header-inner {
+  display: none;
+}
+#Header .header { 
+  color: #DEEBFF; 
+}
+```
+

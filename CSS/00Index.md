@@ -2,6 +2,8 @@
 
 This folder contains CSS notes, snippets and example code.
 
+Does CSS allow aliasing to combine several classes? No use JS to add/remove classes!  
+
 CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
 
 CSS is a container of Rules that modify the browser display of elements.

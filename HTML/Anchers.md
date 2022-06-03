@@ -10,3 +10,35 @@
 <a href="https://support.office.com/en-us/">MS Office Support</a>
 ```
 
+## Examples using Anchors
+### Skip to Main Content
+```html
+<a class="skippy" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+```
+Later in document:
+```html
+<main class="container" id="content">
+  <a name="content"></a>
+  [Content]
+</main>
+```
+Associated CSS:
+```css
+.skippy{
+  display:block;
+  padding:1em;
+  color:#fff;
+  text-align:center;
+  background-color:#563d7c;
+  outline:0
+}
+.skippy:hover{
+  color:#fff
+  }
+.skippy-text{
+  padding:.5em;
+  outline:1px dotted
+}
+```

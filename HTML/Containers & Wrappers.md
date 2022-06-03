@@ -122,5 +122,38 @@
 | Main-Header | `<div id="main-header">` <BR> `  <h1 id="main-header-text"></h1>` <BR> `</div> <!-- \#main-header -->` | `#main-header {` <BR> `}` |  
 | Sidebar Container | `<div id="sidebar-container"></div> <!-- \#sidebar-container -->` | `#sidebar-container {` <BR> `}` |  
 | Sidebar-Header | `<div id="sidebar-header">` <BR> `  <h1 id="sidebar-header-text"></h1>` <BR> `</div> <!-- \#sidebar-header -->` | ``#sidebar-header {` <BR> `}`` | 
+
+## Code Wrapper for HTML
+```html
+<q lang="html">A quote in a paragraph</q>
+```
+```css
+q:lang(html) {
+  quotes: "<" ">";
+}
+```
   
+## Notifications
+```html
+<p class="greenStatus"> A Green Status Condition </p>
+<p class="yellowStatus"> A Yellow Status Condition </p>
+<p class="redStatus">A Red Status Condition</p>
+```
+```css
+.greenStatus {
+  background-color: #000;
+  color: green;
+  font-weight: bold;
+}
+.redStatus {
+  background-color: #000;
+  color: red;
+  font-weight: bold;
+}
+.yellowStatus {
+  background-color: #000;
+  color: yellow;
+  font-weight: bold;
+}
+```
   
