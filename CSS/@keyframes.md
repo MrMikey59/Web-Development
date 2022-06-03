@@ -69,6 +69,10 @@
 
 ## Reveal Animations
 ```css
+@keyframes delayedVisibility {
+  99%{visibility:hidden}
+  to{visibility:visible}
+}
 @keyframes reveal-bottom {
   0%   {transform:translate(0px, 50px);}
   50%  {transform:translate(0px, 50px);}
@@ -84,8 +88,15 @@
 ## Shift Background Color
 ```css
 @keyframes bg-ShiftColor {
-  from { background-color: red;}
-  to   { background-color: blue;}
+  from { background-color: red; }
+  to   { background-color: blue; }
+}
+```
+## Shimmer
+```css
+@keyframes shimmer{
+  0% { transform:translateX(-100%); }
+  to { transform:translateX(100%); }
 }
 ```
 
@@ -97,11 +108,13 @@
     80%  { opacity: 1; }
     100% { opacity: 0; }
 }
-@-webkit-keyframes showlogo {
-    0%   { opacity: 0; }
-    20%  { opacity: 1; }
-    80%  { opacity: 1; }
-    100% { opacity: 0; }
+```
+
+## Shrink Animation
+```css
+@keyframes shrink {
+  0%{max-width:500px}
+  to{max-width:32px}
 }
 ```
 
