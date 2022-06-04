@@ -16,3 +16,9 @@
 * 🔖 [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)  
 
 
+## Procedures
+
+| Process | Actions Required |
+| --- | --- | 
+| Developer Tools | Chrome: Menu > Tools > Developer Tools | 
+| Content Settings | Chrome: chrome://settings/content | 
