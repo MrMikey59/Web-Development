@@ -15,6 +15,7 @@
   <LINK rel="icon"  type="image/png"  href="images/favicon.png">
 
   <LINK rel="stylesheet"  type="text/css"  href="css/common.css">
+  <LINK rel="stylesheet"  type="text/css"  href="css/bootstrap.css">
 
   <SCRIPT src="scripts/common.js" language="JavaScript" text="text/javascript">
     document.write("Included Common JS file not found");
@@ -22,12 +23,43 @@
 
 <STYLE>
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d0ffff;
+}
+ol, ul { 
+  margin: 0;
+  padding: 0;
+}
 .container {
   border: solid 1px #222;
   display: block;
   margin: 0 2.5%;
   width: 95%;
 }
+
+.musiclinks {
+  display: inline;
+  list-style: none;
+}
+.musiclinks li:first-child {
+  background-color: #a0ffff;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.col {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0 2px;
+}
+
+/* Footer */
 
 .footerList {
   font-size: 16px;
@@ -175,7 +207,7 @@
 
 </HEAD>
 
-<BODY   bgcolor=" #d0fff">
+<BODY>
 
 <div id="Page" class="container">
 
@@ -192,6 +224,17 @@
   <ul>
     <li><a href="https://calendar.google.com/calendar/u/0/r?tab=cc" target="_blank">Calendar</a></li>
     <li> | </li> 
+    <li>
+      <div class="dropdown">Credit</a>
+        <ul id="IDDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://www.annualcreditreport.com/index.action" target="_blank" >Annual Credit Report</a></li><br>
+          <li class="listitem"><a href="https://equifax.com/" target="_blank" >Equifax</a></li><br>
+          <li class="listitem"><a href="https://transunion.com/" target="_blank" >Transunion</a></li><br>
+          <li class="listitem"><a href="https://fraud.transunion.com/fa/fraudAlert" target="_blank" >- Fraud Report</a></li><br>
+        </ul>
+      </div>
+    </li>  
+    <li> | </li> 
     <li><div class="dropdown">DoD
         <ul id="DodDropMenu" class="dropdown-content">
           <li class="listitem"><a href="https://www.dfas.mil/" target="_blank" >Defense Finance and Accounting Service (DFAS)</a></li><br>
@@ -202,6 +245,32 @@
         </ul>
       </div>
     </li>
+    <li> | </li>  
+    <li>
+      <div class="dropdown">Emergency</a>
+        <ul id="IDDropMenu" class="dropdown-content">
+          <li>Burn Bans:</li><br>
+          <li class="listitem"><a href="https://waburnbans.net/recent-burn-bans/category/lewis/" target="_blank" >- Lewis County</a> or (800-595-4341)</li><br>
+          <li class="listitem"><a href="https://secure.pscleanair.org/AirQuality/NetworkMap" target="_blank" >- Puget Sound Burn Ban</a></li><br>            
+          <li class="listitem"><a href="https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246" target="_blank" >Air Quality (.gov)</li><br>
+          <li class="listitem"><a href="https://secure.pscleanair.org/AirQuality/NetworkMap" target="_blank" >Air Quality (PS Clean Air)</li><br>
+          <li class="listitem"><a href="https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1" target="_blank" >Bremerton Weather</li><br>
+          <li class="listitem"><a href="https://www.bing.com/search?q=98370+weather&qs=WA&pq=98370+weather&sc=5-13&cvid=517CA61710B94410BE7063E744E66742&FORM=QBRE&sp=1" target="_blank" >Poulsbo Weather</li><br>
+          <li class="listitem"><a href="https://www.pse.com/outage/outage-map" target="_blank" >PSE Power Outage Map</li><br>
+          <li class="listitem"><a href="https://www.localconditions.com/weather-kitsap-county-washington/wa279/traffic.php" target="_blank" >Traffic Map (Kitsap)</li><br>
+          <li class="listitem"><a href="https://www.navbug.com/washington/kitsap_county_traffic.htm#popmap" target="_blank" >Traffic Map (Kitsap Alternate)</li><br>
+        </ul>
+      </div>
+    </li>  
+    <li> | </li> 
+    <li>
+      <div class="dropdown">Identity</a>
+        <ul id="IDDropMenu" class="dropdown-content">
+          <li class="listitem"><a href="https://opm.gov/cybersecurity" target="_blank" >Do Not Call List</a> (888-382-1222) <BR> - or (866-290-4236 -TTY)</li><br>
+          <li class="listitem"><a href="https://opm.gov/cybersecurity" target="_blank" >MyIDCare (OPM)</a> (800-750-3004)</li><br>
+        </ul>
+      </div>
+    </li>  
     <li> | </li> 
     <li><a href="#" target="_blank" >Insurance</a></li> 
     <li> | </li> 
@@ -225,6 +294,7 @@
     <li><div class="dropdown">Social Media</a>
         <ul id="SMDropMenu" class="dropdown-content">
           <li class="listitem"><a href="https://www.facebook.com/?sk=h_chr" target="_blank" >FaceBook</a></li><br>
+          <li class="listitem"><a href="https://www.facebook.com/kitsapnavy/" target="_blank" >- Naval Base Kitsap</a></li><br>
           <li class="listitem"><a href="https://eblanding.com/" target="_blank" >GD's EB Landing</a></li><br>
           <li class="listitem"><a href="https://www.linkedin.com/" target="_blank" >LinkedIN</a></li><br>
         </ul>
@@ -243,6 +313,7 @@
           <li class="listitem"><a href="https://www.va.gov/" target="_blank" >VA</a></li><br>
           <li class="listitem"><a href="https://blogs.va.gov/VAntage/" target="_blank" >- Blogs (VAntage)</a></li><br>
           <li class="listitem"><a href="https://www.va.gov/oig/">- Office of Inspector General</a></li><br>
+          <li class="listitem"><a href="http://www.pbm.va.gov/">- Pharmacy Services</a></li><br>
           <div class="listheader"> Benefits </div>
           <div class="listheader"> Health</div>
           <p class="listitem">Puget Sound Health Care System<br>-- 1660 South Columbian Way Seattle WA 98108-1597</p>
@@ -257,7 +328,41 @@
 <div id="Content" class="content">
 
   <h1>Content</h1>
-  <p>Password Guide (MD)</p>
+
+  <h2>Music</h2>
+
+  <div id="MusicList" class="row equal-size">
+
+    <div class="col-4 col">
+      <UL id="Bandcamplinks" class="musiclinks">
+        <li><a href=https://bandcamp.com/ alt="Bandcamp">
+          <img src="images/bandcamp.svg" alt="Bandcamp" style="height:15px"> Bandcamp</a>
+        </li>
+        <li><a href="https://bandcamp.com/terms_of_use"> - Terms of Use</a></li>
+        <li><a href="https://bandcamp.com/privacy"> - Privacy</a></li>
+        <li><a href="https://bandcamp.com/copyright"> - Copyright Policy</a></li>
+      </UL>
+    </div>
+
+    <div class="col-4 col">
+      <ul id="MarcGunnlinks" class="musiclinks">
+        <li>Celt Father: <a target="_blank" href="http://marcgunn.com">Marc Gunn</a></li>
+        <li><a target="_blank" href="http://celticmusicpodcast.com/">- Celtic Music Podcast</a></li>
+        <li><a target="_blank" href="http://facebook.com/celtfather">- Facebook</a></li>
+        <li><a target="_blank" href="http://patreon.com/celtfather">- Patreon</a></li>
+        <li><a target="_blank" href="http://youtube.com/marcgunn">- YouTube</a></li>
+     </ul>      
+    </div>
+
+    <div class="col-4 col" class="musiclinks">
+      <ul id="OtherMusiclinks" class="musiclinks">
+        <li>Other Music Links:</li>
+        <li><a target="_blank" href="http://www.pandora.com/people/mikemyers59">- Pandora</a></li>
+        <li><a target="_blank" href="http://player.play.it/">- Play It</a></li>
+     </ul>       
+    </div>
+
+  </div>
 
 <!-- Search Engines -->
 <style>

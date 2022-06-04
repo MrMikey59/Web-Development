@@ -22,3 +22,4 @@
 | --- | --- | 
 | Developer Tools | Chrome: Menu > Tools > Developer Tools | 
 | Content Settings | Chrome: chrome://settings/content | 
+

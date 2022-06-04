@@ -2,19 +2,6 @@
 
 ## Add to Mike's Retirement Menu
 
-Do Not Call List- You can register your numbers cell phones and landlines on the national Do Not Call list at no cost by calling 888-382-1222 or 866-290-4236 (TTY). You must call from the phone number you wish to register.
-
-Home Emergency
-- https://www.navbug.com/washington/kitsap_county_traffic.htm#popmap
-- https://www.pse.com/outage/outage-map
-- https://secure.pscleanair.org/AirQuality/NetworkMap 
-- Bremerton: https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1 
-- Poulsbo: https://www.bing.com/search?q=98370+weather&qs=WA&pq=98370+weather&sc=5-13&cvid=517CA61710B94410BE7063E744E66742&FORM=QBRE&sp=1
-- https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246 
-- https://www.localconditions.com/weather-kitsap-county-washington/wa279/traffic.php
-
-NBK page: https://www.facebook.com/kitsapnavy/
-
 ### Links
 ```html
 <div>
@@ -31,10 +18,6 @@ NBK page: https://www.facebook.com/kitsapnavy/
 <li><a href="" alt=""></a></li>
 ```
 
-Puget Sound Burn Ban: https://www.pscleanair.org/168/Current-Status or (800-595-4341)
-
-Lewis County: https://waburnbans.net/recent-burn-bans/category/lewis/ 
-
 Southwest Clean Air Agency, 11815 NE 99th Street, Suite 1294, Vancouver, WA 98682: (360-574-3058) http://www.swcleanair.org/
 
 **Recreational Fire**: Recreational fires are limited to 3'x3'x2' and are used solely for recreational purposes.  "Recreational Fire" means cooking fires, campfires, and bonfires using charcoal or firewood that occur in designated areas or on private property for cooking, pleasure, or ceremonial purposes. Fires used for debris disposal purposes are not considered recreational fires.
@@ -44,7 +27,6 @@ Department of Natural Resources: https://fortress.wa.gov/dnr/protection/firedang
 [Bremerton Kitsap Access Television (BKAT)](http://www.bremertonwa.gov/402/Bremerton-Kitsap-Access-Television-BKAT) - a Public Education and Government (PEG) Access television station airing programming on Comcast Channel 12.  Each year, BKAT cablecasts hundreds of community based programs to approximately 50,000 households throughout Kitsap County.
 
 Kitsap Cable Franchise Authority: https://www.kitsapgov.com/dis/Pages/Cable-Franchise-Authority.aspx
-
 
 ## POCs
 
@@ -85,14 +67,9 @@ Ziff-Davis Tips (Weekly):	http://www.zdtips.com
 | KITZ|Seattle| | |1400| | |  |  
 | KOMO|Seattle|ABC|4|1000| | |https://www.komotv.com/ <br>http://www.komonews.com/ |  
 | KZOK|Seattle|iHeart| | |102.5| https://www.kzok.com/ S: (800) 252-1025 <br> B: (206) 805-1025 <br> http://player.radio.com/listen/station/kzok-1025 <br> http://play.it/stations/KZOK-HD2 |  
-| KJAQ|Seattle|Jack| | |96.5| |http://jackseattle.com/  <br> http://play.it/stations/96.5+JACK+FM |  
 
 #### Channel Name
 American History Channel (AHC)
 [Bravo](http://www.bravotv.com/)
 [Weather](http://www.weather.com)
-
-## Music
-Pandora	http://www.pandora.com/people/mikemyers59 
-Play It	http://player.play.it/   
 
