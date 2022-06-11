@@ -2,18 +2,44 @@
 @charset "UTF-8";
 
 /* Variables */
+
 :root {
+/* Colors */
   --dark-green: #2E5955;               /* var(--dark-green) */
   --mid-green: #3C7373;                /* var(--mid-green) */
   --light-green: #C2D9BF;              /* var(--light-green) */
+  --black: #000000;
+  --red: #FF0000;
+  --white: #fff;
 
-  --heading_font: 'Amatic SC', cursive;  /* var(--heading_font) */
-  --paragraph_font: 'Overlock', cursive; /* var(--paragraph_font) */
+/* Filters */
+--invertFilter: invert(0);
 
-  --popup-width: 390px;     /* var(--popup-width) */
-  --popup-height: 194px;    /* var(--popup-height) */
-  --popup-arrow-size: 20px  /* var(--popup-arrow-size) */ 
-  
+/* Fonts */
+--headingFont: 'Amatic SC', cursive;  /* var(--heading_font) */
+--paragraphFont: 'Overlock', cursive; /* var(--paragraph_font) */
+
+/* Images */
+  --GreyCamoImgUrl: url("images/GreyCamo.jpg");
+
+/* Positions */
+  --imageAlignment: left;
+
+/*  Sizes */
+  --bannerHeight: 64px;
+  --borderRadius: 20px;
+  --emojiHeight: 40px;
+  --emojiWidth: 40px;
+  --iconSizeSm: 16px;
+  --iconSizeMd: 24px;
+  --iconSizeLg: 32px;
+  --iconSizeXl: 64px;
+  --imageHeight: 48px;
+  --lineHeight: 38px;
+  --padding: 6px;
+  --popupWidth: 390px;     /* var(--popup-width) */
+  --popupHeight: 194px;    /* var(--popup-height) */
+  --popupArrow-size: 20px  /* var(--popup-arrow-size) */ 
 }
 
 * {

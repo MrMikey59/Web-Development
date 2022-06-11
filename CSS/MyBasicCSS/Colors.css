@@ -9,11 +9,11 @@
 */
 
 :root{
-  --color333:    "#333";        /* var(color333) */
-  --color707070: "#707070";
-  --color999:    "#999";
-  --colorF0F0F0: "#f0f0f0";
-  --colorFFF:    "#fff";
+  --color333:    #333;        /* var(color333) */
+  --color707070: #707070;
+  --color999:    #999;
+  --colorF0F0F0: #f0f0f0;
+  --colorFFF:    #fff;
 }
 
 /* ====== Opacity ====== */

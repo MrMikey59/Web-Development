@@ -225,6 +225,27 @@ Lucida Sans Unicode
 }
 ```
 
+## IBMPlexSans
+```css
+@font-face {
+  font-family: 'IBMPlexSans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-regular-39e1a74bab.woff2') format('woff2'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-regular-5a469cfacd.woff') format('woff');
+}
+@font-face {
+  font-family: 'IBMPlexSans';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-medium-93cde5cb70.woff2') format('woff2'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-medium-926e6b23b6.woff') format('woff');
+}
+@font-face {
+  font-family: 'IBMPlexSans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-bold-47d0880913.woff2') format('woff2'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-ibmplexsans-bold-736188bb57.woff') format('woff');
+}```
+
 ## Lato
 ```css
 @font-face {
@@ -404,6 +425,17 @@ Lucida Sans Unicode
 	mso-font-pitch:variable;
 	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
 ``
+
+## Noto Sans
+```css
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-notosans-notosans-923ab93982.woff2') format('woff2'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-notosans-notosans-49dd5c1e17.woff') format('woff'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-notosans-notosans-d29e1ec47e.ttf') format('truetype'), url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-notosans-notosans-0c237dfb54.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+```
 ## Open Sans
 ```css
 @font-face {
@@ -563,6 +595,26 @@ Lucida Sans Unicode
 	mso-generic-font-family:auto;
 	mso-font-pitch:auto;
 	mso-font-signature:0 0 0 0 0 0;
+}
+```
+
+## Reddit
+```css
+@font-face {
+  font-family: 'Reddit Sans';
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-redditsans-redditsans-regular-48854d9ae7.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Reddit Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-redditsans-redditsans-bold-c4a5ab79eb.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Reddit Sans';
+  font-weight: 800;
+  font-style: normal;
+  src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-redditsans-redditsans-extrabold-5d96a4e524.woff2') format('woff2');
 }
 ```
 
