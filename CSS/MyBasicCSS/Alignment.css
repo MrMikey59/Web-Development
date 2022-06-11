@@ -4,24 +4,27 @@
 
 .block-center {
   max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
+}
+
+.center {
+  margin: 0 auto;
 }
 
 .centered {
 	max-width:90%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
   display: block;
 }
 
 /* =========Float========== */
 .float-left,
-.fLeft        { float: left;                           }
-.float-middle { margin-left: auto; margin-right: auto; }
+.fLeft        { float: left; }
+.float-middle, 
+.fmiddle { margin-left: auto; margin-right: auto; }
 .float-right,
-.fRight       { float: right;                          }
+.fRight       { float: right; }
 
 /* ===========Overflow=========== */
 .ofHide { overflow: hidden;  }
@@ -30,7 +33,7 @@
 /* ===========Position=========== */
 .pFixed    { position: fixed;    }
 .pRelative { position: relative; } 
-.pStatis   { position: static;   }
+.pStatic   { position: static;   }
 
 /* ===========Text Align=========== */
 .text-center, 
@@ -47,8 +50,11 @@
 .taRight  { text-align: right;  }
 
 /* ==========Vertical Alignment========== */
+.vertical-bottom, .va-bottom {
+	vertical-align: bottom;
+}
 
-.vertical-center{
+.vertical-center, .va-center {
 	height: 75px;
 	line-height: 75px;
 }
@@ -57,20 +63,16 @@
 	vertical-align: middle;
 }
 
-.vertical-top, .va-top {
-	vertical-align: top;
-}
-
-.vertical-bottom, .va-bottom {
-	vertical-align: bottom;
-}
-
 .vertical-subscript, .va-sub {
 	vertical-align: sub;
 }
 
 .vertical-superscript, .va-sup {
 	vertical-align: super;
+}
+
+.vertical-top, .va-top {
+	vertical-align: top;
 }
 
 /* ==========White Space========== */

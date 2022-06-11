@@ -1,16 +1,22 @@
 /* Three Column Demo */
 
+body, html {
+  margin: 0;
+  padding:0;
+}
 /* Area Definitions */
 #top {
-  margin: 20px;
+  border: 1px solid black;
   padding: 10px;
   background: #ccc;
   height: 100px;
 }
 
 #left {
+  background-color: #a0ffff;
   position: absolute;
   left: 10px;
+  min-height: 800px;
   top: 160px;
   width: 200px;
 }
@@ -20,11 +26,16 @@
   border-width: 4px;
   border-style: solid;
   border-color: black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  min-height: 800px;
   margin-top: 0;
   margin-left: 220px;
   margin-right: 220px;
 }
 #right {
+  background-color: #a0ffff;
+  min-height: 800px;
   position: absolute;
   right: 10px;
   top: 160px;

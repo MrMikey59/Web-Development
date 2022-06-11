@@ -1,43 +1,42 @@
 <!DOCTYPE html >
-<html>
+
+<html lang="en/US">
 
 <head>
 
-  <title>Three-Column Layout Demonstration</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-  <link rel="stylesheet" href="threecoldemo.css" type="text/css" />
+  <title>Three-Column Layout Demonstration</title>
+
+  <link rel="stylesheet" href="ThreeColDemo.css" type="text/css" />
+  
   <SCRIPT LANGUAGE="JavaScript" src="ThreeColDemo.js"></Script>
 
+  <style>
+    .center {
+      text-align: center;
+    }
+  </style>
 
 </head>
 
-
 <body onLoad="displayTime();makeWave(0);">
 
-<div id="top">
-  <div ID="textDiv" align="center">Make a Wave</div>
+<div id="top" class="center">
+  <div ID="textDiv">Make a Wave</div>
 </div>
 
 <div id="left">
-<P class="PStrong"> Show the Time </P>
-<form name=myTime>
-<input type=text name=showTime size=11><p>
-<input type=radio name=showFormat>24 Hour Format<br>
-<input type=radio name=showFormat>12 Hour Format<br>
-</form>
+  <P class="PStrong"> Show the Time </P>
+  <form name=myTime>
+    <input type=text name=showTime size=11><p>
+    <input type=radio name=showFormat>24 Hour Format<br>
+    <input type=radio name=showFormat>12 Hour Format<br>
+  </form>
 </div>
 
 <div id="center">
-<p>
-Notice that this column is not able to be positioned. Its
-position will thus retain its "natural" place based on its
-location in the HTML file that generates the page. Margin
-settings ensure that the left and right columns (which are
-set to 200 pixels in width) will have room for their content
-without creating a visible space between any of the
-adjoining columns.
-</p>
+  <p>Notice that this column is not able to be positioned. Its position will thus retain its "natural" place based on its location in the HTML file that generates the page. Margin settings ensure that the left and right columns (which are set to 200 pixels in width) will have room for their content without creating a visible space between any of the adjoining columns.</p>
 </div>
 
 <div id="right">
@@ -56,7 +55,7 @@ adjoining columns.
     <option value="Google">Google</option>
     <option value="Bing">Bing</option>
   </select>
-  <BR><Center><input type="button" value=" SEARCH " onClick="makeSearch()"></Center>
+  <BR><input type="button" value=" SEARCH " onClick="makeSearch()"  class="center">
   <script language="JavaScript">
     var formVariable;
     formVariable=document.forms.length
@@ -78,13 +77,12 @@ adjoining columns.
 </form>
 
 <P class="PStrong">View Your Hard Drive</P>
-<Center>
-<form action="file:///c|/">
+<form action="file:///c|/"  class="center">
   <input type="submit" value="Open C Disk">
 </form>
-</center>
 
 </div>
 
 </body>
+
 </html>

@@ -4,6 +4,12 @@ SSI's are directions to the Web Server to include additonal code/script/markup i
 **Note**: CSS also allows SSI, but is limited! 
 
 # SSI Commands  
+`<!--#include virtual="/homepages/organizations/OMTweb/footer.html" -->`
+
+`<!--[if { lt | lte | gte | gt | ! | none } mso { 9 | 10 | none }]--> … <!--[endif]-->`
+`<!--[if { lt | lte | gte | gt | ! | none } ppt]--> … <!--[endif]-->`
+`<!--[if { lt | lte | gte | gt | ! | none } IE { 7 | 8 | 9 }]> … <!--[endif]-->`
+
 
 ### #CONFIG  
 Set your configuration requirements.  
@@ -14,8 +20,15 @@ Set your configuration requirements.
 | \%d | timefmt | Day of the Month `[1-31]` |  
 | \%Y | timefmt | Year in the form `[0,1,2]999` |  
 
+`<!--#config timefmt="%Y" --> ` 
+`<!--#config timefmt="%A, %B %d, %Y"-->`
+
 ### #ECHO  
 The Echo command copies directly into the document at the location inserted.  
+
+REMOTE_USER:  `<!--#echo var="REMOTE_USER" -->`
+Current Time:  `<!--#echo var="DATE_LOCAL"-->`
+Last Updated:  `<!--#echo var="LAST_MODIFIED" -->` 
 
 # Examples
 

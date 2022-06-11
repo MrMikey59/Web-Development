@@ -6,12 +6,20 @@
   --dark-green: #2E5955;               /* var(--dark-green) */
   --mid-green: #3C7373;                /* var(--mid-green) */
   --light-green: #C2D9BF;              /* var(--light-green) */
+
   --heading_font: 'Amatic SC', cursive;  /* var(--heading_font) */
   --paragraph_font: 'Overlock', cursive; /* var(--paragraph_font) */
+
+  --popup-width: 390px;     /* var(--popup-width) */
+  --popup-height: 194px;    /* var(--popup-height) */
+  --popup-arrow-size: 20px  /* var(--popup-arrow-size) */ 
+  
 }
 
 * {
+  border: 0;
   margin: 0;
-  Padding: 0;
+  outline: 0;
+  padding: 0;
 }
 

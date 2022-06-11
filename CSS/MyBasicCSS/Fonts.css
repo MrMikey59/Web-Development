@@ -23,6 +23,13 @@ px	em
 512	32
 */
 
+/* Web Safe Fonts
+cursive: "Brush Script MT"
+monospace: Courier New
+sans-serif: Arial, Verdana, Helvetica, Tahoma, "Trebuchet MS"
+serif: "Times New Roman", Georgia, Garamond
+*/
+
 /* ====== Font Size ====== */
 .font-1x {
   font-size: 1em; 

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* Colors Test Pallette */
+
+.color {
+  background: lightgray;
+  background-color: #337c34;
+  background-color: #b90e21;
+  background-color: #c81a00;
+  background-color: #fc6120;
+
+  color: #188038;
+  color: #222222; /* off black */
+  color: #3c4043;
+  color: #52188c;
+  color: #70757a;
+  color: #9aa0a6;
+  color: #d93025;
+  color: currentColor;
+  color: WindowText;
+
+}
+
