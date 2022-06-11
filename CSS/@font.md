@@ -147,8 +147,21 @@ Lucida Sans Unicode
        local('America-Bold'),
        url(https://c5.patreon.com/external/fonts/gt-america/GT-America-Standard-Bold.woff2) format('woff2'),
        url(https://c5.patreon.com/external/fonts/gt-america/GT-America-Standard-Bold.woff) format('woff');
-}```
+}
+```
   
+## BentonSans
+```css
+@font-face{font-family:BentonSans;font-weight:300;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Light-6dccf00b06936bd0fb2913d5e7279816-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Light-56973edfcf61447fc1ffeb7a6eb6b178-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:300;font-style:italic;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Light-Italic-36b388f18999631c032ceeade2312d41-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Light-Italic-112953068bc678d61f4553a1184561f0-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:400;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Regular-10f4d2158069741ac4ddbc45710381a1-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Regular-e6bbcdd30d3bd4d6b170bcb6d3552cab-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:400;font-style:italic;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Italic-a79b88d69296747b773f0e224cc42ea1-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Italic-5267af566ab853eb9d74db1a78a46c67-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:500;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Medium-d7c31b2e9ada52f5ad11194858e44a93-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Medium-1051a531d3e1ee3483a6533158557139-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:500;font-style:italic;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Medium-Italic-9abd3f23e60e4f632817ebdff606b8ec-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Medium-Italic-a25d440012460eb8883e539f93040fa7-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:700;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Bold-91e4c20cbb21e802d984a5ca6ac174a0-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Bold-c34ba754b7235b49d33b294ff7a54179-font.woff) format("woff")}
+@font-face{font-family:BentonSans;font-weight:700;font-style:italic;src:url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Bold-Italic-fc6d8a3f6499b32d9a6be03168b8066f-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/BentonSans/Bold-Italic-255b4934a1f414dd312aa89382d65114-font.woff) format("woff")}
+```
+
 ## Calibri
 ```css
 @font-face {
@@ -424,7 +437,25 @@ Lucida Sans Unicode
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
-``
+```
+
+## Noto Mono
+```css
+@font-face{
+  font-family: Noto Mono;
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://www.redditstatic.com/desktop2x/fonts/NotoMono/Regular-b16bb0524a7e7ee597970333c0c67180-font.woff2) format("woff2"),
+       url(https://www.redditstatic.com/desktop2x/fonts/NotoMono/Regular-e6bbcdd30d3bd4d6b170bcb6d3552cab-font.woff) format("woff")
+}
+@font-face{
+  font-family: Noto Mono;
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://www.redditstatic.com/desktop2x/fonts/NotoMono/el-Regular-29d72243d2cd6145b28bcb80dc33f0e4-font.woff2) format("woff2"),
+       url(https://www.redditstatic.com/desktop2x/fonts/NotoMono/el-Regular-06ee3f893717454d11a16c3e8d0aa9f9-font.woff) format("woff");
+  unicode-range:U+0370-03ff,U+1f??
+}```
 
 ## Noto Sans
 ```css
@@ -598,7 +629,7 @@ Lucida Sans Unicode
 }
 ```
 
-## Reddit
+## Reddit Sans
 ```css
 @font-face {
   font-family: 'Reddit Sans';
@@ -616,6 +647,11 @@ Lucida Sans Unicode
   font-style: normal;
   src: url('https://www.redditstatic.com/crypto-assets/v2/-core-styles-fonts-redditsans-redditsans-extrabold-5d96a4e524.woff2') format('woff2');
 }
+@font-face{font-family:RedditSans;font-weight:400;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-Regular-f6da4a74985e726695c5550b2a96360d-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-Regular-938c6d17d3195feb74fbfcbf6d028c47-font.woff) format("woff")}
+@font-face{font-family:RedditSans;font-weight:700;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-Bold-00b9ceb8410bb0559de9132fb8c5ddbd-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-Bold-919ed023cc331c1b982510dce87edaf0-font.woff) format("woff")}
+@font-face{font-family:RedditSans;font-weight:600;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-SemiBold-fcee61fe0a8b9eb173d0b097bdf1be07-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-SemiBold-a8cf195e6dc5180d834bd4ba84701907-font.woff) format("woff")}
+@font-face{font-family:RedditSans;font-weight:800;font-style:italic;src:url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-ExtraBoldItalic-0346885b2f9e13f7d733268cb8916a8c-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-ExtraBoldItalic-84b1042d8aac344ee8f4d25444049aa7-font.woff) format("woff")}
+@font-face{font-family:RedditSans;font-weight:800;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-ExtraBold-a6a549325ce2e7248e5bf8997bbde759-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/RedditSans/RedditSans-ExtraBold-6633c8402da41892cddf755223abb785-font.woff) format("woff")}
 ```
 
 ## Roboto
@@ -718,4 +754,8 @@ if (document.fonts && document.fonts.load) {
 }
 ```
 
+## VCR
+```css
+@font-face{font-family:VCR;font-weight:400;font-style:normal;src:url(https://www.redditstatic.com/desktop2x/fonts/VCR/Regular-8917e4f4dcb46c5f44221e2652d435d4-font.woff2) format("woff2"),url(https://www.redditstatic.com/desktop2x/fonts/VCR/Regular-e6bbcdd30d3bd4d6b170bcb6d3552cab-font.woff) format("woff")}
+```
 
