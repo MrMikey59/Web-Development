@@ -7,7 +7,19 @@
   background-color: #b90e21;
   background-color: #c81a00;
   background-color: #fc6120;
-
+  background-color: #0079d3;
+  background-color: #ea0027;
+  background-color: #ff4500;
+  background-color: #ff4500;
+  background-color: rgba(234,0,39,.8);
+  background-color: rgba(255,69,0,.8);
+  background-color: transparent;
+   
+  color: #ea0027;
+  color: #ff4500;
+  color: rgba(135,138,140,.8);
+  color: rgba(234,0,39,.8);
+  color: rgba(255,69,0,.8);
   color: #188038;
   color: #222222; /* off black */
   color: #3c4043;
@@ -17,7 +29,12 @@
   color: #d93025;
   color: currentColor;
   color: WindowText;
-
+  color: #ea0027;
+  color: #ff4500;
+  color: #ff585b;
+  color: rgba(135,138,140,.8);
+  color: rgba(234,0,39,.8);
+  
   --actionIcon: #878A8C;
   --actionIconAlpha20: rgba(135,138,140,0.2);
   --actionIconAlpha50: rgba(135,138,140,0.5);
@@ -184,6 +201,5 @@
   --widgetColors-sidebarWidgetHeaderColorAlpha60: rgba(255,255,255,0.6);
   --widgetColors-sidebarWidgetTextColor: #1A1A1B;
   --widgetColors-sidebarWidgetTextColorShaded80: #141415;
-  --widgetColors-sidebarWidgetTitleColor: #1A1A1B;
 }
 
