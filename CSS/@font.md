@@ -29,7 +29,7 @@
 
 | cursive | fantasy | serif | sans-serif | monospace |  
 | --- | --- | --- | --- | --- |  
-| Amatic SC <BR> [Overlock](#Overlock) |  | Times New Roman | Arial <BR> Geneva <br> Helvetica <BR> Open Sans <BR> Oswald <BR> [Proxima Nova](#Proxima%20Nova) <BR> [Roboto](#Roboto) <BR> Verdana <BR> Work Sans | Andale Mono <BR> Courier <BR> Courier New
+| Amatic SC <BR> [Overlock](#Overlock) |  | Times New Roman | Arial <BR> Geneva <br> Google Sans <br> Helvetica, Helvetica Neue <BR> Lucida Sans Unicode <BR> Noto Sans <BR> Open Sans <BR> Oswald <BR> [Proxima Nova](#Proxima%20Nova) <BR> [Roboto](#Roboto) <BR> Segoe UI <BR> Symantec Sans <BR> Verdana <BR> Work Sans | Andale Mono <BR> Courier <BR> Courier New
  |  
 
 [Amatic](#Amatic)

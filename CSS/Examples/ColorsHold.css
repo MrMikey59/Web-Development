@@ -2,7 +2,38 @@
 /* Colors Test Pallette */
 
 .color {
+  background:	none;
+  background-color: transparent;
   background: lightgray;
+  background:	#68e;
+  background:	#eee;
+  background:	#f8a156;
+  background:	#ffd664;
+  background:	#ffe283;
+  background-color:	#1a73e8;
+  background-color:	#337c34;
+  background-color:	#5094ed;
+  background-color:	#529642;
+  background-color:	#529642;
+  background-color:	#63a0ef;
+  background-color:	#666666;
+  background-color:	#808080;
+  background-color:	#a6342e;
+  background-color:	#b3332c;
+  background-color:	#b90e21;
+  background-color:	#c81a00;
+  background-color:	#cc3127;
+  background-color:	#d93025;
+  background-color:	#e8eaed;
+  background-color:	#f1f3f4;
+  background-color:	#f8f9fa;
+  background-color:	#fc6120;
+  background-color:	#fce8e6;
+  background-color:	#ff7200;
+  background-color:	#ffe283;
+  background-color:	rgba(217,48,37,.1);
+  background-color:	rgba(26,115,232,.1);
+  background-color:	rgba(60,64,67,.1);
   background-color: #337c34;
   background-color: #b90e21;
   background-color: #c81a00;
@@ -13,8 +44,13 @@
   background-color: #ff4500;
   background-color: rgba(234,0,39,.8);
   background-color: rgba(255,69,0,.8);
-  background-color: transparent;
-   
+
+  color: currentColor;
+  color: WindowText;   
+  color: #1a73e8;
+  color: #2962ff;
+  color: #3c4043;
+  color: #5f6368;
   color: #ea0027;
   color: #ff4500;
   color: rgba(135,138,140,.8);
@@ -27,8 +63,6 @@
   color: #70757a;
   color: #9aa0a6;
   color: #d93025;
-  color: currentColor;
-  color: WindowText;
   color: #ea0027;
   color: #ff4500;
   color: #ff585b;

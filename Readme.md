@@ -1,4 +1,4 @@
 # WEB DEVELOPMENT
 
-This is a collection of the Web Development Tools availabel with examples and notes.
+This is a collection of the Web Development Tools available with examples and notes.
 
